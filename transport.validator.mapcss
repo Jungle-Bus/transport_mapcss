@@ -1,0 +1,120 @@
+meta
+{
+	title: "Jungle Bus – validation ruleset";
+	version: "dev";
+	description: "Une validation intransigeante des données de transport en commun";
+	author: "nlehuby";
+	link: "http://junglebus.io/";
+	watch-modified: true;
+}
+
+
+/* Tags unitaires sur les relations */
+
+relation[type=route][!network],
+relation[type=route_master][!network]
+{
+	throwError: "Jungle : Le réseau est manquant (ajouter un tag network)";
+
+}
+
+relation[type=route][!operator],
+relation[type=route_master][!operator]
+{
+	throwError: "Jungle : L'opérateur est manquant (ajouter un tag operator)";
+
+}
+
+relation[type=route][!ref],
+relation[type=route_master][!ref]
+{
+	throwError: "Jungle : Le numéro de ligne est manquant (ajouter un tag ref)";
+
+}
+
+relation[type=route][!route]
+{
+	throwError: "Jungle : Le mode est manquant (ajouter un tag route = bus/coach/tram/etc)";
+
+}
+
+relation[type=route_master][!route_master][!route]
+{
+	throwError: "Jungle : Le mode est manquant (ajouter un tag route_master = bus/coach/tram/etc)";
+
+}
+
+/* mode dans le mauvais tag */
+relation[type=route_master][route]
+{
+	throwError: "Jungle : Le mode est manquant (transformer le tag route en route_master)";
+	fixChangeKey: "route=>route_master";
+
+}
+
+relation[type=route][!from],
+relation[type=route][!to]
+{
+	throwError: "Jungle : L'origine/destination est manquante (ajouter les tags from/to)";
+
+}
+
+relation[type=route]["fixme:relation"="order members"]
+{
+	throwError: "Jungle : Les arrêts ne sont peut-être pas dans le bon ordre";
+
+}
+
+/* valeurs d'opérateur interdites */
+relation[type=route]["operator"=~/STIF|Kéolis|Véolia/],
+relation[type=route_master]["operator"=~/STIF|Kéolis|Véolia/]
+{
+	throwError: "Jungle : Vérifier l'opérateur";
+
+}
+
+/* valeurs de réseau interdites */
+relation[type=route]["network"=~/STIF|Kéolis|Véolia/],
+relation[type=route_master]["network"=~/STIF|Kéolis|Véolia/]
+{
+	throwError: "Jungle : Vérifier le réseau";
+
+}
+
+
+
+/* Tags unitaires sur les arrêts */
+
+node[highway=bus_stop][!name]
+{
+	throwError: "Jungle : L'arrêt n'a pas de nom";
+
+}
+
+node[highway=bus_stop][!public_transport]
+{
+	throwError: "Jungle : Préciser s'il s'agit d'un arrêt (platform) ou d'un emplacement sur la route (stop_position)";
+	fixAdd: "public_transport=platform";
+
+}
+
+node[highway=bus_stop][note],
+node[highway=bus_stop][note:fr]
+{
+	throwWarning: "Jungle : Vérifier si la note peut-être supprimée";
+
+}
+
+node[highway=bus_stop][network]
+{
+	throwError: "Jungle : Le réseau devrait être porté par les lignes de transport et non les arrêts";
+	fixRemove: "network";
+
+}
+
+node[highway=bus_stop][operator]
+{
+	throwError: "Jungle : L'opérateur devrait être porté par les lignes de transport et non les arrêts";
+	fixRemove: "operator";
+
+}
