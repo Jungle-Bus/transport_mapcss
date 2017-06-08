@@ -118,3 +118,18 @@ node[highway=bus_stop][operator]
 	fixRemove: "operator";
 
 }
+
+
+
+/* Toutes les variantes de lignes (relations route) devraient être dans une ligne (relation route_master) */
+relation[type=route_master] > relation[type=route] 
+{
+	set route_ok
+}
+
+relation[type=route]!.route_ok
+{
+	throwError: "Jungle : La variante de ligne n'appartient à aucune ligne (l'ajouter à la relation route_master)";
+}
+
+
