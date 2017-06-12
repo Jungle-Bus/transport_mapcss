@@ -98,23 +98,25 @@ node[highway=bus_stop][!public_transport]
 
 }
 
+/* Le tag note est souvent utilisé pour marquer les lignes qui passent à l'arrêt,
+ou ajouter des infos qui pourraient être portées par un autre tag*/
 node[highway=bus_stop][note],
 node[highway=bus_stop][note:fr]
 {
-	throwWarning: "Jungle : Vérifier si la note peut-être supprimée";
+	throwWarning: "Jungle : Vérifier si la note peut être supprimée";
 
 }
 
 node[highway=bus_stop][network]
 {
-	throwError: "Jungle : Le réseau devrait être porté par les lignes de transport et non les arrêts";
+	throwError: "Jungle : Le réseau devrait être porté par les lignes de transport et non par les arrêts";
 	fixRemove: "network";
 
 }
 
 node[highway=bus_stop][operator]
 {
-	throwError: "Jungle : L'opérateur devrait être porté par les lignes de transport et non les arrêts";
+	throwError: "Jungle : L'opérateur devrait être porté par les lignes de transport et non par les arrêts";
 	fixRemove: "operator";
 
 }
@@ -122,7 +124,7 @@ node[highway=bus_stop][operator]
 
 
 /* Toutes les variantes de lignes (relations route) devraient être dans une ligne (relation route_master) */
-relation[type=route_master] > relation[type=route] 
+relation[type=route_master] > relation[type=route]
 {
 	set route_ok
 }
@@ -131,5 +133,3 @@ relation[type=route]!.route_ok
 {
 	throwError: "Jungle : La variante de ligne n'appartient à aucune ligne (l'ajouter à la relation route_master)";
 }
-
-
