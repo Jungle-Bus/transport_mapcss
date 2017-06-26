@@ -61,7 +61,7 @@ relation[type=route][!to]
 
 relation[type=route]["fixme:relation"="order members"]
 {
-	throwError: "Jungle : Les arrêts ne sont peut-être pas dans le bon ordre";
+	throwWarning: "Jungle : Les arrêts ne sont peut-être pas dans le bon ordre";
 
 }
 
@@ -87,7 +87,7 @@ relation[type=route_master]["network"=~/STIF|Kéolis|Véolia/]
 
 node[highway=bus_stop][!name]
 {
-	throwError: "Jungle : L'arrêt n'a pas de nom";
+	throwWarning: "Jungle : L'arrêt n'a pas de nom";
 
 }
 
