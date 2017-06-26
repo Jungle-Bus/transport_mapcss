@@ -143,3 +143,14 @@ relation.pt_route!.route_ok
 {
 	throwError: "Jungle : La variante de ligne n'appartient à aucune ligne (l'ajouter à la relation route_master)";
 }
+
+/* Tous les arrêts devraient être dans au moins une variante de lignes */
+relation[type=route] > node[public_transport=platform]
+{
+    set platform_ok
+}
+
+node[public_transport=platform]!.platform_ok
+{
+    throwError: "Jungle : L'arrêt n'est desservi par aucune ligne (l'ajouter à la relation route)";
+}
