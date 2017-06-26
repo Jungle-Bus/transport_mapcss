@@ -10,28 +10,6 @@ meta
 
 
 /* Tags unitaires sur les relations */
-
-relation[type=route][!network],
-relation[type=route_master][!network]
-{
-	throwError: "Jungle : Le réseau est manquant (ajouter un tag network)";
-
-}
-
-relation[type=route][!operator],
-relation[type=route_master][!operator]
-{
-	throwError: "Jungle : L'opérateur est manquant (ajouter un tag operator)";
-
-}
-
-relation[type=route][!ref],
-relation[type=route_master][!ref]
-{
-	throwError: "Jungle : Le numéro de ligne est manquant (ajouter un tag ref)";
-
-}
-
 relation[type=route][!route]
 {
 	throwError: "Jungle : Le mode est manquant (ajouter un tag route = bus/coach/tram/etc)";
@@ -52,30 +30,62 @@ relation[type=route_master][route]
 
 }
 
-relation[type=route][!from],
-relation[type=route][!to]
+relation[type=route][route=~/^(bus|coach|train|subway|monorail|trolleybus|aerialway|funicular|ferry|tram|share_taxy|light_rail|school_bus)$/]
+{
+	set pt_route
+}
+
+relation.pt_route_master[route_master=~/^(bus|coach|train|subway|monorail|trolleybus|aerialway|funicular|ferry|tram|share_taxy|light_rail|school_bus)$/]
+{
+	set pt_route_master
+}
+
+
+relation.pt_route[!network],
+relation.pt_route_master[!network]
+{
+	throwError: "Jungle : Le réseau est manquant (ajouter un tag network)";
+
+}
+
+relation.pt_route[!operator],
+relation.pt_route_master[!operator]
+{
+	throwError: "Jungle : L'opérateur est manquant (ajouter un tag operator)";
+
+}
+
+relation.pt_route[!ref],
+relation.pt_route_master[!ref]
+{
+	throwError: "Jungle : Le numéro de ligne est manquant (ajouter un tag ref)";
+
+}
+
+relation.pt_route[!from],
+relation.pt_route[!to]
 {
 	throwError: "Jungle : L'origine/destination est manquante (ajouter les tags from/to)";
 
 }
 
-relation[type=route]["fixme:relation"="order members"]
+relation.pt_route["fixme:relation"="order members"]
 {
 	throwWarning: "Jungle : Les arrêts ne sont peut-être pas dans le bon ordre";
 
 }
 
 /* valeurs d'opérateur interdites */
-relation[type=route]["operator"=~/STIF|Kéolis|Véolia/],
-relation[type=route_master]["operator"=~/STIF|Kéolis|Véolia/]
+relation.pt_route["operator"=~/STIF|Kéolis|Véolia/],
+relation.pt_route_master["operator"=~/STIF|Kéolis|Véolia/]
 {
 	throwError: "Jungle : Vérifier l'opérateur";
 
 }
 
 /* valeurs de réseau interdites */
-relation[type=route]["network"=~/STIF|Kéolis|Véolia/],
-relation[type=route_master]["network"=~/STIF|Kéolis|Véolia/]
+relation.pt_route["network"=~/STIF|Kéolis|Véolia/],
+relation.pt_route_master["network"=~/STIF|Kéolis|Véolia/]
 {
 	throwError: "Jungle : Vérifier le réseau";
 
@@ -129,7 +139,7 @@ relation[type=route_master] > relation[type=route]
 	set route_ok
 }
 
-relation[type=route]!.route_ok
+relation.pt_route!.route_ok
 {
 	throwError: "Jungle : La variante de ligne n'appartient à aucune ligne (l'ajouter à la relation route_master)";
 }
