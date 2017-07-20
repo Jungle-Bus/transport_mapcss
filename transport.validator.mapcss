@@ -2,14 +2,14 @@ meta
 {
 	title: "Jungle Bus – validation ruleset";
 	version: "dev";
-	description: "Une validation intransigeante des données de transport en commun";
+	description: "An uncompromising validation rules for public transport";
 	author: "nlehuby";
 	link: "http://junglebus.io/";
 	watch-modified: true;
 }
 
 
-/* Tags unitaires sur les relations */
+/* Route tag on relations */
 relation[type=route][!route]
 {
 	throwError: "Jungle : The route tag is missing (add the tag route = bus/coach/tram/etc)";
@@ -22,7 +22,7 @@ relation[type=route_master][!route_master][!route]
 
 }
 
-/* mode dans le mauvais tag */
+/* Mode in the wrong tag */
 relation[type=route_master][route]
 {
 	throwError: "Jungle : The route_master tag is missing (change the route tag to route_master)";
@@ -69,14 +69,9 @@ relation.pt_route[!to]
 
 }
 
-relation.pt_route["fixme:relation"="order members"]
-{
-	throwWarning: "Jungle : The stops may need to be sorted";
-
-}
 
 
-/* Tags unitaires sur les arrêts */
+/* Tags on bus stops */
 
 node[highway=bus_stop][!name]
 {
@@ -92,7 +87,7 @@ node[highway=bus_stop][!public_transport]
 }
 
 
-/* Toutes les variantes de lignes (relations route) devraient être dans une ligne (relation route_master) */
+/* All the line variations (route relations) should be part of a line (route_master relation) */
 relation[type=route_master] > relation[type=route]
 {
 	set route_ok
@@ -103,7 +98,7 @@ relation.pt_route!.route_ok
 	throwError: "Jungle : Add this route relation to a route_master relation";
 }
 
-/* Tous les arrêts devraient être dans au moins une variante de lignes */
+/* All the stops should be in at least a line variation (route relation) */
 relation[type=route] > node[public_transport=platform]
 {
     set platform_ok
