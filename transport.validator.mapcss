@@ -35,7 +35,7 @@ relation[type=route][route=~/^(bus|coach|train|subway|monorail|trolleybus|aerial
 	set pt_route
 }
 
-relation.pt_route_master[route_master=~/^(bus|coach|train|subway|monorail|trolleybus|aerialway|funicular|ferry|tram|share_taxy|light_rail|school_bus)$/]
+relation[type=route_master][route_master=~/^(bus|coach|train|subway|monorail|trolleybus|aerialway|funicular|ferry|tram|share_taxy|light_rail|school_bus)$/]
 {
 	set pt_route_master
 }
