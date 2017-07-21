@@ -108,6 +108,19 @@ node[highway=bus_stop][!public_transport]
 
 }
 
+node["public_transport"="platform"][!highway][!railway]
+{
+	throwError: "Jungle : Le tag historique est manquant (ajouter le tag highway=bus_stop/railway=tram_stop);
+}
+
+node["public_transport"="platform"][shelter][!highway],
+node["public_transport"="platform"][bus=yes][!highway]
+{
+	throwError: "Jungle : Est-ce un arrêt de bus ? (ajouter le tag highway=bus_stop)";
+	fixAdd: "highway=bus_stop";
+}
+
+
 /* Le tag note est souvent utilisé pour marquer les lignes qui passent à l'arrêt,
 ou ajouter des infos qui pourraient être portées par un autre tag*/
 node[highway=bus_stop][note],
