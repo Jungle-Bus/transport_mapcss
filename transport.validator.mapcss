@@ -108,6 +108,18 @@ node[highway=bus_stop][!public_transport]
 
 }
 
+node["public_transport"="platform"][!highway][!railway]
+{
+	throwError: "Jungle : Is it a bus_stop or a tram_stop ?";
+	fixAdd: "highway=bus_stop";
+}
+
+node["public_transport"="platform"][shelter][!highway],
+node["public_transport"="platform"][bus=yes][!highway]
+{
+	throwError: "Jungle : Is it a bus_stop ?";
+	fixAdd: "highway=bus_stop";
+}
 
 /* All the line variations (route relations) should be part of a line (route_master relation) */
 relation[type=route_master] > relation[type=route]
