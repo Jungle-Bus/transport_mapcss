@@ -81,6 +81,16 @@ relation.pt_route_master[!charge]
 
 }
 
+/* The charge tag must end with GHS */
+relation.pt_route_master[charge$="GHS"]
+{
+	set charge_ok
+}
+relation.pt_route_master[charge]!.charge_ok
+{
+	throwError: "Jungle : The charge tag must end with GHS";
+
+}
 
 
 /* Tags on bus stops */
