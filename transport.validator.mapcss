@@ -75,6 +75,12 @@ relation.pt_route_master[!frequency]
 
 }
 
+relation.pt_route[!travel_time]
+{
+	throwError: "Jungle : The travel_time tag is missing";
+
+}
+
 relation.pt_route_master[!charge]
 {
 	throwError: "Jungle : The charge tag is missing";
