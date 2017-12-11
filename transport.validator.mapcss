@@ -113,7 +113,6 @@ node["public_transport"="platform"][!highway][!railway]
 	throwError: "Jungle : Le tag historique est manquant (ajouter le tag highway=bus_stop/railway=tram_stop);
 }
 
-node["public_transport"="platform"][shelter][!highway],
 node["public_transport"="platform"][bus=yes][!highway]
 {
 	throwError: "Jungle : Est-ce un arrêt de bus ? (ajouter le tag highway=bus_stop)";
