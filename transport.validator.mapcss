@@ -23,7 +23,7 @@ relation[type=route_master][!route_master][!route]
 }
 
 /* mode dans le mauvais tag */
-relation[type=route_master][route]
+relation[type=route_master][!route_master][route]
 {
 	throwError: "Jungle : Le mode est manquant (transformer le tag route en route_master)";
 	fixChangeKey: "route=>route_master";
