@@ -1,7 +1,7 @@
 meta
 {
 	title: "Jungle Bus – validation ruleset";
-	version: "dev";
+	version: "0.2";
 	description: "Une validation intransigeante des données de transport en commun";
 	author: "nlehuby";
 	link: "http://junglebus.io/";
