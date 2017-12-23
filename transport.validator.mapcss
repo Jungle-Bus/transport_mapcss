@@ -101,6 +101,12 @@ node[highway=bus_stop][!name]
 
 }
 
+node[highway=bus_stop][amenity=bus_station]
+{
+	throwWarning: "Jungle : Est-ce un arrêt de bus ou une gare routière ?";
+    fixRemove: "amenity";
+}
+
 node[highway=bus_stop][!public_transport]
 {
 	throwError: "Jungle : Préciser s'il s'agit d'un arrêt (platform) ou d'un emplacement sur la route (stop_position)";
