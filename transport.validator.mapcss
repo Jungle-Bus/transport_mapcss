@@ -1,7 +1,7 @@
 meta
 {
 	title: "Jungle Bus – validation ruleset";
-	version: "0.2";
+	version: "0.3";
 	description: "Une validation intransigeante des données de transport en commun";
 	author: "nlehuby";
 	link: "http://junglebus.io/";
@@ -103,7 +103,7 @@ node[highway=bus_stop][!name]
 
 node[highway=bus_stop][amenity=bus_station]
 {
-	throwWarning: "Jungle : Est-ce un arrêt de bus ou une gare routière ?";
+	throwError: "Jungle : Est-ce un arrêt de bus ou une gare routière ?";
     fixRemove: "amenity";
 }
 
