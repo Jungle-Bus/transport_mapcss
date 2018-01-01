@@ -116,7 +116,7 @@ node[highway=bus_stop][!public_transport]
 
 node["public_transport"="platform"][!highway][!railway]
 {
-	throwError: "Jungle : Le tag historique est manquant (ajouter le tag highway=bus_stop/railway=tram_stop);
+	throwError: "Jungle : Le tag historique est manquant (ajouter le tag highway=bus_stop/railway=tram_stop)";
 }
 
 node["public_transport"="platform"][bus=yes][!highway]
