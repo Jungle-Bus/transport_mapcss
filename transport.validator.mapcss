@@ -1,7 +1,7 @@
 meta
 {
 	title: "Jungle Bus – validation ruleset";
-	version: "0.3";
+	version: "0.4";
 	description: "Une validation intransigeante des données de transport en commun";
 	author: "nlehuby";
 	link: "http://junglebus.io/";
@@ -30,12 +30,12 @@ relation[type=route_master][!route_master][route]
 
 }
 
-relation[type=route][route=~/^(bus|coach|train|subway|monorail|trolleybus|aerialway|funicular|ferry|tram|share_taxy|light_rail|school_bus)$/]
+relation[type=route][route=~/^(bus|coach|train|subway|monorail|trolleybus|aerialway|funicular|ferry|tram|share_taxi|light_rail|school_bus)$/]
 {
 	set pt_route
 }
 
-relation[type=route_master][route_master=~/^(bus|coach|train|subway|monorail|trolleybus|aerialway|funicular|ferry|tram|share_taxy|light_rail|school_bus)$/]
+relation[type=route_master][route_master=~/^(bus|coach|train|subway|monorail|trolleybus|aerialway|funicular|ferry|tram|share_taxi|light_rail|school_bus)$/]
 {
 	set pt_route_master
 }
@@ -76,16 +76,16 @@ relation.pt_route["fixme:relation"="order members"]
 }
 
 /* valeurs d'opérateur interdites */
-relation.pt_route["operator"=~/STIF|Kéolis|Véolia/],
-relation.pt_route_master["operator"=~/STIF|Kéolis|Véolia/]
+relation.pt_route["operator"=~/STIF|Kéolis|Véolia/][inside("FR")],
+relation.pt_route_master["operator"=~/STIF|Kéolis|Véolia/][inside("FR")]
 {
 	throwError: "Jungle : Vérifier l'opérateur";
 
 }
 
 /* valeurs de réseau interdites */
-relation.pt_route["network"=~/STIF|Kéolis|Véolia/],
-relation.pt_route_master["network"=~/STIF|Kéolis|Véolia/]
+relation.pt_route["network"=~/STIF|Kéolis|Véolia/][inside("FR")],
+relation.pt_route_master["network"=~/STIF|Kéolis|Véolia/][inside("FR")]
 {
 	throwError: "Jungle : Vérifier le réseau";
 
@@ -129,22 +129,22 @@ node["public_transport"="platform"][bus=yes][!highway]
 /* Le tag note est souvent utilisé pour marquer les lignes qui passent à l'arrêt,
 ou ajouter des infos qui pourraient être portées par un autre tag*/
 node[highway=bus_stop][note],
-node[highway=bus_stop][note:fr]
+node[highway=bus_stop][note:fr][inside("FR")]
 {
 	throwWarning: "Jungle : Vérifier si la note peut être supprimée";
 
 }
 
-node[highway=bus_stop][network]
+node[highway=bus_stop][network][inside("FR")]
 {
-	throwError: "Jungle : Le réseau devrait être porté par les lignes de transport et non par les arrêts";
+	throwWarning: "Jungle : Le réseau devrait être porté par les lignes de transport et non par les arrêts";
 	fixRemove: "network";
 
 }
 
-node[highway=bus_stop][operator]
+node[highway=bus_stop][operator][inside("FR")]
 {
-	throwError: "Jungle : L'opérateur devrait être porté par les lignes de transport et non par les arrêts";
+	throwWarning: "Jungle : L'opérateur devrait être porté par les lignes de transport et non par les arrêts";
 	fixRemove: "operator";
 
 }
