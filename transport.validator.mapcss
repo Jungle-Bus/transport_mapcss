@@ -8,18 +8,15 @@ meta
 	watch-modified: true;
 }
 
-
 /* Tags unitaires sur les relations */
 relation[type=route][!route]
 {
 	throwError: "Jungle : Le mode est manquant (ajouter un tag route = bus/coach/tram/etc)";
-
 }
 
 relation[type=route_master][!route_master][!route]
 {
 	throwError: "Jungle : Le mode est manquant (ajouter un tag route_master = bus/coach/tram/etc)";
-
 }
 
 /* mode dans le mauvais tag */
@@ -27,52 +24,45 @@ relation[type=route_master][!route_master][route]
 {
 	throwError: "Jungle : Le mode est manquant (transformer le tag route en route_master)";
 	fixChangeKey: "route=>route_master";
-
 }
 
 relation[type=route][route=~/^(bus|coach|train|subway|monorail|trolleybus|aerialway|funicular|ferry|tram|share_taxi|light_rail|school_bus)$/]
 {
-	set pt_route
+	set pt_route;
 }
 
 relation[type=route_master][route_master=~/^(bus|coach|train|subway|monorail|trolleybus|aerialway|funicular|ferry|tram|share_taxi|light_rail|school_bus)$/]
 {
-	set pt_route_master
+	set pt_route_master;
 }
-
 
 relation.pt_route[!network],
 relation.pt_route_master[!network]
 {
 	throwError: "Jungle : Le réseau est manquant (ajouter un tag network)";
-
 }
 
 relation.pt_route[!operator],
 relation.pt_route_master[!operator]
 {
 	throwError: "Jungle : L'opérateur est manquant (ajouter un tag operator)";
-
 }
 
 relation.pt_route[!ref],
 relation.pt_route_master[!ref]
 {
 	throwError: "Jungle : Le numéro de ligne est manquant (ajouter un tag ref)";
-
 }
 
 relation.pt_route[!from],
 relation.pt_route[!to]
 {
 	throwError: "Jungle : L'origine/destination est manquante (ajouter les tags from/to)";
-
 }
 
 relation.pt_route["fixme:relation"="order members"]
 {
 	throwWarning: "Jungle : Les arrêts ne sont peut-être pas dans le bon ordre";
-
 }
 
 /* valeurs d'opérateur interdites */
@@ -80,7 +70,6 @@ relation.pt_route["operator"=~/STIF|Kéolis|Véolia/][inside("FR")],
 relation.pt_route_master["operator"=~/STIF|Kéolis|Véolia/][inside("FR")]
 {
 	throwError: "Jungle : Vérifier l'opérateur";
-
 }
 
 /* valeurs de réseau interdites */
@@ -88,30 +77,24 @@ relation.pt_route["network"=~/STIF|Kéolis|Véolia/][inside("FR")],
 relation.pt_route_master["network"=~/STIF|Kéolis|Véolia/][inside("FR")]
 {
 	throwError: "Jungle : Vérifier le réseau";
-
 }
 
-
-
 /* Tags unitaires sur les arrêts */
-
 node[highway=bus_stop][!name]
 {
 	throwWarning: "Jungle : L'arrêt n'a pas de nom";
-
 }
 
 node[highway=bus_stop][amenity=bus_station]
 {
 	throwError: "Jungle : Est-ce un arrêt de bus ou une gare routière ?";
-    fixRemove: "amenity";
+	fixRemove: "amenity";
 }
 
 node[highway=bus_stop][!public_transport]
 {
 	throwError: "Jungle : Préciser s'il s'agit d'un arrêt (platform) ou d'un emplacement sur la route (stop_position)";
 	fixAdd: "public_transport=platform";
-
 }
 
 node["public_transport"="platform"][!highway][!railway]
@@ -125,31 +108,25 @@ node["public_transport"="platform"][bus=yes][!highway]
 	fixAdd: "highway=bus_stop";
 }
 
-
 /* Le tag note est souvent utilisé pour marquer les lignes qui passent à l'arrêt,
 ou ajouter des infos qui pourraient être portées par un autre tag*/
 node[highway=bus_stop][note],
 node[highway=bus_stop][note:fr][inside("FR")]
 {
 	throwWarning: "Jungle : Vérifier si la note peut être supprimée";
-
 }
 
 node[highway=bus_stop][network][inside("FR")]
 {
 	throwWarning: "Jungle : Le réseau devrait être porté par les lignes de transport et non par les arrêts";
 	fixRemove: "network";
-
 }
 
 node[highway=bus_stop][operator][inside("FR")]
 {
 	throwWarning: "Jungle : L'opérateur devrait être porté par les lignes de transport et non par les arrêts";
 	fixRemove: "operator";
-
 }
-
-
 
 /* Toutes les variantes de lignes (relations route) devraient être dans une ligne (relation route_master) */
 relation[type=route_master] > relation[type=route]
@@ -165,10 +142,10 @@ relation.pt_route!.route_ok
 /* Tous les arrêts devraient être dans au moins une variante de lignes */
 relation[type=route] > node[public_transport=platform]
 {
-    set platform_ok
+	set platform_ok
 }
 
 node[public_transport=platform]!.platform_ok
 {
-    throwError: "Jungle : L'arrêt n'est desservi par aucune ligne (l'ajouter à la relation route)";
+	throwError: "Jungle : L'arrêt n'est desservi par aucune ligne (l'ajouter à la relation route)";
 }
