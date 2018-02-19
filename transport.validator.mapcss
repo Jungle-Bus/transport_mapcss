@@ -1,17 +1,18 @@
 meta
 {
 	title: "Jungle Bus – validation ruleset";
-	version: "0.4";
+	version: "0.4-test";
 	description: "Une validation intransigeante des données de transport en commun";
 	author: "nlehuby";
 	link: "http://junglebus.io/";
+    baselanguage: "fr";
 	watch-modified: true;
 }
 
 /* Tags unitaires sur les relations */
 relation[type=route][!route]
 {
-	throwError: "Jungle : Le mode est manquant (ajouter un tag route = bus/coach/tram/etc)";
+	throwError: tr("Jungle : Le mode est manquant (ajouter un tag route = bus/coach/tram/etc)");
 }
 
 relation[type=route_master][!route_master][!route]
