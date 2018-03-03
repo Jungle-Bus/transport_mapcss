@@ -63,7 +63,7 @@ relation.pt_route_master[!operator]
 relation.pt_route[!ref],
 relation.pt_route_master[!ref]
 {
-	throwError: tr("Missing ref tag on a public_transport relation");
+	throwError: tr("Missing ref tag for line number on a public_transport relation");
 	assertNoMatch: "relation type=route route=bus ref=3";
 	assertMatch: "relation type=route route=bus";
 }

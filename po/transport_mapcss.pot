@@ -24,7 +24,7 @@ msgid "Missing operator tag on a public_transport relation"
 msgstr ""
 
 #: ../transport.validator.mapcss:66
-msgid "Missing ref tag on a public_transport relation"
+msgid "Missing ref tag for line number on a public_transport relation"
 msgstr ""
 
 #: ../transport.validator.mapcss:74
