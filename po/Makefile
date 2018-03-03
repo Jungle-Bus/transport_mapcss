@@ -1,6 +1,6 @@
 PO:=$(wildcard *.po)
 
-all: fr.lang
+all: transport.validator.zip
 
 transport_mapcss.pot: ../transport.validator.mapcss
 	sed -i "s/^#: .*//" $@
@@ -17,3 +17,7 @@ i18n.pl:
 
 fr.lang: i18n.pl fr.po
 	perl i18n.pl --potfile=transport_mapcss.pot ./fr.po
+
+transport.validator.zip: ../transport.validator.mapcss fr.lang
+	rm -f transport.validator.zip
+	zip -j transport.validator.zip ../transport.validator.mapcss *.lang
