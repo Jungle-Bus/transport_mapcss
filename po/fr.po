@@ -26,7 +26,7 @@ msgstr "Le réseau est manquant, ajouter un tag network"
 
 #: ../transport.validator.mapcss:58
 msgid "Missing operator tag on a public_transport relation"
-msgstr "L'opérateur est manquant, ajouter un tag operator"
+msgstr "L''opérateur est manquant, ajouter un tag operator"
 
 #: ../transport.validator.mapcss:66
 msgid "Missing ref tag for line number on a public_transport relation"
@@ -34,7 +34,7 @@ msgstr "Le numéro de ligne est manquant, ajouter un tag ref"
 
 #: ../transport.validator.mapcss:74
 msgid "Missing from/to tag on a public_transport route relation"
-msgstr "L'origine/destination est manquante, ajouter les tags from/to"
+msgstr "L''origine/destination est manquante, ajouter les tags from/to"
 
 #: ../transport.validator.mapcss:83
 msgid "The stops may not be in the right order"
@@ -42,7 +42,7 @@ msgstr "Les arrêts ne sont peut-être pas dans le bon ordre"
 
 #: ../transport.validator.mapcss:90
 msgid "Check the operator tag"
-msgstr "Vérifier l'opérateur sur le tag operator"
+msgstr "Vérifier l''opérateur sur le tag operator"
 
 #: ../transport.validator.mapcss:97
 msgid "Check the network tag"
@@ -50,7 +50,7 @@ msgstr "Vérifier le réseau sur tag network"
 
 #: ../transport.validator.mapcss:103
 msgid "Stop without name"
-msgstr "L'arrêt n'a pas de nom"
+msgstr "L''arrêt n''a pas de nom"
 
 #: ../transport.validator.mapcss:108
 msgid "Is it a bus stop or a bus station?"
@@ -60,7 +60,7 @@ msgstr "Est-ce un arrêt de bus ou une gare routière ?"
 msgid ""
 "Specify if it is a stop (platform) or a location on the road (stop_position)"
 msgstr ""
-"Préciser s'il s'agit d'un arrêt (platform) ou d'un emplacement sur la route "
+"Préciser s''il s'agit d'un arrêt (platform) ou d'un emplacement sur la route "
 "(stop_position)"
 
 #: ../transport.validator.mapcss:134
@@ -87,7 +87,7 @@ msgstr ""
 #: ../transport.validator.mapcss:163
 msgid "The operator should be on the transport lines and not on the stops"
 msgstr ""
-"L'opérateur devrait être porté par les lignes de transport et non par les "
+"L''opérateur devrait être porté par les lignes de transport et non par les "
 "arrêts"
 
 #: ../transport.validator.mapcss:175
@@ -95,13 +95,13 @@ msgid ""
 "The line variant does not belong to any line, add it to the route_master "
 "relation"
 msgstr ""
-"La variante de ligne n'appartient à aucune ligne (l'ajouter à la relation "
+"La variante de ligne n''appartient à aucune ligne (l''ajouter à la relation "
 "route_master)"
 
 #: ../transport.validator.mapcss:186
 msgid "The stop is not served by any line, add it to a route relation"
 msgstr ""
-"L'arrêt n'est desservi par aucune ligne (l'ajouter à une relation route)"
+"L''arrêt n'est desservi par aucune ligne (l''ajouter à une relation route)"
 
 #: ../transport.validator.mapcss:115 ../transport.validator.mapcss:125
 msgid "Missing public_transport tag on a public transport stop"
@@ -111,7 +111,7 @@ msgstr "Il manque le tag public_transport sur un arrêt"
 msgid ""
 "Specify if it is a stop (platform) or a location on the rails (stop_position)"
 msgstr ""
-"Préciser s'il s'agit d'un arrêt (platform) ou d'un emplacement sur les rails "
+"Préciser s''il s'agit d''un arrêt (platform) ou d''un emplacement sur les rails "
 "(stop_position)"
 
 #: ../transport.validator.mapcss:135 ../transport.validator.mapcss:142
