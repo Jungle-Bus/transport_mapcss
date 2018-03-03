@@ -49,24 +49,34 @@ relation.pt_route[!network],
 relation.pt_route_master[!network]
 {
 	throwError: "Jungle : Le réseau est manquant (ajouter un tag network)";
+	assertNoMatch: "relation type=route network=BiBiBus";
+	assertMatch: "relation type=route";
 }
 
 relation.pt_route[!operator],
 relation.pt_route_master[!operator]
 {
 	throwError: "Jungle : L'opérateur est manquant (ajouter un tag operator)";
+	assertNoMatch: "relation type=route operator=BiBiBus";
+	assertMatch: "relation type=route";
 }
 
 relation.pt_route[!ref],
 relation.pt_route_master[!ref]
 {
 	throwError: "Jungle : Le numéro de ligne est manquant (ajouter un tag ref)";
+	assertNoMatch: "relation type=route ref=3";
+	assertMatch: "relation type=route";
 }
 
 relation.pt_route[!from],
 relation.pt_route[!to]
 {
 	throwError: "Jungle : L'origine/destination est manquante (ajouter les tags from/to)";
+	assertNoMatch: "relation type=route from=A to=B";
+	assertMatch: "relation type=route from=A";
+	assertMatch: "relation type=route to=B";
+	assertMatch: "relation type=route";
 }
 
 relation.pt_route["fixme:relation"="order members"]
