@@ -37,6 +37,14 @@ relation[type=route_master][route_master=~/^(bus|coach|train|subway|monorail|tro
 	set pt_route_master;
 }
 
+relation.pt_route[!public_transport:version],
+relation.pt_route_master[!public_transport:version]
+{
+	throwError: "Jungle : La version est manquante (ajouter un tag public_transport:version)";
+	assertNoMatch: "relation type=route public_transport:version=1";
+	assertMatch: "relation type=route";
+}
+
 relation.pt_route[!network],
 relation.pt_route_master[!network]
 {
