@@ -41,42 +41,42 @@ relation.pt_route[!public_transport:version],
 relation.pt_route_master[!public_transport:version]
 {
 	throwError: "Jungle : La version est manquante (ajouter un tag public_transport:version)";
-	assertNoMatch: "relation type=route public_transport:version=1";
-	assertMatch: "relation type=route";
+	assertNoMatch: "relation type=route route=bus public_transport:version=1";
+	assertMatch: "relation type=route route=bus";
 }
 
 relation.pt_route[!network],
 relation.pt_route_master[!network]
 {
 	throwError: "Jungle : Le réseau est manquant (ajouter un tag network)";
-	assertNoMatch: "relation type=route network=BiBiBus";
-	assertMatch: "relation type=route";
+	assertNoMatch: "relation type=route route=bus network=BiBiBus";
+	assertMatch: "relation type=route route=bus";
 }
 
 relation.pt_route[!operator],
 relation.pt_route_master[!operator]
 {
 	throwError: "Jungle : L'opérateur est manquant (ajouter un tag operator)";
-	assertNoMatch: "relation type=route operator=BiBiBus";
-	assertMatch: "relation type=route";
+	assertNoMatch: "relation type=route route=bus operator=BiBiBus";
+	assertMatch: "relation type=route route=bus";
 }
 
 relation.pt_route[!ref],
 relation.pt_route_master[!ref]
 {
 	throwError: "Jungle : Le numéro de ligne est manquant (ajouter un tag ref)";
-	assertNoMatch: "relation type=route ref=3";
-	assertMatch: "relation type=route";
+	assertNoMatch: "relation type=route route=bus ref=3";
+	assertMatch: "relation type=route route=bus";
 }
 
 relation.pt_route[!from],
 relation.pt_route[!to]
 {
 	throwError: "Jungle : L'origine/destination est manquante (ajouter les tags from/to)";
-	assertNoMatch: "relation type=route from=A to=B";
-	assertMatch: "relation type=route from=A";
-	assertMatch: "relation type=route to=B";
-	assertMatch: "relation type=route";
+	assertNoMatch: "relation type=route route=bus from=A to=B";
+	assertMatch: "relation type=route route=bus from=A";
+	assertMatch: "relation type=route route=bus to=B";
+	assertMatch: "relation type=route route=bus";
 }
 
 relation.pt_route["fixme:relation"="order members"]
