@@ -129,15 +129,19 @@ node[railway=tram_stop][!public_transport]
 	assertMatch: "node railway=tram_stop";
 }
 
-node["public_transport"="platform"][!highway][!railway]
+node[public_transport=platform][!highway][!railway][!bus][!shelter]
 {
 	throwError: "Jungle : Le tag historique est manquant (ajouter le tag highway=bus_stop/railway=tram_stop)";
+	group: "Jungle : Le tag historique est manquant";
 }
 
-node["public_transport"="platform"][bus=yes][!highway]
+node[public_transport=platform][!highway][!railway][bus=yes],
+node[public_transport=platform][!highway][!railway][shelter]
 {
 	throwError: "Jungle : Est-ce un arrêt de bus ? (ajouter le tag highway=bus_stop)";
+	group: "Jungle : Le tag historique est manquant";
 	fixAdd: "highway=bus_stop";
+	assertMatch: "node public_transport=platform shelter=yes"
 }
 
 /* Le tag note est souvent utilisé pour marquer les lignes qui passent à l'arrêt,
