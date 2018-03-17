@@ -112,7 +112,21 @@ node[highway=bus_stop][amenity=bus_station]
 node[highway=bus_stop][!public_transport]
 {
 	throwError: "Jungle : Préciser s'il s'agit d'un arrêt (platform) ou d'un emplacement sur la route (stop_position)";
+	group: "Jungle : Il manque le tag public_transport sur un arrêt";
 	fixAdd: "public_transport=platform";
+	assertNoMatch: "node highway=bus_stop public_transport=platform";
+	assertNoMatch: "node highway=bus_stop public_transport=stop_position";
+	assertMatch: "node highway=bus_stop";
+}
+
+node[railway=tram_stop][!public_transport]
+{
+	throwError: "Jungle : Préciser s'il s'agit d'un arrêt (platform) ou d'un emplacement sur les rails (stop_position)";
+	group: "Jungle : Il manque le tag public_transport sur un arrêt";
+	fixAdd: "public_transport=stop_position";
+	assertNoMatch: "node railway=tram_stop public_transport=platform";
+	assertNoMatch: "node railway=tram_stop public_transport=stop_position";
+	assertMatch: "node railway=tram_stop";
 }
 
 node["public_transport"="platform"][!highway][!railway]
