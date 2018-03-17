@@ -7,6 +7,8 @@ meta
 	link: "https://junglebus.io/";
 	baselanguage: "en";
 	watch-modified: true;
+	min-josm-version: 14481;
+	-osmoseTags: list("tag", "public_transport");
 }
 meta[lang=en] /* lang=en, unused, only to use tr() to catch string for translation */
 {
@@ -79,6 +81,7 @@ relation[type=route_master][route_master=~/^(bus|coach|train|subway|monorail|tro
 relation.pt_route[!public_transport:version]
 {
 	throwError: tr("Missing public_transport:version tag on a public_transport route relation");
+	-osmoseItemClassLevel: "2140/21401/3";
 	assertNoMatch: "relation type=route route=bus public_transport:version=1";
 	assertMatch: "relation type=route route=bus";
 }
@@ -87,6 +90,7 @@ relation.pt_route[!network],
 relation.pt_route_master[!network]
 {
 	throwError: tr("Missing network tag on a public_transport relation");
+	-osmoseItemClassLevel: "2140/21402/3";
 	assertNoMatch: "relation type=route route=bus network=BiBiBus";
 	assertMatch: "relation type=route route=bus";
 }
@@ -95,6 +99,7 @@ relation.pt_route[!operator],
 relation.pt_route_master[!operator]
 {
 	throwError: tr("Missing operator tag on a public_transport relation");
+	-osmoseItemClassLevel: "2140/21403/3";
 	assertNoMatch: "relation type=route route=bus operator=BiBiBus";
 	assertMatch: "relation type=route route=bus";
 }
@@ -103,6 +108,7 @@ relation.pt_route[!ref],
 relation.pt_route_master[!ref]
 {
 	throwError: tr("Missing ref tag for line number on a public_transport relation");
+	-osmoseItemClassLevel: "2140/21404/3";
 	assertNoMatch: "relation type=route route=bus ref=3";
 	assertMatch: "relation type=route route=bus";
 }
@@ -111,6 +117,7 @@ relation.pt_route[!from],
 relation.pt_route[!to]
 {
 	throwError: tr("Missing from/to tag on a public_transport route relation");
+	-osmoseItemClassLevel: "2140/21405/3";
 	assertNoMatch: "relation type=route route=bus from=A to=B";
 	assertMatch: "relation type=route route=bus from=A";
 	assertMatch: "relation type=route route=bus to=B";
@@ -120,6 +127,7 @@ relation.pt_route[!to]
 relation.pt_route["fixme:relation"="order members"]
 {
 	throwWarning: tr("The stops may not be in the right order");
+	-osmoseItemClassLevel: none;
 }
 
 /* These values are not valid operator or network */
@@ -138,6 +146,7 @@ relation.pt_route_master["network"=~/STIF|Kéolis|Véolia/][inside("FR")]
 node[highway=bus_stop][!name]
 {
 	throwWarning: tr("Stop without name");
+	-osmoseItemClassLevel: none;
 }
 
 node[highway=bus_stop][amenity=bus_station]
@@ -150,6 +159,7 @@ node[highway=bus_stop][!public_transport]
 {
 	throwError: tr("Specify if it is a stop (platform) or a location on the road (stop_position)");
 	group: tr("Missing public_transport tag on a public transport stop");
+	-osmoseItemClassLevel: "2140/21411:0/3";
 	fixAdd: "public_transport=platform";
 	assertNoMatch: "node highway=bus_stop public_transport=platform";
 	assertNoMatch: "node highway=bus_stop public_transport=stop_position";
@@ -160,6 +170,7 @@ node[railway=tram_stop][!public_transport]
 {
 	throwError: tr("Specify if it is a stop (platform) or a location on the rails (stop_position)");
 	group: tr("Missing public_transport tag on a public transport stop");
+	-osmoseItemClassLevel: "2140/21411:1/3";
 	fixAdd: "public_transport=stop_position";
 	assertNoMatch: "node railway=tram_stop public_transport=platform";
 	assertNoMatch: "node railway=tram_stop public_transport=stop_position";
@@ -170,6 +181,7 @@ node[public_transport=platform][!highway][!railway][!bus][!shelter]
 {
 	throwError: tr("The legacy tag is missing, add the tag highway=bus_stop / railway=tram_stop");
 	group: tr("Missing legacy tag on a public transport stop");
+	-osmoseItemClassLevel: "2140/21412:1/3";
 }
 
 node[public_transport=platform][!highway][!railway][bus=yes],
@@ -177,6 +189,7 @@ node[public_transport=platform][!highway][!railway][shelter]
 {
 	throwError: tr("Is this a bus stop? add the tag highway=bus_stop");
 	group: tr("Missing legacy tag on a public transport stop");
+	-osmoseItemClassLevel: "2140/21412:0/3";
 	fixAdd: "highway=bus_stop";
 	assertMatch: "node public_transport=platform shelter=yes"
 }
@@ -218,4 +231,5 @@ relation[type=route] > node[public_transport=platform]
 node[public_transport=platform]!.platform_ok
 {
 	throwError: tr("The stop is not served by any line, add it to a route relation");
+	-osmoseItemClassLevel: none;
 }
