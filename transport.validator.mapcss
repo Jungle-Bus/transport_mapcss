@@ -1,7 +1,7 @@
 meta
 {
 	title: "Jungle Bus – validation ruleset";
-	version: "0.4-test";
+	version: "0.5";
 	description: "Une validation intransigeante des données de transport en commun";
 	author: "nlehuby";
 	link: "http://junglebus.io/";
@@ -37,8 +37,7 @@ relation[type=route_master][route_master=~/^(bus|coach|train|subway|monorail|tro
 	set pt_route_master;
 }
 
-relation.pt_route[!public_transport:version],
-relation.pt_route_master[!public_transport:version]
+relation.pt_route[!public_transport:version]
 {
 	throwError: "Jungle : La version est manquante (ajouter un tag public_transport:version)";
 	assertNoMatch: "relation type=route route=bus public_transport:version=1";
@@ -113,18 +112,36 @@ node[highway=bus_stop][amenity=bus_station]
 node[highway=bus_stop][!public_transport]
 {
 	throwError: "Jungle : Préciser s'il s'agit d'un arrêt (platform) ou d'un emplacement sur la route (stop_position)";
+	group: "Jungle : Il manque le tag public_transport sur un arrêt";
 	fixAdd: "public_transport=platform";
+	assertNoMatch: "node highway=bus_stop public_transport=platform";
+	assertNoMatch: "node highway=bus_stop public_transport=stop_position";
+	assertMatch: "node highway=bus_stop";
 }
 
-node["public_transport"="platform"][!highway][!railway]
+node[railway=tram_stop][!public_transport]
+{
+	throwError: "Jungle : Préciser s'il s'agit d'un arrêt (platform) ou d'un emplacement sur les rails (stop_position)";
+	group: "Jungle : Il manque le tag public_transport sur un arrêt";
+	fixAdd: "public_transport=stop_position";
+	assertNoMatch: "node railway=tram_stop public_transport=platform";
+	assertNoMatch: "node railway=tram_stop public_transport=stop_position";
+	assertMatch: "node railway=tram_stop";
+}
+
+node[public_transport=platform][!highway][!railway][!bus][!shelter]
 {
 	throwError: "Jungle : Le tag historique est manquant (ajouter le tag highway=bus_stop/railway=tram_stop)";
+	group: "Jungle : Le tag historique est manquant";
 }
 
-node["public_transport"="platform"][bus=yes][!highway]
+node[public_transport=platform][!highway][!railway][bus=yes],
+node[public_transport=platform][!highway][!railway][shelter]
 {
 	throwError: "Jungle : Est-ce un arrêt de bus ? (ajouter le tag highway=bus_stop)";
+	group: "Jungle : Le tag historique est manquant";
 	fixAdd: "highway=bus_stop";
+	assertMatch: "node public_transport=platform shelter=yes"
 }
 
 /* Le tag note est souvent utilisé pour marquer les lignes qui passent à l'arrêt,
