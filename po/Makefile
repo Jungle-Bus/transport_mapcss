@@ -1,4 +1,5 @@
 PO:=$(wildcard *.po)
+LANG_=$(PO:.po=.lang)
 
 all: ../transport.validator.zip
 
@@ -9,15 +10,15 @@ transport_mapcss.pot: ../transport.validator.mapcss
 	  --force-po --omit-header \
 	  --output=$@ $<
 
-fr.po: transport_mapcss.pot
+%.po: transport_mapcss.pot
 	msgmerge --update $@ $<
 
 i18n.pl:
 	wget https://svn.openstreetmap.org/applications/editors/josm/i18n/i18n.pl
 
-fr.lang: i18n.pl fr.po
-	perl i18n.pl --potfile=transport_mapcss.pot ./fr.po
+%.lang: %.po i18n.pl
+	perl i18n.pl --potfile=transport_mapcss.pot ./$<
 
-../transport.validator.zip: ../transport.validator.mapcss fr.lang
+../transport.validator.zip: ../transport.validator.mapcss $(LANG_)
 	rm -f $@
-	zip -j $@ ../transport.validator.mapcss *.lang
+	zip -j $@ ../transport.validator.mapcss $(LANG_)

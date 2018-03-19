@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[osmose.transport_mapcss]
+file_filter = po/<lang>.po
+source_file = po/transport_mapcss.pot
+source_lang = en
+type = PO
