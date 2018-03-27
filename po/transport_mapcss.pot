@@ -1,0 +1,113 @@
+# 
+msgid ""
+msgstr ""
+
+#: ../transport.validator.mapcss:5
+msgid "Uncompromising validation of transit data"
+msgstr "Uncompromising validation of transit data"
+
+#: ../transport.validator.mapcss:15 ../transport.validator.mapcss:20
+msgid "Missing transportation mode, add a tag route = bus/coach/tram/etc"
+msgstr "Missing transportation mode, add a tag route = bus/coach/tram/etc"
+
+#: ../transport.validator.mapcss:26
+msgid "Missing transportation mode, change tag route to route_master"
+msgstr "Missing transportation mode, change tag route to route_master"
+
+#: ../transport.validator.mapcss:42
+msgid ""
+"Missing public_transport:version tag on a public_transport route relation"
+msgstr ""
+"Missing public_transport:version tag on a public_transport route relation"
+
+#: ../transport.validator.mapcss:50
+msgid "Missing network tag on a public_transport relation"
+msgstr "Missing network tag on a public_transport relation"
+
+#: ../transport.validator.mapcss:58
+msgid "Missing operator tag on a public_transport relation"
+msgstr "Missing operator tag on a public_transport relation"
+
+#: ../transport.validator.mapcss:66
+msgid "Missing ref tag for line number on a public_transport relation"
+msgstr "Missing ref tag for line number on a public_transport relation"
+
+#: ../transport.validator.mapcss:74
+msgid "Missing from/to tag on a public_transport route relation"
+msgstr "Missing from/to tag on a public_transport route relation"
+
+#: ../transport.validator.mapcss:83
+msgid "The stops may not be in the right order"
+msgstr "The stops may not be in the right order"
+
+#: ../transport.validator.mapcss:90
+msgid "Check the operator tag"
+msgstr "Check the operator tag"
+
+#: ../transport.validator.mapcss:97
+msgid "Check the network tag"
+msgstr "Check the network tag"
+
+#: ../transport.validator.mapcss:103
+msgid "Stop without name"
+msgstr "Stop without name"
+
+#: ../transport.validator.mapcss:108
+msgid "Is it a bus stop or a bus station?"
+msgstr "Is it a bus stop or a bus station?"
+
+#: ../transport.validator.mapcss:114
+msgid ""
+"Specify if it is a stop (platform) or a location on the road (stop_position)"
+msgstr ""
+"Specify if it is a stop (platform) or a location on the road (stop_position)"
+
+#: ../transport.validator.mapcss:134
+msgid ""
+"The legacy tag is missing, add the tag highway=bus_stop / railway=tram_stop"
+msgstr ""
+"The legacy tag is missing, add the tag highway=bus_stop / railway=tram_stop"
+
+#: ../transport.validator.mapcss:141
+msgid "Is this a bus stop? add the tag highway=bus_stop"
+msgstr "Is this a bus stop? add the tag highway=bus_stop"
+
+#: ../transport.validator.mapcss:152
+msgid "Check if the note can be deleted"
+msgstr "Check if the note can be deleted"
+
+#: ../transport.validator.mapcss:157
+msgid "The network should be on the transport lines and not on the stops"
+msgstr "The network should be on the transport lines and not on the stops"
+
+#: ../transport.validator.mapcss:163
+msgid "The operator should be on the transport lines and not on the stops"
+msgstr "The operator should be on the transport lines and not on the stops"
+
+#: ../transport.validator.mapcss:175
+msgid ""
+"The line variant does not belong to any line, add it to the route_master "
+"relation"
+msgstr ""
+"The line variant does not belong to any line, add it to the route_master "
+"relation"
+
+#: ../transport.validator.mapcss:186
+msgid "The stop is not served by any line, add it to a route relation"
+msgstr "The stop is not served by any line, add it to a route relation"
+
+#: ../transport.validator.mapcss:115 ../transport.validator.mapcss:125
+msgid "Missing public_transport tag on a public transport stop"
+msgstr "Missing public_transport tag on a public transport stop"
+
+#: ../transport.validator.mapcss:124
+msgid ""
+"Specify if it is a stop (platform) or a location on the rails "
+"(stop_position)"
+msgstr ""
+"Specify if it is a stop (platform) or a location on the rails "
+"(stop_position)"
+
+#: ../transport.validator.mapcss:135 ../transport.validator.mapcss:142
+msgid "Missing legacy tag on a public transport stop"
+msgstr "Missing legacy tag on a public transport stop"
