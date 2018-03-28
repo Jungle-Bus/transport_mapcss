@@ -4,7 +4,7 @@ meta
 	version: "0.6";
 	description: tr("Uncompromising validation of transit data");
 	author: "nlehuby";
-	link: "http://junglebus.io/";
+	link: "https://junglebus.io/";
 	baselanguage: "en";
 	watch-modified: true;
 }
