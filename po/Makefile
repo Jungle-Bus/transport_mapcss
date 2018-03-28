@@ -21,4 +21,8 @@ i18n.pl:
 
 ../transport.validator.zip: ../transport.validator.mapcss $(LANG_)
 	rm -f $@
-	zip -j $@ ../transport.validator.mapcss $(LANG_)
+	mkdir -p data
+	cp ../transport.validator.mapcss data
+	cp $(LANG_) data
+	zip $@ data/*
+	rm -fr data
