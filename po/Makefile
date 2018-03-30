@@ -23,9 +23,9 @@ en.lang: $(PO) i18n.pl
 	rm -f $@
 	mkdir -p data
 	perl i18n.pl --potfile=transport_mapcss.pot ./fr.po
-	cp ../transport.validator.mapcss data
 	mv $(LANG_) data
 	zip $@ data/*
+	zip -j $@ ../transport.validator.mapcss
 	rm -fr data
 
 clean:
