@@ -1,4 +1,4 @@
-PO:=en.po $(wildcard *.po)
+PO:=$(wildcard *.po)
 LANG_=$(PO:.po=.lang)
 
 all: ../transport.validator.zip
@@ -10,8 +10,7 @@ transport_mapcss.pot: ../transport.validator.mapcss
 	  --force-po --omit-header \
 	  --output=$@ $<
 
-en.po: transport_mapcss.pot
-	cp $< $@
+
 
 %.po: transport_mapcss.pot
 	msgmerge --update $@ $<
@@ -25,13 +24,13 @@ i18n.pl:
 ../transport.validator.zip: ../transport.validator.mapcss $(LANG_)
 	rm -f $@
 	mkdir -p data
+	perl i18n.pl --potfile=transport_mapcss.pot ./fr.po
 	cp ../transport.validator.mapcss data
-	cp $(LANG_) data
+	mv $(LANG_) data
 	zip $@ data/*
 	rm -fr data
 
 clean:
-	rm -f en.po
 	rm -f $(LANG_)
 	rm -fr data
 	rm -f i18n.pl
