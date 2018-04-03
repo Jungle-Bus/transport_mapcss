@@ -1,29 +1,29 @@
 meta
 {
 	title: "Jungle Bus – validation ruleset";
-	version: "0.5";
-	description: "Une validation intransigeante des données de transport en commun";
+	version: "0.7";
+	description: tr("Uncompromising validation of transit data");
 	author: "nlehuby";
-	link: "http://junglebus.io/";
-	baselanguage: "fr";
+	link: "https://junglebus.io/";
+	baselanguage: "en";
 	watch-modified: true;
 }
 
 /* Tags unitaires sur les relations */
 relation[type=route][!route]
 {
-	throwError: tr("Jungle : Le mode est manquant (ajouter un tag route = bus/coach/tram/etc)");
+	throwError: tr("Missing transportation mode, add a tag route = bus/coach/tram/etc");
 }
 
 relation[type=route_master][!route_master][!route]
 {
-	throwError: "Jungle : Le mode est manquant (ajouter un tag route_master = bus/coach/tram/etc)";
+	throwError: tr("Missing transportation mode, add a tag route = bus/coach/tram/etc");
 }
 
 /* mode dans le mauvais tag */
 relation[type=route_master][!route_master][route]
 {
-	throwError: "Jungle : Le mode est manquant (transformer le tag route en route_master)";
+	throwError: tr("Missing transportation mode, change tag route to route_master");
 	fixChangeKey: "route=>route_master";
 }
 
@@ -39,7 +39,7 @@ relation[type=route_master][route_master=~/^(bus|coach|train|subway|monorail|tro
 
 relation.pt_route[!public_transport:version]
 {
-	throwError: "Jungle : La version est manquante (ajouter un tag public_transport:version)";
+	throwError: tr("Missing public_transport:version tag on a public_transport route relation");
 	assertNoMatch: "relation type=route route=bus public_transport:version=1";
 	assertMatch: "relation type=route route=bus";
 }
@@ -47,7 +47,7 @@ relation.pt_route[!public_transport:version]
 relation.pt_route[!network],
 relation.pt_route_master[!network]
 {
-	throwError: "Jungle : Le réseau est manquant (ajouter un tag network)";
+	throwError: tr("Missing network tag on a public_transport relation");
 	assertNoMatch: "relation type=route route=bus network=BiBiBus";
 	assertMatch: "relation type=route route=bus";
 }
@@ -55,7 +55,7 @@ relation.pt_route_master[!network]
 relation.pt_route[!operator],
 relation.pt_route_master[!operator]
 {
-	throwError: "Jungle : L'opérateur est manquant (ajouter un tag operator)";
+	throwError: tr("Missing operator tag on a public_transport relation");
 	assertNoMatch: "relation type=route route=bus operator=BiBiBus";
 	assertMatch: "relation type=route route=bus";
 }
@@ -63,7 +63,7 @@ relation.pt_route_master[!operator]
 relation.pt_route[!ref],
 relation.pt_route_master[!ref]
 {
-	throwError: "Jungle : Le numéro de ligne est manquant (ajouter un tag ref)";
+	throwError: tr("Missing ref tag for line number on a public_transport relation");
 	assertNoMatch: "relation type=route route=bus ref=3";
 	assertMatch: "relation type=route route=bus";
 }
@@ -71,7 +71,7 @@ relation.pt_route_master[!ref]
 relation.pt_route[!from],
 relation.pt_route[!to]
 {
-	throwError: "Jungle : L'origine/destination est manquante (ajouter les tags from/to)";
+	throwError: tr("Missing from/to tag on a public_transport route relation");
 	assertNoMatch: "relation type=route route=bus from=A to=B";
 	assertMatch: "relation type=route route=bus from=A";
 	assertMatch: "relation type=route route=bus to=B";
@@ -80,39 +80,39 @@ relation.pt_route[!to]
 
 relation.pt_route["fixme:relation"="order members"]
 {
-	throwWarning: "Jungle : Les arrêts ne sont peut-être pas dans le bon ordre";
+	throwWarning: tr("The stops may not be in the right order");
 }
 
 /* valeurs d'opérateur interdites */
 relation.pt_route["operator"=~/STIF|Kéolis|Véolia/][inside("FR")],
 relation.pt_route_master["operator"=~/STIF|Kéolis|Véolia/][inside("FR")]
 {
-	throwError: "Jungle : Vérifier l'opérateur";
+	throwError: tr("Check the operator tag");
 }
 
 /* valeurs de réseau interdites */
 relation.pt_route["network"=~/STIF|Kéolis|Véolia/][inside("FR")],
 relation.pt_route_master["network"=~/STIF|Kéolis|Véolia/][inside("FR")]
 {
-	throwError: "Jungle : Vérifier le réseau";
+	throwError: tr("Check the network tag");
 }
 
 /* Tags unitaires sur les arrêts */
 node[highway=bus_stop][!name]
 {
-	throwWarning: "Jungle : L'arrêt n'a pas de nom";
+	throwWarning: tr("Stop without name");
 }
 
 node[highway=bus_stop][amenity=bus_station]
 {
-	throwError: "Jungle : Est-ce un arrêt de bus ou une gare routière ?";
+	throwError: tr("Is it a bus stop or a bus station?");
 	fixRemove: "amenity";
 }
 
 node[highway=bus_stop][!public_transport]
 {
-	throwError: "Jungle : Préciser s'il s'agit d'un arrêt (platform) ou d'un emplacement sur la route (stop_position)";
-	group: "Jungle : Il manque le tag public_transport sur un arrêt";
+	throwError: tr("Specify if it is a stop (platform) or a location on the road (stop_position)");
+	group: tr("Missing public_transport tag on a public transport stop");
 	fixAdd: "public_transport=platform";
 	assertNoMatch: "node highway=bus_stop public_transport=platform";
 	assertNoMatch: "node highway=bus_stop public_transport=stop_position";
@@ -121,8 +121,8 @@ node[highway=bus_stop][!public_transport]
 
 node[railway=tram_stop][!public_transport]
 {
-	throwError: "Jungle : Préciser s'il s'agit d'un arrêt (platform) ou d'un emplacement sur les rails (stop_position)";
-	group: "Jungle : Il manque le tag public_transport sur un arrêt";
+	throwError: tr("Specify if it is a stop (platform) or a location on the rails (stop_position)");
+	group: tr("Missing public_transport tag on a public transport stop");
 	fixAdd: "public_transport=stop_position";
 	assertNoMatch: "node railway=tram_stop public_transport=platform";
 	assertNoMatch: "node railway=tram_stop public_transport=stop_position";
@@ -131,15 +131,15 @@ node[railway=tram_stop][!public_transport]
 
 node[public_transport=platform][!highway][!railway][!bus][!shelter]
 {
-	throwError: "Jungle : Le tag historique est manquant (ajouter le tag highway=bus_stop/railway=tram_stop)";
-	group: "Jungle : Le tag historique est manquant";
+	throwError: tr("The legacy tag is missing, add the tag highway=bus_stop / railway=tram_stop");
+	group: tr("Missing legacy tag on a public transport stop");
 }
 
 node[public_transport=platform][!highway][!railway][bus=yes],
 node[public_transport=platform][!highway][!railway][shelter]
 {
-	throwError: "Jungle : Est-ce un arrêt de bus ? (ajouter le tag highway=bus_stop)";
-	group: "Jungle : Le tag historique est manquant";
+	throwError: tr("Is this a bus stop? add the tag highway=bus_stop");
+	group: tr("Missing legacy tag on a public transport stop");
 	fixAdd: "highway=bus_stop";
 	assertMatch: "node public_transport=platform shelter=yes"
 }
@@ -149,18 +149,18 @@ ou ajouter des infos qui pourraient être portées par un autre tag*/
 node[highway=bus_stop][note],
 node[highway=bus_stop][note:fr][inside("FR")]
 {
-	throwWarning: "Jungle : Vérifier si la note peut être supprimée";
+	throwWarning: tr("Check if the note can be deleted");
 }
 
 node[highway=bus_stop][network][inside("FR")]
 {
-	throwWarning: "Jungle : Le réseau devrait être porté par les lignes de transport et non par les arrêts";
+	throwWarning: tr("The network should be on the transport lines and not on the stops");
 	fixRemove: "network";
 }
 
 node[highway=bus_stop][operator][inside("FR")]
 {
-	throwWarning: "Jungle : L'opérateur devrait être porté par les lignes de transport et non par les arrêts";
+	throwWarning: tr("The operator should be on the transport lines and not on the stops");
 	fixRemove: "operator";
 }
 
@@ -172,7 +172,7 @@ relation[type=route_master] > relation[type=route]
 
 relation.pt_route!.route_ok
 {
-	throwError: "Jungle : La variante de ligne n'appartient à aucune ligne (l'ajouter à la relation route_master)";
+	throwError: tr("The line variant does not belong to any line, add it to the route_master relation");
 }
 
 /* Tous les arrêts devraient être dans au moins une variante de lignes */
@@ -183,5 +183,5 @@ relation[type=route] > node[public_transport=platform]
 
 node[public_transport=platform]!.platform_ok
 {
-	throwError: "Jungle : L'arrêt n'est desservi par aucune ligne (l'ajouter à la relation route)";
+	throwError: tr("The stop is not served by any line, add it to a route relation");
 }
