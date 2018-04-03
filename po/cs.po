@@ -1,8 +1,9 @@
 # Translators:
 # frodrigo <fred.rodrigo@gmail.com>, 2018
+# Petr Schönmann <pschonmann@gmail.com>, 2018
 msgid ""
 msgstr ""
-"Last-Translator: frodrigo <fred.rodrigo@gmail.com>, 2018\n"
+"Last-Translator: Petr Schönmann <pschonmann@gmail.com>, 2018\n"
 "Language-Team: Czech (https://www.transifex.com/openstreetmap-france/teams/17462/cs/)\n"
 "Language: cs\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
@@ -42,23 +43,23 @@ msgstr "Chybějící tag from/to na relaci trasy public_transport"
 
 #: ../transport.validator.mapcss:83
 msgid "The stops may not be in the right order"
-msgstr ""
+msgstr "Zastávky pravděpodobně nejsou ve správném pořadí"
 
 #: ../transport.validator.mapcss:90
 msgid "Check the operator tag"
-msgstr ""
+msgstr "Zkontroluj tag operator"
 
 #: ../transport.validator.mapcss:97
 msgid "Check the network tag"
-msgstr ""
+msgstr "Zkontroluj tag network"
 
 #: ../transport.validator.mapcss:103
 msgid "Stop without name"
-msgstr ""
+msgstr "Zastávka bez jména"
 
 #: ../transport.validator.mapcss:108
 msgid "Is it a bus stop or a bus station?"
-msgstr ""
+msgstr "Je toto autobusová zastávka nebo autobusová stanice ?"
 
 #: ../transport.validator.mapcss:114
 msgid ""
@@ -72,19 +73,21 @@ msgstr ""
 
 #: ../transport.validator.mapcss:141
 msgid "Is this a bus stop? add the tag highway=bus_stop"
-msgstr ""
+msgstr "Je to autobusová zastávka ? Přidej tag highway=bus_stop"
 
 #: ../transport.validator.mapcss:152
 msgid "Check if the note can be deleted"
-msgstr ""
+msgstr "Zkontroluj zda může být poznámka smazána"
 
 #: ../transport.validator.mapcss:157
 msgid "The network should be on the transport lines and not on the stops"
 msgstr ""
+"Značka network by měla být na dopravních linkách, nikoliv na zastávkách"
 
 #: ../transport.validator.mapcss:163
 msgid "The operator should be on the transport lines and not on the stops"
 msgstr ""
+"Značka operator by měla být na dopravních linkách, nikoliv na zastávkách"
 
 #: ../transport.validator.mapcss:175
 msgid ""
@@ -95,6 +98,8 @@ msgstr ""
 #: ../transport.validator.mapcss:186
 msgid "The stop is not served by any line, add it to a route relation"
 msgstr ""
+"Zastávka není obsluhována žádnou linkou, přidejte ji do route relace "
+"příslušné dopravní linky"
 
 #: ../transport.validator.mapcss:115 ../transport.validator.mapcss:125
 msgid "Missing public_transport tag on a public transport stop"

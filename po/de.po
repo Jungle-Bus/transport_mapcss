@@ -1,8 +1,9 @@
 # Translators:
 # frodrigo <fred.rodrigo@gmail.com>, 2018
+# Christian Ostermann, 2018
 msgid ""
 msgstr ""
-"Last-Translator: frodrigo <fred.rodrigo@gmail.com>, 2018\n"
+"Last-Translator: Christian Ostermann, 2018\n"
 "Language-Team: German (https://www.transifex.com/openstreetmap-france/teams/17462/de/)\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -13,7 +14,7 @@ msgstr ""
 
 #: ../transport.validator.mapcss:15 ../transport.validator.mapcss:20
 msgid "Missing transportation mode, add a tag route = bus/coach/tram/etc"
-msgstr ""
+msgstr "Fehlendes Verkehrsmittel, ergänze den Tag route = bus/coach/tram/etc"
 
 #: ../transport.validator.mapcss:26
 msgid "Missing transportation mode, change tag route to route_master"
@@ -35,30 +36,32 @@ msgstr "Fehlender operator Tag bei einer public_transport Relation"
 #: ../transport.validator.mapcss:66
 msgid "Missing ref tag for line number on a public_transport relation"
 msgstr ""
+"Fehlender ref Tag für Liniennummer bei einer public_transport Relation"
 
 #: ../transport.validator.mapcss:74
 msgid "Missing from/to tag on a public_transport route relation"
-msgstr ""
+msgstr "Fehlender from/to Tag bei einer public_transport Routen-Relation"
 
 #: ../transport.validator.mapcss:83
 msgid "The stops may not be in the right order"
 msgstr ""
+"Die Haltestellen sind möglicherweise nicht in der richtigen Reihenfolge"
 
 #: ../transport.validator.mapcss:90
 msgid "Check the operator tag"
-msgstr ""
+msgstr "operator Tag überprüfen"
 
 #: ../transport.validator.mapcss:97
 msgid "Check the network tag"
-msgstr ""
+msgstr "network Tag überprüfen"
 
 #: ../transport.validator.mapcss:103
 msgid "Stop without name"
-msgstr ""
+msgstr "Haltestelle ohne Name"
 
 #: ../transport.validator.mapcss:108
 msgid "Is it a bus stop or a bus station?"
-msgstr ""
+msgstr "Ist das eine Bushaltestelle oder ein Busbahnhof?"
 
 #: ../transport.validator.mapcss:114
 msgid ""
@@ -72,7 +75,7 @@ msgstr ""
 
 #: ../transport.validator.mapcss:141
 msgid "Is this a bus stop? add the tag highway=bus_stop"
-msgstr ""
+msgstr "Ist das eine Bushaltestelle? Wenn ja, Tag highway=bus_stop hinzufügen"
 
 #: ../transport.validator.mapcss:152
 msgid "Check if the note can be deleted"
@@ -91,10 +94,14 @@ msgid ""
 "The line variant does not belong to any line, add it to the route_master "
 "relation"
 msgstr ""
+"Die Linienvariante gehört zu keiner Linie, füge sie zur route_master "
+"Relation hinzu"
 
 #: ../transport.validator.mapcss:186
 msgid "The stop is not served by any line, add it to a route relation"
 msgstr ""
+"Diese Haltestelle wird von keiner Linie bedient, füge sie zu einer Routen-"
+"Relation hinzu"
 
 #: ../transport.validator.mapcss:115 ../transport.validator.mapcss:125
 msgid "Missing public_transport tag on a public transport stop"
