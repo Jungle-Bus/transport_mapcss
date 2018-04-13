@@ -1,23 +1,25 @@
 # Translators:
 # frodrigo <fred.rodrigo@gmail.com>, 2018
+# Ігор Варварчук <varvar1@bigmir.net>, 2018
 msgid ""
 msgstr ""
-"Last-Translator: frodrigo <fred.rodrigo@gmail.com>, 2018\n"
+"Last-Translator: Ігор Варварчук <varvar1@bigmir.net>, 2018\n"
 "Language-Team: Ukrainian (https://www.transifex.com/openstreetmap-france/teams/17462/uk/)\n"
 "Language: uk\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../transport.validator.mapcss:5
 msgid "Uncompromising validation of transit data"
-msgstr ""
+msgstr "Безкомпромісна валідація транзитних даних"
 
 #: ../transport.validator.mapcss:15 ../transport.validator.mapcss:20
 msgid "Missing transportation mode, add a tag route = bus/coach/tram/etc"
 msgstr ""
+"Відсутній режим транспортування, додайте теґ route=bus/coach/tram/тощо"
 
 #: ../transport.validator.mapcss:26
 msgid "Missing transportation mode, change tag route to route_master"
-msgstr ""
+msgstr "Відсутній режим транспортування, змініть теґ route на route_master"
 
 #: ../transport.validator.mapcss:42
 msgid ""
@@ -36,7 +38,7 @@ msgstr "Відсутній теґ operator у зв'язку громадсько
 
 #: ../transport.validator.mapcss:66
 msgid "Missing ref tag for line number on a public_transport relation"
-msgstr ""
+msgstr "Відсутній теґ ref для номеру лінії на зв'язку public_transport"
 
 #: ../transport.validator.mapcss:74
 msgid "Missing from/to tag on a public_transport route relation"
@@ -44,59 +46,62 @@ msgstr "Відсутній теґ from/to у зв'язку маршруту гр
 
 #: ../transport.validator.mapcss:83
 msgid "The stops may not be in the right order"
-msgstr ""
+msgstr "The stops may not be in the right order"
 
 #: ../transport.validator.mapcss:90
 msgid "Check the operator tag"
-msgstr ""
+msgstr "Перевірте теґ operator"
 
 #: ../transport.validator.mapcss:97
 msgid "Check the network tag"
-msgstr ""
+msgstr "Перевірте теґ network"
 
 #: ../transport.validator.mapcss:103
 msgid "Stop without name"
-msgstr ""
+msgstr "Зупинка без name"
 
 #: ../transport.validator.mapcss:108
 msgid "Is it a bus stop or a bus station?"
-msgstr ""
+msgstr "Це автобусна зупинка чи автовокзал?"
 
 #: ../transport.validator.mapcss:114
 msgid ""
 "Specify if it is a stop (platform) or a location on the road (stop_position)"
-msgstr ""
+msgstr "Вкажіть, це зупинка (платформа), чи місце на шляху (stop_position)"
 
 #: ../transport.validator.mapcss:134
 msgid ""
 "The legacy tag is missing, add the tag highway=bus_stop / railway=tram_stop"
 msgstr ""
+"Відсутній спадковий теґ, додайте теґ highway=bus_stop / railway=tram_stop"
 
 #: ../transport.validator.mapcss:141
 msgid "Is this a bus stop? add the tag highway=bus_stop"
-msgstr ""
+msgstr "Це автобусна зупинка? додайте теґ highway=bus_stop"
 
 #: ../transport.validator.mapcss:152
 msgid "Check if the note can be deleted"
-msgstr ""
+msgstr "Перевірте, чи можна видалити нотатку"
 
 #: ../transport.validator.mapcss:157
 msgid "The network should be on the transport lines and not on the stops"
-msgstr ""
+msgstr "Network повинен бути на транспортних лініях, а не на зупинках"
 
 #: ../transport.validator.mapcss:163
 msgid "The operator should be on the transport lines and not on the stops"
-msgstr ""
+msgstr "Operator повинен бути на транспортних лініях, а не на зупинках"
 
 #: ../transport.validator.mapcss:175
 msgid ""
 "The line variant does not belong to any line, add it to the route_master "
 "relation"
 msgstr ""
+"Варіант лінії не належить жодній лінії, додайте його до зв'язку route_master"
 
 #: ../transport.validator.mapcss:186
 msgid "The stop is not served by any line, add it to a route relation"
 msgstr ""
+"Зупинка не обслуговується жодною лінією, додайте її до зв'язку маршруту"
 
 #: ../transport.validator.mapcss:115 ../transport.validator.mapcss:125
 msgid "Missing public_transport tag on a public transport stop"
@@ -107,6 +112,7 @@ msgid ""
 "Specify if it is a stop (platform) or a location on the rails "
 "(stop_position)"
 msgstr ""
+"Вкажіть, чи це зупинка (платформа), чи місце на рейках (stop_position)"
 
 #: ../transport.validator.mapcss:135 ../transport.validator.mapcss:142
 msgid "Missing legacy tag on a public transport stop"

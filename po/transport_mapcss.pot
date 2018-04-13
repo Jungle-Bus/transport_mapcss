@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 
@@ -102,11 +102,9 @@ msgstr "Missing public_transport tag on a public transport stop"
 
 #: ../transport.validator.mapcss:124
 msgid ""
-"Specify if it is a stop (platform) or a location on the rails "
-"(stop_position)"
+"Specify if it is a stop (platform) or a location on the rails (stop_position)"
 msgstr ""
-"Specify if it is a stop (platform) or a location on the rails "
-"(stop_position)"
+"Specify if it is a stop (platform) or a location on the rails (stop_position)"
 
 #: ../transport.validator.mapcss:135 ../transport.validator.mapcss:142
 msgid "Missing legacy tag on a public transport stop"
