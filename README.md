@@ -1,17 +1,30 @@
-# transport_mapcss
-Des règles intransigeantes pour valider les données de transport dans JOSM
+# Jungle Bus – validation ruleset
+A set of uncompromising validation rules about public transport in JOSM.
 
+The `errors` are meant to be easy to fix, whereas the `warnings` may need some local knowledge or more advanced public_transport OSM knowledge.
 
-Pour ajouter ces règles à JOSM :
+Some of these validation rules are also available in [Osmose](http://osmose.openstreetmap.fr/fr/errors/?item=9014)
 
-* Préférences (Éditer > Préférences)
-* Validateur de données
-* Onglet Règles du vérificateur d'attributs)
-* Bouton +
-* Renseigner le chemin du fichier mapcss
+To add the ruleset to JOSM:
 
-## Philosophie
-* DRY : si la règle existe déjà dans JOSM ou dans un plugin (PT Assistant par exemple), on ne l'ajoute pas à nouveau ;)
-* Les erreurs correspondent à des corrections simples à réaliser. Les avertissements correspondent à des modifications qui nécessitent potentiellement une connaissance terrain ou sont plus complexes à corriger.
+* Edit -> Preferences
+* Validator
+* Tag Checker Rules (2nd tab)
+* Select "Jungle Bus – validation ruleset"
+
+You may also want to add the pt_assistant plugin, for even more validation rules and other useful tools about OSM public transport.
+
+## Translate
+
+[Help us translate the validation rules in your language !](https://www.transifex.com/openstreetmap-france/osmose/)
 
 ![capture d'écran](validateur_JOSM.png)
+
+## Contribute
+
+Please share your ideas in the issues, and feel free to send a pull request if you know how to implement it in MapCSS.
+
+## About
+This validation ruleset has been developed by the [Jungle Bus](http://junglebus.io/) team, a French non-profit organization dedicated to bus public transport in OpenStreetMap.
+
+If you value this work, show your support by donating to the [OSM French local chapter](http://openstreetmap.fr).
