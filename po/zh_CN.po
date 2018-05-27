@@ -1,23 +1,24 @@
 # Translators:
 # frodrigo <fred.rodrigo@gmail.com>, 2018
+# jie x <qa003qa003@hotmail.com>, 2018
 msgid ""
 msgstr ""
-"Last-Translator: frodrigo <fred.rodrigo@gmail.com>, 2018\n"
+"Last-Translator: jie x <qa003qa003@hotmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/openstreetmap-france/teams/17462/zh_CN/)\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../transport.validator.mapcss:5
 msgid "Uncompromising validation of transit data"
-msgstr ""
+msgstr "运输数据不妥协的验证"
 
 #: ../transport.validator.mapcss:15 ../transport.validator.mapcss:20
 msgid "Missing transportation mode, add a tag route = bus/coach/tram/etc"
-msgstr ""
+msgstr "缺少运输模式，请添加标签route = bus/coach/tram/etc"
 
 #: ../transport.validator.mapcss:26
 msgid "Missing transportation mode, change tag route to route_master"
-msgstr ""
+msgstr "缺少运输模式，请将标签路线更改为route_master"
 
 #: ../transport.validator.mapcss:42
 msgid ""
@@ -34,7 +35,7 @@ msgstr "在public_transport关系中缺少运运营单位标记"
 
 #: ../transport.validator.mapcss:66
 msgid "Missing ref tag for line number on a public_transport relation"
-msgstr ""
+msgstr "在public_transport关系中缺少线路编号的ref标记"
 
 #: ../transport.validator.mapcss:74
 msgid "Missing from/to tag on a public_transport route relation"
@@ -42,59 +43,59 @@ msgstr "在public_transport路径关系上缺少from/to标签"
 
 #: ../transport.validator.mapcss:83
 msgid "The stops may not be in the right order"
-msgstr ""
+msgstr "站点可能没有按照正确的顺序"
 
 #: ../transport.validator.mapcss:90
 msgid "Check the operator tag"
-msgstr ""
+msgstr "检查运行商标签"
 
 #: ../transport.validator.mapcss:97
 msgid "Check the network tag"
-msgstr ""
+msgstr "检查network标签"
 
 #: ../transport.validator.mapcss:103
 msgid "Stop without name"
-msgstr ""
+msgstr "站没有名字"
 
 #: ../transport.validator.mapcss:108
 msgid "Is it a bus stop or a bus station?"
-msgstr ""
+msgstr "它是一个公交站还是一个公交总站？"
 
 #: ../transport.validator.mapcss:114
 msgid ""
 "Specify if it is a stop (platform) or a location on the road (stop_position)"
-msgstr ""
+msgstr "指定它是停靠点（站台）还是道路上的位置（stop_position）"
 
 #: ../transport.validator.mapcss:134
 msgid ""
 "The legacy tag is missing, add the tag highway=bus_stop / railway=tram_stop"
-msgstr ""
+msgstr "遗留标签丢失，请添加标签highway=bus_stop / railway=tram_stop"
 
 #: ../transport.validator.mapcss:141
 msgid "Is this a bus stop? add the tag highway=bus_stop"
-msgstr ""
+msgstr "这是公交站吗？ 添加标签highway=bus_stop"
 
 #: ../transport.validator.mapcss:152
 msgid "Check if the note can be deleted"
-msgstr ""
+msgstr "检查笔记是否可以删除"
 
 #: ../transport.validator.mapcss:157
 msgid "The network should be on the transport lines and not on the stops"
-msgstr ""
+msgstr "交通系统network标签应该在交通线路上，而不是在停靠点上"
 
 #: ../transport.validator.mapcss:163
 msgid "The operator should be on the transport lines and not on the stops"
-msgstr ""
+msgstr "运营商标签应该在交通线路上，而不是在停靠站上"
 
 #: ../transport.validator.mapcss:175
 msgid ""
 "The line variant does not belong to any line, add it to the route_master "
 "relation"
-msgstr ""
+msgstr "线型不属于任何线路，将其添加到route_master关系中"
 
 #: ../transport.validator.mapcss:186
 msgid "The stop is not served by any line, add it to a route relation"
-msgstr ""
+msgstr "停靠点不是为任何线路服务的，将其添加到路线关系中"
 
 #: ../transport.validator.mapcss:115 ../transport.validator.mapcss:125
 msgid "Missing public_transport tag on a public transport stop"
@@ -104,7 +105,7 @@ msgstr "公共交通站点缺少public_transport标记"
 msgid ""
 "Specify if it is a stop (platform) or a location on the rails "
 "(stop_position)"
-msgstr ""
+msgstr "指定它是停靠点（站台）还是位于铁轨上的位置（stop_position）"
 
 #: ../transport.validator.mapcss:135 ../transport.validator.mapcss:142
 msgid "Missing legacy tag on a public transport stop"
