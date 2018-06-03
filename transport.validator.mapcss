@@ -8,6 +8,30 @@ meta
 	baselanguage: "en";
 	watch-modified: true;
 }
+meta[lang=es]
+{
+	description: "Validación inflexible de los datos de tránsito";
+}
+meta[lang=fr]
+{
+	description: "Une validation intransigeante des données de transport en commun";
+}
+meta[lang=hu]
+{
+	description: "Tömegközlekedési adatok teljes körű érvényesítése";
+}
+meta[lang=nl]
+{
+	description: "Compromisloze validatie van transit data";
+}
+meta[lang=uk]
+{
+	description: "Безкомпромісна валідація транзитних даних";
+}
+meta[lang=zh_CN]
+{
+	description: "运输数据不妥协的验证";
+}
 
 /* Tags unitaires sur les relations */
 relation[type=route][!route]
