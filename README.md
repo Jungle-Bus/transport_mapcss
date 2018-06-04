@@ -12,13 +12,15 @@ To add the ruleset to JOSM:
 * Tag Checker Rules (2nd tab)
 * Select "Jungle Bus – validation ruleset"
 
+![how to add this ruleset](add_validator.gif)
+
 You may also want to add the pt_assistant plugin, for even more validation rules and other useful tools about OSM public transport.
 
 ## Translate
 
 [Help us translate the validation rules in your language !](https://www.transifex.com/openstreetmap-france/osmose/)
 
-![capture d'écran](validateur_JOSM.png)
+![screenshot](validateur_JOSM.png)
 
 ## Contribute
 
