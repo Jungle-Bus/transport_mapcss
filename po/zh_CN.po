@@ -11,70 +11,70 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../transport.validator.mapcss:5
+#: ../transport.validator.mapcss:13
 msgid "Uncompromising validation of transit data"
 msgstr "运输数据不妥协的验证"
 
-#: ../transport.validator.mapcss:39 ../transport.validator.mapcss:44
+#: ../transport.validator.mapcss:42 ../transport.validator.mapcss:47
 msgid "Missing transportation mode, add a tag route = bus/coach/tram/etc"
 msgstr "缺少运输模式，请添加标签route = bus/coach/tram/etc"
 
-#: ../transport.validator.mapcss:50
+#: ../transport.validator.mapcss:53
 msgid "Missing transportation mode, change tag route to route_master"
 msgstr "缺少运输模式，请将标签路线更改为route_master"
 
-#: ../transport.validator.mapcss:66
+#: ../transport.validator.mapcss:69
 msgid ""
 "Missing public_transport:version tag on a public_transport route relation"
 msgstr "缺少public_transport：public_transport路径关系上的版本标记"
 
-#: ../transport.validator.mapcss:74
+#: ../transport.validator.mapcss:77
 msgid "Missing network tag on a public_transport relation"
 msgstr "在public_transport关系中缺少网络标记"
 
-#: ../transport.validator.mapcss:82
+#: ../transport.validator.mapcss:85
 msgid "Missing operator tag on a public_transport relation"
 msgstr "在public_transport关系中缺少运运营单位标记"
 
-#: ../transport.validator.mapcss:90
+#: ../transport.validator.mapcss:93
 msgid "Missing ref tag for line number on a public_transport relation"
 msgstr "在public_transport关系中缺少线路编号的ref标记"
 
-#: ../transport.validator.mapcss:98
+#: ../transport.validator.mapcss:101
 msgid "Missing from/to tag on a public_transport route relation"
 msgstr "在public_transport路径关系上缺少from/to标签"
 
-#: ../transport.validator.mapcss:107
+#: ../transport.validator.mapcss:110
 msgid "The stops may not be in the right order"
 msgstr "站点可能没有按照正确的顺序"
 
-#: ../transport.validator.mapcss:114
+#: ../transport.validator.mapcss:117
 msgid "Check the operator tag"
 msgstr "检查运行商标签"
 
-#: ../transport.validator.mapcss:121
+#: ../transport.validator.mapcss:123
 msgid "Check the network tag"
 msgstr "检查network标签"
 
-#: ../transport.validator.mapcss:127
+#: ../transport.validator.mapcss:128
 msgid "Stop without name"
 msgstr "站没有名字"
 
-#: ../transport.validator.mapcss:132
+#: ../transport.validator.mapcss:133
 msgid "Is it a bus stop or a bus station?"
 msgstr "它是一个公交站还是一个公交总站？"
 
-#: ../transport.validator.mapcss:138
+#: ../transport.validator.mapcss:139
 msgid ""
 "Specify if it is a stop (platform) or a location on the road (stop_position)"
 msgstr "指定它是停靠点（站台）还是道路上的位置（stop_position）"
 
-#: ../transport.validator.mapcss:158
+#: ../transport.validator.mapcss:159
 msgid ""
 "The legacy tag is missing, add the tag highway=bus_stop / railway=tram_stop"
 msgstr "遗留标签丢失，请添加标签highway=bus_stop / railway=tram_stop"
 
-#: ../transport.validator.mapcss:165
+#: ../transport.validator.mapcss:166
 msgid "Is this a bus stop? add the tag highway=bus_stop"
 msgstr "这是公交站吗？ 添加标签highway=bus_stop"
 
@@ -90,25 +90,25 @@ msgstr "交通系统network标签应该在交通线路上，而不是在停靠�
 msgid "The operator should be on the transport lines and not on the stops"
 msgstr "运营商标签应该在交通线路上，而不是在停靠站上"
 
-#: ../transport.validator.mapcss:199
+#: ../transport.validator.mapcss:198
 msgid ""
 "The line variant does not belong to any line, add it to the route_master "
 "relation"
 msgstr "线型不属于任何线路，将其添加到route_master关系中"
 
-#: ../transport.validator.mapcss:210
+#: ../transport.validator.mapcss:208
 msgid "The stop is not served by any line, add it to a route relation"
 msgstr "停靠点不是为任何线路服务的，将其添加到路线关系中"
 
-#: ../transport.validator.mapcss:139 ../transport.validator.mapcss:149
+#: ../transport.validator.mapcss:140 ../transport.validator.mapcss:150
 msgid "Missing public_transport tag on a public transport stop"
 msgstr "公共交通站点缺少public_transport标记"
 
-#: ../transport.validator.mapcss:148
+#: ../transport.validator.mapcss:149
 msgid ""
 "Specify if it is a stop (platform) or a location on the rails (stop_position)"
 msgstr "指定它是停靠点（站台）还是位于铁轨上的位置（stop_position）"
 
-#: ../transport.validator.mapcss:159 ../transport.validator.mapcss:166
+#: ../transport.validator.mapcss:160 ../transport.validator.mapcss:167
 msgid "Missing legacy tag on a public transport stop"
 msgstr "在公共交通站点遗失遗留标记"
