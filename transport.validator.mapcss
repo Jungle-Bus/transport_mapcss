@@ -2,11 +2,15 @@ meta
 {
 	title: "Jungle Bus – validation ruleset";
 	version: "0.7";
-	description: tr("Uncompromising validation of transit data");
+	description: "Uncompromising validation of transit data";
 	author: "nlehuby";
 	link: "https://junglebus.io/";
 	baselanguage: "en";
 	watch-modified: true;
+}
+meta[lang=en] /* lang=en, unused, only to use tr() to catch string for translation */
+{
+	description: tr("Uncompromising validation of transit data");
 }
 meta[lang=es]
 {
