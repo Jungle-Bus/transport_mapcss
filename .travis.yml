@@ -1,0 +1,8 @@
+dist: trusty
+
+language: bash
+
+script:
+    - cd po
+    - make *.po
+    - make
