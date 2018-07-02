@@ -19,4 +19,4 @@ deploy:
     - cd .. && ./deploy.sh
 
   on:
-    branch: ci
+    branch: master
