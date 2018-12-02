@@ -12,6 +12,10 @@ meta[lang=en] /* lang=en, unused, only to use tr() to catch string for translati
 {
 	description: tr("Uncompromising validation of transit data");
 }
+meta[lang=cs]
+{
+	description: "Nekompromisní validace údajů o tranzitu";
+}
 meta[lang=es]
 {
 	description: "Validación inflexible de los datos de tránsito";
@@ -24,6 +28,10 @@ meta[lang=hu]
 {
 	description: "Tömegközlekedési adatok teljes körű érvényesítése";
 }
+meta[lang=it]
+{
+	description: "Validazione senza compromessi sui dati di transito";
+}
 meta[lang=nl]
 {
 	description: "Compromisloze validatie van transit data";
@@ -35,6 +43,10 @@ meta[lang=uk]
 meta[lang=zh_CN]
 {
 	description: "运输数据不妥协的验证";
+}
+meta[lang=zh_TW]
+{
+	description: "未妥協驗證的運輸資料";
 }
 
 relation[type=route][!route]
