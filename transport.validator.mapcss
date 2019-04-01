@@ -168,6 +168,12 @@ relation.pt_route_master["network"=~/STIF|Kéolis|Véolia/][inside("FR")]
 	throwError: tr("Check the network tag");
 }
 
+way[highway=bus_stop],
+relation[highway=bus_stop]
+{
+	throwError: tr("A bus stop is supposed to be a node");
+}
+
 node[highway=bus_stop][!name]
 {
 	throwWarning: tr("Stop without name");
