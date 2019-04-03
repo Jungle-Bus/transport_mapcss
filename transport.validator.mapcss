@@ -134,6 +134,16 @@ relation.pt_route[tag(operator)!=parent_tag(operator)]
 	throwError: tr("The operator tag should be the same for the route and the route_master : {0} vs {1}", tag(operator), parent_tag(operator));
 }
 
+relation.pt_route[tag(ref)!=parent_tag(ref)]
+{
+	throwWarning: tr("The ref tag should be the same for the route and the route_master : {0} vs {1}", tag(ref), parent_tag(ref));
+}
+
+relation.pt_route[tag(colour)!=parent_tag(colour)]
+{
+	throwWarning: tr("The colour tag should be the same for the route and the route_master : {0} vs {1}", tag(colour), parent_tag(colour));
+}
+
 relation.pt_route[tag(route)!=parent_tag(route_master)]
 {
 	throwError: tr("The public transport mode should be the same for the route and the route_master : {0} vs {1}", tag(route), parent_tag(route_master));
