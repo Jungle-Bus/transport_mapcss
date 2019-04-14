@@ -153,6 +153,15 @@ relation.pt_route[colour][colour=~/^#/][colour!~/^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6
 relation.pt_route_master[colour][colour=~/^#/][colour!~/^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/]
 {
     throwError: tr("Check the colour tag");
+    -osmoseItemClassLevel: none;
+}
+
+relation.pt_route[colour][colour=~/^([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/],
+relation.pt_route_master[colour][colour=~/^([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/]
+{
+    throwError: tr("The colour code should start with '#' followed by 3 or 6 digits");
+    fixAdd: concat("colour=#", tag(colour));
+    -osmoseItemClassLevel: none;
 }
 
 relation.pt_route[!colour][color],
