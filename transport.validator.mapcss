@@ -1,7 +1,7 @@
 meta
 {
 	title: "Jungle Bus – validation ruleset";
-	version: "0.9";
+	version: "0.10";
 	description: "Uncompromising validation of transit data";
 	author: "nlehuby";
 	link: "https://junglebus.io/";
@@ -68,12 +68,12 @@ relation[type=route_master][!route_master][route]
 	fixChangeKey: "route=>route_master";
 }
 
-relation[type=route][route=~/^(bus|coach|train|subway|monorail|trolleybus|aerialway|funicular|ferry|tram|share_taxi|light_rail|school_bus)$/]
+relation[type=route][route=~/^(bus|coach|train|subway|monorail|trolleybus|aerialway|funicular|ferry|tram|share_taxi|light_rail|school_bus|walking_bus)$/]
 {
 	set pt_route;
 }
 
-relation[type=route_master][route_master=~/^(bus|coach|train|subway|monorail|trolleybus|aerialway|funicular|ferry|tram|share_taxi|light_rail|school_bus)$/]
+relation[type=route_master][route_master=~/^(bus|coach|train|subway|monorail|trolleybus|aerialway|funicular|ferry|tram|share_taxi|light_rail|school_bus|walking_bus)$/]
 {
 	set pt_route_master;
 }
@@ -149,6 +149,28 @@ relation.pt_route[tag(route)!=parent_tag(route_master)]
 	throwError: tr("The public transport mode should be the same for the route and the route_master : {0} vs {1}", tag(route), parent_tag(route_master));
 }
 
+relation.pt_route[colour][colour=~/^#/][colour!~/^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/],
+relation.pt_route_master[colour][colour=~/^#/][colour!~/^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/]
+{
+    throwError: tr("Check the colour tag");
+    -osmoseItemClassLevel: none;
+}
+
+relation.pt_route[colour][colour=~/^([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/],
+relation.pt_route_master[colour][colour=~/^([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/]
+{
+    throwError: tr("The colour code should start with '#' followed by 3 or 6 digits");
+    fixAdd: concat("colour=#", tag(colour));
+    -osmoseItemClassLevel: none;
+}
+
+relation.pt_route[!colour][color],
+relation.pt_route_master[!colour][color]
+{
+    throwError: tr("The color of the public transport line should be in a colour tag");
+    fixChangeKey: "color=>colour";
+}
+
 relation.pt_route["fixme:relation"="order members"]
 {
 	throwWarning: tr("The stops may not be in the right order");
@@ -166,6 +188,12 @@ relation.pt_route["network"=~/STIF|Kéolis|Véolia/][inside("FR")],
 relation.pt_route_master["network"=~/STIF|Kéolis|Véolia/][inside("FR")]
 {
 	throwError: tr("Check the network tag");
+}
+
+way[highway=bus_stop],
+relation[highway=bus_stop]
+{
+	throwError: tr("A bus stop is supposed to be a node");
 }
 
 node[highway=bus_stop][!name]
