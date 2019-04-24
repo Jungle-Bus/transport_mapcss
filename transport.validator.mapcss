@@ -1,7 +1,7 @@
 meta
 {
 	title: "Jungle Bus – validation ruleset";
-	version: "0.11";
+	version: "0.12";
 	description: "Uncompromising validation of transit data";
 	author: "nlehuby";
 	link: "https://junglebus.io/";
@@ -206,6 +206,12 @@ node[highway=bus_stop][amenity=bus_station]
 {
 	throwError: tr("Is it a bus stop or a bus station?");
 	fixRemove: "amenity";
+}
+
+node[amenity=bus_station]
+{
+	throwWarning: tr("A bus station is usually a large area where many buses stops, check if you can draw this area");
+    -osmoseItemClassLevel: none;
 }
 
 node[highway=bus_stop][!public_transport]
