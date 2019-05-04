@@ -11,7 +11,7 @@ transport_mapcss.pot: ../transport.validator.mapcss
 	  --output=$@ $<
 
 %.po: transport_mapcss.pot
-	msgmerge --update $@ $<
+	msgmerge --no-fuzzy-matching --no-location --update $@ $<
 
 i18n.pl:
 	wget https://svn.openstreetmap.org/applications/editors/josm/i18n/i18n.pl
@@ -33,3 +33,4 @@ clean:
 	rm -fr data
 	rm -f i18n.pl
 	rm -f ../transport.validator.zip
+	rm *.po~
