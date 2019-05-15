@@ -196,12 +196,6 @@ relation[highway=bus_stop]
 	throwError: tr("A bus stop is supposed to be a node");
 }
 
-node[highway=bus_stop][!name]
-{
-	throwWarning: tr("Stop without name");
-	-osmoseItemClassLevel: none;
-}
-
 node[highway=bus_stop][amenity=bus_station]
 {
 	throwError: tr("Is it a bus stop or a bus station?");
@@ -236,7 +230,7 @@ node[railway=tram_stop][!public_transport]
 	assertMatch: "node railway=tram_stop";
 }
 
-node[public_transport=platform][!highway][!railway][!bus][!shelter]
+node[public_transport=platform][!highway][!railway][!bus]
 {
 	throwError: tr("The legacy tag is missing, add the tag highway=bus_stop / railway=tram_stop");
 	group: tr("Missing legacy tag on a public transport stop");
@@ -244,13 +238,12 @@ node[public_transport=platform][!highway][!railway][!bus][!shelter]
 }
 
 node[public_transport=platform][!highway][!railway][bus=yes],
-node[public_transport=platform][!highway][!railway][shelter]
 {
 	throwError: tr("Is this a bus stop? add the tag highway=bus_stop");
 	group: tr("Missing legacy tag on a public transport stop");
 	-osmoseItemClassLevel: "2140/21412:0/3";
 	fixAdd: "highway=bus_stop";
-	assertMatch: "node public_transport=platform shelter=yes"
+	assertMatch: "node public_transport=platform bus=yes"
 }
 
 /* The note tag is often used to specify the bus routes or other useful metadata that should have their own tag */
@@ -284,12 +277,28 @@ relation.pt_route!.route_ok
 
 relation[type=route] > node[public_transport=platform]
 {
-	set platform_ok
+	set platform_in_route
+}
+relation[type=route] > way[public_transport=platform]
+{
+	set way_platform_in_route
 }
 
-node[public_transport=platform]!.platform_ok
+node[public_transport=platform]!.platform_in_route
 {
 	throwError: tr("The stop is not served by any line, add it to a route relation");
+	-osmoseItemClassLevel: none;
+}
+
+node.platform_in_route[!name]
+{
+	throwWarning: tr("Missing name on a public transport stop");
+	-osmoseItemClassLevel: none;
+}
+
+way.way_platform_in_route[!name]
+{
+	throwWarning: tr("Missing name on a public transport stop");
 	-osmoseItemClassLevel: none;
 }
 
@@ -315,4 +324,5 @@ relation.pt_route["interval:conditional"][!opening_hours],
 relation.pt_route_master["interval:conditional"][!opening_hours]
 {
 	throwError: tr("Missing opening_hours tag");
+
 }
