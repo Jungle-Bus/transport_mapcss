@@ -1,6 +1,7 @@
 # Translators:
 # frodrigo <fred.rodrigo@gmail.com>, 2018
 # Christian Ostermann, 2018
+# Noémie Lehuby, 2019
 #
 msgid ""
 msgstr ""
@@ -8,7 +9,7 @@ msgstr ""
 "Language-Team: German (https://www.transifex.com/openstreetmap-france/"
 "teams/17462/de/)\n"
 "Language: de\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -48,9 +49,6 @@ msgstr "operator Tag überprüfen"
 
 msgid "Check the network tag"
 msgstr "network Tag überprüfen"
-
-msgid "Stop without name"
-msgstr "Haltestelle ohne Name"
 
 msgid "Is it a bus stop or a bus station?"
 msgstr "Ist das eine Bushaltestelle oder ein Busbahnhof?"
@@ -150,3 +148,9 @@ msgstr ""
 
 msgid "Missing opening_hours tag"
 msgstr ""
+
+msgid "Missing name on a public transport stop"
+msgstr ""
+
+#~ msgid "Stop without name"
+#~ msgstr "Haltestelle ohne Name"

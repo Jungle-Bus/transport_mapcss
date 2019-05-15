@@ -1,5 +1,6 @@
 # Translators:
 # imni <iriman@chmail.ir>, 2018
+# Noémie Lehuby, 2019
 #
 msgid ""
 msgstr ""
@@ -7,7 +8,7 @@ msgstr ""
 "Language-Team: Persian (https://www.transifex.com/openstreetmap-france/"
 "teams/17462/fa/)\n"
 "Language: fa\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
@@ -47,9 +48,6 @@ msgstr "تگ operator را بررسی کنید"
 
 msgid "Check the network tag"
 msgstr "تگ network را بررسی کنید"
-
-msgid "Stop without name"
-msgstr "ایستگاه بدون نام"
 
 msgid "Is it a bus stop or a bus station?"
 msgstr "ایستگاه اتوبوس است (stop) یا پایانهٔ اتوبوس (station)؟"
@@ -150,3 +148,9 @@ msgstr ""
 
 msgid "Missing opening_hours tag"
 msgstr ""
+
+msgid "Missing name on a public transport stop"
+msgstr ""
+
+#~ msgid "Stop without name"
+#~ msgstr "ایستگاه بدون نام"

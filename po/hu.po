@@ -1,6 +1,7 @@
 # Translators:
 # frodrigo <fred.rodrigo@gmail.com>, 2018
 # Gábor Babos <gabor.babos@gmail.com>, 2018
+# Noémie Lehuby, 2019
 #
 msgid ""
 msgstr ""
@@ -8,7 +9,7 @@ msgstr ""
 "Language-Team: Hungarian (https://www.transifex.com/openstreetmap-france/"
 "teams/17462/hu/)\n"
 "Language: hu\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -52,9 +53,6 @@ msgstr "Ellenőrizze az üzemeltetőt jelző <operatort> címkét"
 
 msgid "Check the network tag"
 msgstr "Ellenőrizze a hálózatot jelölő <network> címkét"
-
-msgid "Stop without name"
-msgstr "A megállónak nincs neve"
 
 msgid "Is it a bus stop or a bus station?"
 msgstr "Ez buszmegálló vagy buszállomás?"
@@ -164,3 +162,9 @@ msgstr ""
 
 msgid "Missing opening_hours tag"
 msgstr ""
+
+msgid "Missing name on a public transport stop"
+msgstr ""
+
+#~ msgid "Stop without name"
+#~ msgstr "A megállónak nincs neve"

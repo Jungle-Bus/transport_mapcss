@@ -1,6 +1,7 @@
 # Translators:
 # frodrigo <fred.rodrigo@gmail.com>, 2018
 # jie x, 2018
+# Noémie Lehuby, 2019
 #
 msgid ""
 msgstr ""
@@ -8,7 +9,7 @@ msgstr ""
 "Language-Team: Chinese (China) (https://www.transifex.com/openstreetmap-"
 "france/teams/17462/zh_CN/)\n"
 "Language: zh_CN\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -45,9 +46,6 @@ msgstr "检查运行商标签"
 
 msgid "Check the network tag"
 msgstr "检查network标签"
-
-msgid "Stop without name"
-msgstr "站没有名字"
 
 msgid "Is it a bus stop or a bus station?"
 msgstr "它是一个公交站还是一个公交总站？"
@@ -143,3 +141,9 @@ msgstr ""
 
 msgid "Missing opening_hours tag"
 msgstr ""
+
+msgid "Missing name on a public transport stop"
+msgstr ""
+
+#~ msgid "Stop without name"
+#~ msgstr "站没有名字"

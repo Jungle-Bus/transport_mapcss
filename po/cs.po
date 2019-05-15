@@ -3,6 +3,7 @@
 # Petr Schönmann <pschonmann@gmail.com>, 2018
 # trendspotter <j.podhorecky@volny.cz>, 2018
 # majkaz, 2019
+# Noémie Lehuby, 2019
 #
 msgid ""
 msgstr ""
@@ -10,7 +11,7 @@ msgstr ""
 "Language-Team: Czech (https://www.transifex.com/openstreetmap-france/"
 "teams/17462/cs/)\n"
 "Language: cs\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n "
 "<= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
@@ -48,9 +49,6 @@ msgstr "Zkontroluj tag operator"
 
 msgid "Check the network tag"
 msgstr "Zkontroluj tag network"
-
-msgid "Stop without name"
-msgstr "Zastávka bez jména"
 
 msgid "Is it a bus stop or a bus station?"
 msgstr "Je toto autobusová zastávka nebo autobusová stanice ?"
@@ -157,3 +155,9 @@ msgstr ""
 
 msgid "Missing opening_hours tag"
 msgstr ""
+
+msgid "Missing name on a public transport stop"
+msgstr ""
+
+#~ msgid "Stop without name"
+#~ msgstr "Zastávka bez jména"

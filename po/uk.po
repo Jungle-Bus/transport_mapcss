@@ -1,6 +1,7 @@
 # Translators:
 # frodrigo <fred.rodrigo@gmail.com>, 2018
 # Ігор Варварчук <varvar1@bigmir.net>, 2018
+# Noémie Lehuby, 2019
 #
 msgid ""
 msgstr ""
@@ -8,7 +9,7 @@ msgstr ""
 "Language-Team: Ukrainian (https://www.transifex.com/openstreetmap-france/"
 "teams/17462/uk/)\n"
 "Language: uk\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
 "11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
@@ -50,9 +51,6 @@ msgstr "Перевірте теґ operator"
 
 msgid "Check the network tag"
 msgstr "Перевірте теґ network"
-
-msgid "Stop without name"
-msgstr "Зупинка без name"
 
 msgid "Is it a bus stop or a bus station?"
 msgstr "Це автобусна зупинка чи автовокзал?"
@@ -151,3 +149,9 @@ msgstr ""
 
 msgid "Missing opening_hours tag"
 msgstr ""
+
+msgid "Missing name on a public transport stop"
+msgstr ""
+
+#~ msgid "Stop without name"
+#~ msgstr "Зупинка без name"
