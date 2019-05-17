@@ -237,7 +237,7 @@ node[public_transport=platform][!highway][!railway][!bus]
 	-osmoseItemClassLevel: "2140/21412:1/3";
 }
 
-node[public_transport=platform][!highway][!railway][bus=yes],
+node[public_transport=platform][!highway][!railway][bus=yes]
 {
 	throwError: tr("Is this a bus stop? add the tag highway=bus_stop");
 	group: tr("Missing legacy tag on a public transport stop");
