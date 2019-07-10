@@ -1,0 +1,45 @@
+meta
+{
+	title: "Jungle Bus – Abidjan Transport add-ons";
+	version: "0.12";
+	description: "Uncompromising validation of transit data";
+	author: "nlehuby";
+	link: "https://junglebus.io/";
+	baselanguage: "fr";
+	watch-modified: true;
+	min-josm-version: 14481;
+	-osmoseTags: list("tag", "public_transport");
+}
+
+
+
+relation.pt_route_master[!"interval:conditional"][inside("CI")][route_master=~/^(bus|share_taxi|ferry)$/]
+{
+	throwError: "AbidjanTransport : Il manque le tag interval:conditional pour indiquer les périodes creuses et de pointe";
+}
+
+relation.pt_route_master[!charge][inside("CI")][route_master=~/^(bus|share_taxi|ferry)$/]
+{
+	throwError: "AbidjanTransport : Il manque le tag charge pour indiquer le prix";
+}
+
+/* The charge tag must end with FCFA */
+relation.pt_route_master[charge$="FCFA"][inside("CI")][route_master=~/^(bus|share_taxi|ferry)$/]
+{
+	set charge_ok
+}
+relation.pt_route_master[charge][inside("CI")][route_master=~/^(bus|share_taxi|ferry)$/]!.charge_ok
+{
+	throwError: "AbidjanTransport : le prix doit se terminer par FCFA";
+}
+
+relation.pt_route_master[!"distance"][inside("CI")][route_master=~/^(bus|share_taxi|ferry)$/]
+{
+	throwError: "AbidjanTransport : Il manque le tag distance pour indiquer la longueur du trajet";
+}
+
+/* we choose to map highway=bus_stop as platform and not stop_position*/
+way[highway] > node[highway=bus_stop][inside("CI")]
+{
+    throwWarning: "AbidjanTransport : Cartographier l'arrêt de bus à côté de la route plutôt que sur la route";
+}
