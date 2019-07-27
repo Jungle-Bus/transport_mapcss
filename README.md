@@ -27,6 +27,8 @@ You may also want to add the pt_assistant plugin, for even more validation rules
 Please share your ideas in the issues, and feel free to send a pull request if you know how to implement it in MapCSS.
 
 ## About
-This validation ruleset has been developed by the [Jungle Bus](http://junglebus.io/) team, a French non-profit organization dedicated to bus public transport in OpenStreetMap.
+This validation ruleset has been developed by the [Jungle Bus](http://junglebus.io/) team, as part as the **Bifidus, improve your transit!** project.
 
 If you value this work, show your support by donating to the [OSM French local chapter](http://openstreetmap.fr).
+
+![Bifidus logo](https://github.com/Jungle-Bus/resources/raw/master/logo/Logo_Jungle_Bus-Bifidus.png)
