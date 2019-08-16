@@ -302,13 +302,13 @@ way.way_platform_in_route[!name]
 	-osmoseItemClassLevel: none;
 }
 
-relation.pt_route[interval][interval !~ /^([0-9][0-9][0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/],
+relation.pt_route[interval][interval !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/],
 relation.pt_route_master[interval][interval !~ /^([0-9][0-9][0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/]
 {
 	throwError: tr("The interval is invalid (try a number of minutes)");
 }
 
-relation.pt_route[duration][duration !~ /^([0-9][0-9][0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/],
+relation.pt_route[duration][duration !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/],
 relation.pt_route_master[duration][duration !~ /^([0-9][0-9][0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/]
 {
 	throwError: tr("The duration is invalid (try a number of minutes)");
