@@ -181,13 +181,13 @@ relation.pt_route["fixme:relation"="order members"]
 relation.pt_route["operator"=~/STIF|Kéolis|Véolia/][inside("FR")],
 relation.pt_route_master["operator"=~/STIF|Kéolis|Véolia/][inside("FR")]
 {
-	throwError: tr("Check the operator tag");
+	throwError: tr("Check the operator tag : this operator does not exist, it may be a typo");
 }
 
 relation.pt_route["network"=~/STIF|Kéolis|Véolia/][inside("FR")],
 relation.pt_route_master["network"=~/STIF|Kéolis|Véolia/][inside("FR")]
 {
-	throwError: tr("Check the network tag");
+	throwError: tr("Check the network tag : this network does not exist, it may be a typo");
 }
 
 way[highway=bus_stop],
@@ -204,7 +204,7 @@ node[highway=bus_stop][amenity=bus_station]
 
 node[amenity=bus_station]
 {
-	throwWarning: tr("A bus station is usually a large area where many buses stops, check if you can draw this area");
+	throwWarning: tr("A bus station is usually a large area where many buses stop, check if you can draw this area");
     -osmoseItemClassLevel: none;
 }
 
