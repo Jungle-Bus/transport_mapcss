@@ -20,7 +20,7 @@ You may also want to add the pt_assistant plugin, for even more validation rules
 
 [Help us translate the validation rules in your language !](https://www.transifex.com/openstreetmap-france/osmose/)
 
-![screenshot](validateur_JOSM.png)
+![screenshot](screenshot.png)
 
 ## Contribute
 
