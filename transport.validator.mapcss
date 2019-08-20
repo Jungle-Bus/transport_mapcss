@@ -302,16 +302,31 @@ way.way_platform_in_route[!name]
 	-osmoseItemClassLevel: none;
 }
 
-relation.pt_route[interval][interval !~ /^([0-9][0-9][0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/],
-relation.pt_route_master[interval][interval !~ /^([0-9][0-9][0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/]
+relation.pt_route[interval][interval !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/],
+relation.pt_route_master[interval][interval !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/]
 {
 	throwError: tr("The interval is invalid (try a number of minutes)");
+	assertMatch: "relation type=route route=bus interval=irregular";
+	assertMatch: "relation type=route route=ferry interval=2heures";
+	assertNoMatch: "relation type=route route=bus interval=5";
+	assertNoMatch: "relation type=route route=bus interval=10";
+	assertNoMatch: "relation type=route route=bus interval=120";
+	assertMatch: "relation type=route_master route_master=bus interval=1240";
+	assertNoMatch: "relation type=route route=bus interval=00:05";
+	assertNoMatch: "relation type=route route=bus interval=00:10:00";
+	assertNoMatch: "relation type=route route=bus interval=02:00:00";
+	assertMatch: "relation type=route route=bus interval=00:70:00";
 }
 
-relation.pt_route[duration][duration !~ /^([0-9][0-9][0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/],
-relation.pt_route_master[duration][duration !~ /^([0-9][0-9][0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/]
+relation.pt_route[duration][duration !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/],
+relation.pt_route_master[duration][duration !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/]
 {
 	throwError: tr("The duration is invalid (try a number of minutes)");
+	assertMatch: "relation type=route route=bus duration=20minutes";
+	assertNoMatch: "relation type=route_master route_master=bus duration=5";
+	assertNoMatch: "relation type=route route=ferry duration=20";
+	assertNoMatch: "relation type=route route=ferry duration=120";
+	assertMatch: "relation type=route route=ferry duration=1240";
 }
 
 relation.pt_route["interval:conditional"][!interval],
