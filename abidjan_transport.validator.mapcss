@@ -12,11 +12,11 @@ meta
 }
 
 
-
+/*
 relation.pt_route_master[!"interval:conditional"][inside("CI")][route_master=~/^(bus|share_taxi|ferry)$/]
 {
 	throwError: "AbidjanTransport : Il manque le tag interval:conditional pour indiquer les périodes creuses et de pointe";
-}
+}*/
 
 relation.pt_route_master[!charge][inside("CI")][route_master=~/^(bus|share_taxi|ferry)$/]
 {
@@ -33,10 +33,11 @@ relation.pt_route_master[charge][inside("CI")][route_master=~/^(bus|share_taxi|f
 	throwError: "AbidjanTransport : le prix doit se terminer par FCFA";
 }
 
+/*
 relation.pt_route_master[!"distance"][inside("CI")][route_master=~/^(bus|share_taxi|ferry)$/]
 {
 	throwError: "AbidjanTransport : Il manque le tag distance pour indiquer la longueur du trajet";
-}
+}*/
 
 /* we choose to map highway=bus_stop as platform and not stop_position*/
 way[highway] > node[highway=bus_stop][inside("CI")]
