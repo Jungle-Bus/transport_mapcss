@@ -318,8 +318,8 @@ relation.pt_route_master[interval][interval !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[
 	assertMatch: "relation type=route route=bus interval=00:70:00";
 }
 
-relation.pt_route[duration][duration !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/],
-relation.pt_route_master[duration][duration !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/]
+relation.pt_route[duration][duration !~ /^([0-9][0-9]?[0-9]?|(PT)?[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?|P(?!$)((\d+Y)|(\d+\.\d+Y$))?((\d+M)|(\d+\.\d+M$))?((\d+W)|(\d+\.\d+W$))?((\d+D)|(\d+\.\d+D$))?(T(?=\d)((\d+H)|(\d+\.\d+H$))?((\d+M)|(\d+\.\d+M$))?(\d+(\.\d+)?S)?)??)$/],
+relation.pt_route_master[duration][duration !~ /^([0-9][0-9]?[0-9]?|(PT)?[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?|P(?!$)((\d+Y)|(\d+\.\d+Y$))?((\d+M)|(\d+\.\d+M$))?((\d+W)|(\d+\.\d+W$))?((\d+D)|(\d+\.\d+D$))?(T(?=\d)((\d+H)|(\d+\.\d+H$))?((\d+M)|(\d+\.\d+M$))?(\d+(\.\d+)?S)?)??)$/]
 {
 	throwError: tr("The duration is invalid (try a number of minutes)");
 	assertMatch: "relation type=route route=bus duration=20minutes";
@@ -327,6 +327,15 @@ relation.pt_route_master[duration][duration !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[
 	assertNoMatch: "relation type=route route=ferry duration=20";
 	assertNoMatch: "relation type=route route=ferry duration=120";
 	assertMatch: "relation type=route route=ferry duration=1240";
+    assertNoMatch: "relation type=route_master route=bus duration=02:00:00";
+    assertNoMatch: "relation type=route route=bus duration=25:00";
+    assertNoMatch: "relation type=route route=ferry duration=P0.5D";
+    assertNoMatch: "relation type=route_master route=ferry duration=PT4H";
+    assertNoMatch: "relation type=route route=ferry duration=PT20M";
+    assertNoMatch: "relation type=route route=ferry duration=PT120M";
+    assertNoMatch: "relation type=route route=ferry duration=PT50S";
+    assertNoMatch: "relation type=route route=ferry duration=PT02:25:06";
+    assertNoMatch: "relation type=route route=ferry duration=PT2H25M6S";
 }
 
 relation.pt_route["interval:conditional"][!interval],
