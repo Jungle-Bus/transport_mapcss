@@ -36,3 +36,11 @@ way[highway] > node[highway=bus_stop][inside("CI")]
 {
     throwError: "AbidjanTransport : Cartographier l'arrêt de bus à côté de la route plutôt que sur la route";
 }
+
+relation[type=route][route=bus] >[role="platform"] way {
+    throwError: "AbidjanTransport : Un arrêt de bus doit être un noeud et non un chemin";
+}
+
+relation[type=route][route=bus] >[role="platform"] node[!highway] {
+    throwError: "AbidjanTransport : Un arrêt de bus doit avoir le tag highway=bus_stop";
+}
