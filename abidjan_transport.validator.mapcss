@@ -16,6 +16,11 @@ relation[type=route_master][route_master=~/^(bus|coach|train|subway|monorail|tro
 	set pt_route_master;
 }
 
+relation[type=route][route=~/^(bus|coach|train|subway|monorail|trolleybus|aerialway|funicular|ferry|tram|share_taxi|light_rail|school_bus|walking_bus)$/]
+{
+	set pt_route;
+}
+
 relation.pt_route_master[!charge]
 {
 	throwError: "AbidjanTransport : Il manque le tag charge pour indiquer le prix";
@@ -43,4 +48,24 @@ relation[type=route][route=bus] >[role="platform"] way {
 
 relation[type=route][route=bus] >[role="platform"] node[!highway] {
     throwError: "AbidjanTransport : Un arrêt de bus doit avoir le tag highway=bus_stop";
+}
+
+
+*[public_transport=platform] < relation[type=route] {
+    set route_with_platform
+}
+
+relation.pt_route!.route_with_platform {
+    throwError: "AbidjanTransport : Il manque des arrêts (platform) dans ce parcours";
+}
+
+relation.pt_route_master[!opening_hours]
+{
+	throwError: tr("AbidjanTransport : Il manque les horaires de service (opening_hours) de la ligne");
+    fixAdd: "opening_hours=Mo-Su,PH 05:00-22:00";
+}
+
+relation[type=route_master][interval] > relation[type=route][interval]
+{
+    throwError: "AbidjanTransport : la fréquence de passage est définie sur la ligne et sur le parcours. Si c'est la même, il suffit de la définir sur la ligne (route_master)";
 }
