@@ -1,10 +1,10 @@
 # Translators:
 # frodrigo <fred.rodrigo@gmail.com>, 2018
-# Ігор Варварчук <182050@i.ua>, 2019
+# Ігор Варварчук <182050@i.ua>, 2020
 #
 msgid ""
 msgstr ""
-"Last-Translator: Ігор Варварчук <182050@i.ua>, 2019\n"
+"Last-Translator: Ігор Варварчук <182050@i.ua>, 2020\n"
 "Language-Team: Ukrainian (https://www.transifex.com/openstreetmap-france/teams/17462/uk/)\n"
 "Language: uk\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -178,19 +178,25 @@ msgstr "Відсутній теґ opening_hours"
 
 #: ../transport.validator.mapcss:295 ../transport.validator.mapcss:301
 msgid "Missing name on a public transport stop"
-msgstr ""
+msgstr "Відсутня назва зупинки громадського транспорту"
 
 #: ../transport.validator.mapcss:184
 msgid ""
 "Check the operator tag : this operator does not exist, it may be a typo"
 msgstr ""
+"Перевірте теґ operator: такого оператора не існує, або може бути "
+"орфоргафічною помилкою"
 
 #: ../transport.validator.mapcss:190
 msgid "Check the network tag : this network does not exist, it may be a typo"
 msgstr ""
+"Перевірте теґ network: цієї мережі не існує, або може бути орфоргафічною "
+"помилкою"
 
 #: ../transport.validator.mapcss:207
 msgid ""
 "A bus station is usually a large area where many buses stop, check if you "
 "can draw this area"
 msgstr ""
+"Автобусна станція -  це, як правило, велика територія, де зупиняється багато"
+" автобусів, перевірте, чи можна накреслити цю зону"
