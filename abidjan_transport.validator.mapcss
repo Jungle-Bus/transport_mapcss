@@ -65,7 +65,12 @@ relation.pt_route_master[!opening_hours]
     fixAdd: "opening_hours=Mo-Su,PH 05:00-22:00";
 }
 
-relation[type=route_master][interval] > relation[type=route][interval]
+relation[type=route_master][interval]![interval:note] > relation[type=route][interval]
+{
+    throwError: "AbidjanTransport : la fréquence de passage est définie sur la ligne et sur le parcours. Si c'est la même, il suffit de la définir sur la ligne (route_master)";
+}
+
+ relation[type=route][interval] < relation[type=route_master][interval]![interval:note]
 {
     throwError: "AbidjanTransport : la fréquence de passage est définie sur la ligne et sur le parcours. Si c'est la même, il suffit de la définir sur la ligne (route_master)";
 }
