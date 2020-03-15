@@ -1,0 +1,67 @@
+meta
+{
+	title: "Jungle Bus – KochiTransport add-ons";
+	version: "0.12";
+	description: "Uncompromising validation of transit data";
+	author: "nlehuby";
+	link: "https://junglebus.io/";
+	baselanguage: "fr";
+	watch-modified: true;
+	min-josm-version: 14481;
+	-osmoseTags: list("tag", "public_transport");
+}
+
+relation[type=route_master][route_master=~/^(bus|coach|train|subway|monorail|trolleybus|aerialway|funicular|ferry|tram|share_taxi|light_rail|school_bus|walking_bus)$/]
+{
+	set pt_route_master;
+}
+
+relation[type=route][route=~/^(bus|coach|train|subway|monorail|trolleybus|aerialway|funicular|ferry|tram|share_taxi|light_rail|school_bus|walking_bus)$/]
+{
+	set pt_route;
+}
+
+/* we choose to map highway=bus_stop as platform and not stop_position*/
+way[highway] > node[highway=bus_stop][inside("IN")]
+{
+    throwError: "KochiTransport: Map the bus stop on the side of the road and not on the road";
+}
+
+relation[type=route][route=bus] >[role="platform"] way {
+    throwError: "KochiTransport: A bus stop should be a node and not a way";
+}
+
+relation[type=route][route=bus] >[role="platform"] node[!highway] {
+    throwError: "KochiTransport: A bus stop should have the highway=bus_stop tag";
+}
+
+
+*[public_transport=platform] < relation[type=route] {
+    set route_with_platform
+}
+
+relation.pt_route!.route_with_platform {
+    throwError: "KochiTransport: Add stops (platform) to this route to make it valid";
+}
+
+relation.pt_route_master[!opening_hours]
+{
+	throwError: tr("KochiTransport: Missing opening hours for the line");
+    fixAdd: "opening_hours=Mo-Su,PH 05:00-22:00";
+}
+
+relation[type=route_master][interval]![interval:note] > relation[type=route][interval]
+{
+    throwError: "KochiTransport: The interval is set on both the line (route_master) and route. If it's the same, only add it on the route";
+}
+
+ relation[type=route][interval] < relation[type=route_master][interval]![interval:note]
+{
+    throwError: "KochiTransport: The interval is set on both the line (route_master) and route. If it's the same, only add it on the route";
+}
+
+node[type=public_transport],
+way[type=public_transport] {
+    throwError: "KochiTransport: type=public_transport is not a valid tag for this object (it is only to categorize relations)";
+	fixRemove: "type";
+}
