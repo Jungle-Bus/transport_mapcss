@@ -1,10 +1,11 @@
+#
 # Translators:
 # frodrigo <fred.rodrigo@gmail.com>, 2018
-# Gábor Babos <gabor.babos@gmail.com>, 2019
+# Gábor Babos <gabor.babos@gmail.com>, 2020
 #
 msgid ""
 msgstr ""
-"Last-Translator: Gábor Babos <gabor.babos@gmail.com>, 2019\n"
+"Last-Translator: Gábor Babos <gabor.babos@gmail.com>, 2020\n"
 "Language-Team: Hungarian (https://www.transifex.com/openstreetmap-france/teams/17462/hu/)\n"
 "Language: hu\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -221,3 +222,5 @@ msgstr ""
 #: ../transport.validator.mapcss:235
 msgid "Is this a bus or tram stop ? Add a tag to precise the kind of platform"
 msgstr ""
+"Ez busz- vagy villamosmegálló? A peron típusának pontosításához adjon hozzá "
+"egy címkét."
