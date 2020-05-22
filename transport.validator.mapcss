@@ -230,7 +230,7 @@ node[railway=tram_stop][!public_transport]
 	assertMatch: "node railway=tram_stop";
 }
 
-node[public_transport=platform][!highway][!railway][!bus][!tram][!ferry]
+node[public_transport=platform][!highway][!railway][!bus][!tram][!ferry][!walking_bus]
 {
 	throwError: tr("Is this a bus or tram stop ? Add a tag to precise the kind of platform");
 	group: tr("Missing legacy tag on a public transport stop");
