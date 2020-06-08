@@ -152,23 +152,23 @@ relation.pt_route[tag(route)!=parent_tag(route_master)]
 relation.pt_route[colour][colour=~/^#/][colour!~/^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/],
 relation.pt_route_master[colour][colour=~/^#/][colour!~/^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/]
 {
-    throwError: tr("Check the colour tag");
-    -osmoseItemClassLevel: none;
+	throwError: tr("Check the colour tag");
+	-osmoseItemClassLevel: none;
 }
 
 relation.pt_route[colour][colour=~/^([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/],
 relation.pt_route_master[colour][colour=~/^([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/]
 {
-    throwError: tr("The colour code should start with '#' followed by 3 or 6 digits");
-    fixAdd: concat("colour=#", tag(colour));
-    -osmoseItemClassLevel: none;
+	throwError: tr("The colour code should start with '#' followed by 3 or 6 digits");
+	fixAdd: concat("colour=#", tag(colour));
+	-osmoseItemClassLevel: none;
 }
 
 relation.pt_route[!colour][color],
 relation.pt_route_master[!colour][color]
 {
-    throwError: tr("The color of the public transport line should be in a colour tag");
-    fixChangeKey: "color=>colour";
+	throwError: tr("The color of the public transport line should be in a colour tag");
+	fixChangeKey: "color=>colour";
 }
 
 relation.pt_route["fixme:relation"="order members"]
@@ -205,7 +205,7 @@ node[highway=bus_stop][amenity=bus_station]
 node[amenity=bus_station]
 {
 	throwWarning: tr("A bus station is usually a large area where many buses stop, check if you can draw this area");
-    -osmoseItemClassLevel: none;
+	-osmoseItemClassLevel: none;
 }
 
 node[highway=bus_stop][!public_transport]
@@ -327,15 +327,15 @@ relation.pt_route_master[duration][duration !~ /^([0-9][0-9]?[0-9]?|(PT)?[0-2][0
 	assertNoMatch: "relation type=route route=ferry duration=20";
 	assertNoMatch: "relation type=route route=ferry duration=120";
 	assertMatch: "relation type=route route=ferry duration=1240";
-    assertNoMatch: "relation type=route_master route=bus duration=02:00:00";
-    assertNoMatch: "relation type=route route=bus duration=25:00";
-    assertNoMatch: "relation type=route route=ferry duration=P0.5D";
-    assertNoMatch: "relation type=route_master route=ferry duration=PT4H";
-    assertNoMatch: "relation type=route route=ferry duration=PT20M";
-    assertNoMatch: "relation type=route route=ferry duration=PT120M";
-    assertNoMatch: "relation type=route route=ferry duration=PT50S";
-    assertNoMatch: "relation type=route route=ferry duration=PT02:25:06";
-    assertNoMatch: "relation type=route route=ferry duration=PT2H25M6S";
+	assertNoMatch: "relation type=route_master route=bus duration=02:00:00";
+	assertNoMatch: "relation type=route route=bus duration=25:00";
+	assertNoMatch: "relation type=route route=ferry duration=P0.5D";
+	assertNoMatch: "relation type=route_master route=ferry duration=PT4H";
+	assertNoMatch: "relation type=route route=ferry duration=PT20M";
+	assertNoMatch: "relation type=route route=ferry duration=PT120M";
+	assertNoMatch: "relation type=route route=ferry duration=PT50S";
+	assertNoMatch: "relation type=route route=ferry duration=PT02:25:06";
+	assertNoMatch: "relation type=route route=ferry duration=PT2H25M6S";
 }
 
 relation.pt_route["interval:conditional"][!interval],
