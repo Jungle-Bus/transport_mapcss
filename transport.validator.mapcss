@@ -208,7 +208,21 @@ node[amenity=bus_station]
 	-osmoseItemClassLevel: none;
 }
 
-node[highway=bus_stop][!public_transport]
+
+way[highway] > node[highway=bus_stop]
+{
+	set bus_stop_on_road
+}
+
+node[highway=bus_stop][!public_transport].bus_stop_on_road
+{
+	throwError: tr("Is it the location where the bus stops on the road ? add the tag public_transport=stop_position");
+	group: tr("Missing public_transport tag on a public transport stop");
+	fixAdd: "public_transport=stop_position";
+	fixAdd: "bus=yes";
+}
+
+node[highway=bus_stop][!public_transport]!.bus_stop_on_road
 {
 	throwError: tr("Specify if it is a stop (platform) or a location on the road (stop_position)");
 	group: tr("Missing public_transport tag on a public transport stop");
@@ -348,5 +362,4 @@ relation.pt_route["interval:conditional"][!opening_hours],
 relation.pt_route_master["interval:conditional"][!opening_hours]
 {
 	throwError: tr("Missing opening_hours tag");
-
 }
