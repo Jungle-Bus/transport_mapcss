@@ -59,18 +59,33 @@ relation.pt_route!.route_with_platform {
     throwError: "AbidjanTransport : Il manque des arrêts (platform) dans ce parcours";
 }
 
+relation.pt_route_master[network=~/^Gbaka*/][!vehicle:colour]
+{
+	throwError: "AbidjanTransport : Il manque le tag vehicle:colour pour indiquer la couleur du gbaka";
+}
+
+relation.pt_route_master[network=~/^Gbaka*/][vehicle:colour][vehicle:colour=~/^#/][vehicle:colour!~/^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/]
+{
+	throwError: "AbidjanTransport : le tag vehicle:colour pour indiquer la couleur du gbaka semble incorrect";
+}
+
+relation.pt_route_master[network=~/^Gbaka*/][!vehicle:colour][colour]
+{
+	throwError: "AbidjanTransport : la couleur du gbaka est à mettre dans le tag vehicle:colour";
+}
+
 relation.pt_route_master[!opening_hours]
 {
 	throwError: tr("AbidjanTransport : Il manque les horaires de service (opening_hours) de la ligne");
     fixAdd: "opening_hours=Mo-Su,PH 05:00-22:00";
 }
 
-relation[type=route_master][interval]![interval:note] > relation[type=route][interval]
+relation[type=route_master][interval][!interval:note] > relation[type=route][interval]
 {
     throwError: "AbidjanTransport : la fréquence de passage est définie sur la ligne et sur le parcours. Si c'est la même, il suffit de la définir sur la ligne (route_master)";
 }
 
- relation[type=route][interval] < relation[type=route_master][interval]![interval:note]
+ relation[type=route][interval] < relation[type=route_master][interval][!interval:note]
 {
     throwError: "AbidjanTransport : la fréquence de passage est définie sur la ligne et sur le parcours. Si c'est la même, il suffit de la définir sur la ligne (route_master)";
 }
