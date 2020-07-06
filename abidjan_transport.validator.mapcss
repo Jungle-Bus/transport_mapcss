@@ -59,19 +59,19 @@ relation.pt_route!.route_with_platform {
     throwError: "AbidjanTransport : Il manque des arrêts (platform) dans ce parcours";
 }
 
-relation.pt_route_master[network=~/^Gbaka*/][!vehicle:colour]
+relation.pt_route_master[network=~/^Woro*/][!vehicle:colour]
 {
-	throwError: "AbidjanTransport : Il manque le tag vehicle:colour pour indiquer la couleur du gbaka";
+	throwError: "AbidjanTransport : Il manque le tag vehicle:colour pour indiquer la couleur du woro woro";
 }
 
-relation.pt_route_master[network=~/^Gbaka*/][vehicle:colour][vehicle:colour=~/^#/][vehicle:colour!~/^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/]
+relation.pt_route_master[network=~/^Woro*/][vehicle:colour][vehicle:colour=~/^#/][vehicle:colour!~/^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/]
 {
-	throwError: "AbidjanTransport : le tag vehicle:colour pour indiquer la couleur du gbaka semble incorrect";
+	throwError: "AbidjanTransport : le tag vehicle:colour pour indiquer la couleur du woro woro semble incorrect";
 }
 
-relation.pt_route_master[network=~/^Gbaka*/][!vehicle:colour][colour]
+relation.pt_route_master[network=~/^Woro*/][!vehicle:colour][colour]
 {
-	throwError: "AbidjanTransport : la couleur du gbaka est à mettre dans le tag vehicle:colour";
+	throwError: "AbidjanTransport : la couleur du woro woro est à mettre dans le tag vehicle:colour";
 }
 
 relation.pt_route_master[!opening_hours]
