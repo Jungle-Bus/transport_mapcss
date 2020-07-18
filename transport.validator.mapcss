@@ -34,6 +34,10 @@ meta[lang=it]
 {
 	description: "Validazione senza compromessi sui dati di transito";
 }
+meta[lang=ja]
+{
+	description: "乗り換えデータの妥協のないバリデーション";
+}
 meta[lang=nl]
 {
 	description: "Compromisloze validatie van transit data";
