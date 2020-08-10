@@ -111,8 +111,8 @@ relation.pt_route_master[!operator]
 relation.pt_route[!ref],
 relation.pt_route_master[!ref]
 {
-	throwError: tr("Missing ref tag for line number on a public_transport relation");
-	-osmoseItemClassLevel: "2140/21404/3";
+	throwWarning: tr("Missing ref tag for line number on a public_transport relation");
+    -osmoseItemClassLevel: none;
 	assertNoMatch: "relation type=route route=bus ref=3";
 	assertMatch: "relation type=route route=bus";
 }
