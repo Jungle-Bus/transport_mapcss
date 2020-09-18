@@ -65,3 +65,9 @@ way[type=public_transport] {
     throwError: "KochiTransport: type=public_transport is not a valid tag for this object (it is only to categorize relations)";
 	fixRemove: "type";
 }
+
+relation.pt_route[!duration]
+{
+	throwError: "KochiTransport : Missing travel time (duration tag) for this trip. You can get this value from the GPS track using Voodoo";
+
+}
