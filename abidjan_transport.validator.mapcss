@@ -89,3 +89,9 @@ relation[type=route_master][interval][!interval:note] > relation[type=route][int
 {
     throwError: "AbidjanTransport : la fréquence de passage est définie sur la ligne et sur le parcours. Si c'est la même, il suffit de la définir sur la ligne (route_master)";
 }
+
+relation.pt_route[!duration]
+{
+	throwError: "AbidjanTransport : Il manque la durée du trajet (duration) sur ce parcours. On peut l'obtenir à partir de la trace GPS dans Voodoo";
+
+}
