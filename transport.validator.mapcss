@@ -42,6 +42,10 @@ meta[lang=nl]
 {
 	description: "Compromisloze validatie van transit data";
 }
+meta[lang=ru]
+{
+	description: "Валидатор транспорта";
+}
 meta[lang=uk]
 {
 	description: "Безкомпромісна валідація транзитних даних";
