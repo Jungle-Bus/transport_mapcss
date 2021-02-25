@@ -1,0 +1,353 @@
+meta
+{
+	title: "Jungle Bus – validation ruleset";
+	version: "0.12";
+	description: "Uncompromising validation of transit data";
+	author: "nlehuby";
+	link: "https://junglebus.io/";
+	baselanguage: "en";
+	watch-modified: true;
+	min-josm-version: 14481;
+	-osmoseTags: list("tag", "public_transport");
+}
+meta[lang=en] /* lang=en, unused, only to use tr() to catch string for translation */
+{
+	description: tr("Uncompromising validation of transit data");
+}
+meta[lang=cs]
+{
+	description: "Nekompromisní validace údajů o tranzitu";
+}
+meta[lang=es]
+{
+	description: "Validación inflexible de los datos de tránsito";
+}
+meta[lang=fr]
+{
+	description: "Une validation intransigeante des données de transport en commun";
+}
+meta[lang=hu]
+{
+	description: "Tömegközlekedési adatok teljes körű érvényesítése";
+}
+meta[lang=it]
+{
+	description: "Validazione senza compromessi sui dati di transito";
+}
+meta[lang=ja]
+{
+	description: "乗り換えデータの妥協のないバリデーション";
+}
+meta[lang=nl]
+{
+	description: "Compromisloze validatie van transit data";
+}
+meta[lang=ru]
+{
+	description: "Валидатор транспорта";
+}
+meta[lang=uk]
+{
+	description: "Безкомпромісна валідація транзитних даних";
+}
+meta[lang=zh_CN]
+{
+	description: "运输数据不妥协的验证";
+}
+meta[lang=zh_TW]
+{
+	description: "未妥協驗證的運輸資料";
+}
+
+relation[type=route][!route]
+{
+	throwError: tr("Missing transportation mode, add a tag route = bus/coach/tram/etc");
+}
+
+relation[type=route_master][!route_master][!route]
+{
+	throwError: tr("Missing transportation mode, add a tag route = bus/coach/tram/etc");
+}
+
+/*the transport mode is specified with the wrong tag */
+relation[type=route_master][!route_master][route]
+{
+	throwError: tr("Missing transportation mode, change tag route to route_master");
+	fixChangeKey: "route=>route_master";
+}
+
+relation[type=route][route=~/^(bus|coach|train|subway|monorail|trolleybus|aerialway|funicular|ferry|tram|share_taxi|light_rail|school_bus|walking_bus)$/]
+{
+	set pt_route;
+}
+
+relation[type=route_master][route_master=~/^(bus|coach|train|subway|monorail|trolleybus|aerialway|funicular|ferry|tram|share_taxi|light_rail|school_bus|walking_bus)$/]
+{
+	set pt_route_master;
+}
+
+relation.pt_route[!public_transport:version]
+{
+	throwError: tr("Missing public_transport:version tag on a public_transport route relation");
+	-osmoseItemClassLevel: "2140/21401/3";
+	assertNoMatch: "relation type=route route=bus public_transport:version=1";
+	assertMatch: "relation type=route route=bus";
+}
+
+relation.pt_route[!network],
+relation.pt_route_master[!network]
+{
+	throwError: tr("Missing network tag on a public_transport relation");
+	-osmoseItemClassLevel: "2140/21402/3";
+	assertNoMatch: "relation type=route route=bus network=BiBiBus";
+	assertMatch: "relation type=route route=bus";
+}
+
+relation.pt_route[!operator],
+relation.pt_route_master[!operator]
+{
+	throwError: tr("Missing operator tag on a public_transport relation");
+	-osmoseItemClassLevel: "2140/21403/3";
+	assertNoMatch: "relation type=route route=bus operator=BiBiBus";
+	assertMatch: "relation type=route route=bus";
+}
+
+relation.pt_route[!ref],
+relation.pt_route_master[!ref]
+{
+	throwWarning: tr("Missing ref tag for line number on a public_transport relation");
+    -osmoseItemClassLevel: none;
+	assertNoMatch: "relation type=route route=bus ref=3";
+	assertMatch: "relation type=route route=bus";
+}
+
+relation.pt_route[!from],
+relation.pt_route[!to]
+{
+	throwError: tr("Missing from/to tag on a public_transport route relation");
+	-osmoseItemClassLevel: "2140/21405/3";
+	assertNoMatch: "relation type=route route=bus from=A to=B";
+	assertMatch: "relation type=route route=bus from=A";
+	assertMatch: "relation type=route route=bus to=B";
+	assertMatch: "relation type=route route=bus";
+}
+
+relation.pt_route[tag(network)!=parent_tag(network)]
+{
+	throwError: tr("The network tag should be the same for the route and the route_master : {0} vs {1}", tag(network), parent_tag(network));
+}
+
+relation.pt_route[tag(operator)!=parent_tag(operator)]
+{
+	throwError: tr("The operator tag should be the same for the route and the route_master : {0} vs {1}", tag(operator), parent_tag(operator));
+}
+
+relation.pt_route[tag(ref)!=parent_tag(ref)]
+{
+	throwWarning: tr("The ref tag should be the same for the route and the route_master : {0} vs {1}", tag(ref), parent_tag(ref));
+}
+
+relation.pt_route[tag(colour)!=parent_tag(colour)]
+{
+	throwWarning: tr("The colour tag should be the same for the route and the route_master : {0} vs {1}", tag(colour), parent_tag(colour));
+}
+
+relation.pt_route[tag(route)!=parent_tag(route_master)]
+{
+	throwError: tr("The public transport mode should be the same for the route and the route_master : {0} vs {1}", tag(route), parent_tag(route_master));
+}
+
+relation.pt_route[colour][colour=~/^#/][colour!~/^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/],
+relation.pt_route_master[colour][colour=~/^#/][colour!~/^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/]
+{
+	throwError: tr("Check the colour tag");
+	-osmoseItemClassLevel: none;
+}
+
+relation.pt_route[colour][colour=~/^([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/],
+relation.pt_route_master[colour][colour=~/^([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/]
+{
+	throwError: tr("The colour code should start with '#' followed by 3 or 6 digits");
+	fixAdd: concat("colour=#", tag(colour));
+	-osmoseItemClassLevel: none;
+}
+
+relation.pt_route[!colour][color],
+relation.pt_route_master[!colour][color]
+{
+	throwError: tr("The color of the public transport line should be in a colour tag");
+	fixChangeKey: "color=>colour";
+}
+
+relation.pt_route["fixme:relation"="order members"]
+{
+	throwWarning: tr("The stops may not be in the right order");
+	-osmoseItemClassLevel: none;
+}
+
+/* These values are not valid operator or network */
+relation.pt_route["operator"=~/STIF|Kéolis|Véolia/][inside("FR")],
+relation.pt_route_master["operator"=~/STIF|Kéolis|Véolia/][inside("FR")]
+{
+	throwError: tr("Check the operator tag : this operator does not exist, it may be a typo");
+}
+
+relation.pt_route["network"=~/STIF|Kéolis|Véolia/][inside("FR")],
+relation.pt_route_master["network"=~/STIF|Kéolis|Véolia/][inside("FR")]
+{
+	throwError: tr("Check the network tag : this network does not exist, it may be a typo");
+}
+
+way[highway=bus_stop],
+relation[highway=bus_stop]
+{
+	throwError: tr("A bus stop is supposed to be a node");
+}
+
+node[highway=bus_stop][amenity=bus_station]
+{
+	throwError: tr("Is it a bus stop or a bus station?");
+	fixRemove: "amenity";
+}
+
+node[amenity=bus_station]
+{
+	throwWarning: tr("A bus station is usually a large area where many buses stop, check if you can draw this area");
+	-osmoseItemClassLevel: none;
+}
+
+node[highway=bus_stop][!public_transport]
+{
+	throwError: tr("Specify if it is a stop (platform) or a location on the road (stop_position)");
+	group: tr("Missing public_transport tag on a public transport stop");
+	-osmoseItemClassLevel: "2140/21411:0/3";
+	fixAdd: "public_transport=platform";
+	assertNoMatch: "node highway=bus_stop public_transport=platform";
+	assertNoMatch: "node highway=bus_stop public_transport=stop_position";
+	assertMatch: "node highway=bus_stop";
+}
+
+node[railway=tram_stop][!public_transport]
+{
+	throwError: tr("Specify if it is a stop (platform) or a location on the rails (stop_position)");
+	group: tr("Missing public_transport tag on a public transport stop");
+	-osmoseItemClassLevel: "2140/21411:1/3";
+	fixAdd: "public_transport=stop_position";
+	assertNoMatch: "node railway=tram_stop public_transport=platform";
+	assertNoMatch: "node railway=tram_stop public_transport=stop_position";
+	assertMatch: "node railway=tram_stop";
+}
+
+node[public_transport=platform][!highway][!railway][!bus][!tram][!ferry][!walking_bus]
+{
+	throwError: tr("Is this a bus or tram stop ? Add a tag to precise the kind of platform");
+	group: tr("Missing legacy tag on a public transport stop");
+	-osmoseItemClassLevel: "2140/21412:1/3";
+}
+
+node[public_transport=platform][!highway][!railway][bus=yes]
+{
+	throwError: tr("Is this a bus stop? add the tag highway=bus_stop");
+	group: tr("Missing legacy tag on a public transport stop");
+	-osmoseItemClassLevel: "2140/21412:0/3";
+	fixAdd: "highway=bus_stop";
+	assertMatch: "node public_transport=platform bus=yes"
+}
+
+/* The note tag is often used to specify the bus routes or other useful metadata that should have their own tag */
+node[highway=bus_stop][note],
+node[highway=bus_stop][note:fr][inside("FR")]
+{
+	throwWarning: tr("Check if the note can be deleted");
+}
+
+node[highway=bus_stop][network][inside("FR")]
+{
+	throwWarning: tr("The network should be on the transport lines and not on the stops");
+	fixRemove: "network";
+}
+
+node[highway=bus_stop][operator][inside("FR")]
+{
+	throwWarning: tr("The operator should be on the transport lines and not on the stops");
+	fixRemove: "operator";
+}
+
+relation[type=route_master] > relation[type=route]
+{
+	set route_ok
+}
+
+relation.pt_route!.route_ok
+{
+	throwError: tr("The line variant does not belong to any line, add it to the route_master relation");
+}
+
+relation[type=route] > node[public_transport=platform]
+{
+	set platform_in_route
+}
+relation[type=route] > way[public_transport=platform]
+{
+	set way_platform_in_route
+}
+
+node[public_transport=platform]!.platform_in_route
+{
+	throwError: tr("The stop is not served by any line, add it to a route relation");
+	-osmoseItemClassLevel: none;
+}
+
+node.platform_in_route[!name]
+{
+	throwWarning: tr("Missing name on a public transport stop");
+	-osmoseItemClassLevel: none;
+}
+
+way.way_platform_in_route[!name]
+{
+	throwWarning: tr("Missing name on a public transport stop");
+	-osmoseItemClassLevel: none;
+}
+
+relation.pt_route[interval][interval !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/],
+relation.pt_route_master[interval][interval !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/]
+{
+	throwError: tr("The interval is invalid (try a number of minutes)");
+	assertMatch: "relation type=route route=bus interval=irregular";
+	assertMatch: "relation type=route route=ferry interval=2heures";
+	assertNoMatch: "relation type=route route=bus interval=5";
+	assertNoMatch: "relation type=route route=bus interval=10";
+	assertNoMatch: "relation type=route route=bus interval=120";
+	assertMatch: "relation type=route_master route_master=bus interval=1240";
+	assertNoMatch: "relation type=route route=bus interval=00:05";
+	assertNoMatch: "relation type=route route=bus interval=00:10:00";
+	assertNoMatch: "relation type=route route=bus interval=02:00:00";
+	assertMatch: "relation type=route route=bus interval=00:70:00";
+}
+
+relation.pt_route[duration][duration !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/],
+relation.pt_route_master[duration][duration !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/]
+{
+	throwError: tr("The duration is invalid (try a number of minutes)");
+	assertMatch: "relation type=route route=bus duration=20minutes";
+	assertNoMatch: "relation type=route_master route_master=bus duration=5";
+	assertNoMatch: "relation type=route route=ferry duration=20";
+	assertNoMatch: "relation type=route route=ferry duration=120";
+	assertMatch: "relation type=route route=ferry duration=1240";
+	assertNoMatch: "relation type=route_master route=bus duration=02:00:00";
+	assertNoMatch: "relation type=route route=bus duration=25:00";
+}
+
+relation.pt_route["interval:conditional"][!interval],
+relation.pt_route_master["interval:conditional"][!interval]
+{
+	throwError: tr("Missing interval tag to specify the main interval");
+}
+
+relation.pt_route["interval:conditional"][!opening_hours],
+relation.pt_route_master["interval:conditional"][!opening_hours]
+{
+	throwError: tr("Missing opening_hours tag");
+
+}
