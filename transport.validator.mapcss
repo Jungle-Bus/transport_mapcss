@@ -388,6 +388,6 @@ way > node[railway=train_station_entrance]
 node[railway=subway_entrance]!.subway_entrance_in_way,
 node[railway=train_station_entrance]!.train_station_entrance_in_way
 {
-	throwError: tr("The station entrance should be part of a building or a highway (steps, footway, etc)");
+	throwWarning: tr("The station entrance should be part of a building or a highway (steps, footway, etc)");
 	-osmoseItemClassLevel: none;
 }
