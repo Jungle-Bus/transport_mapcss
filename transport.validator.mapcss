@@ -349,5 +349,45 @@ relation.pt_route["interval:conditional"][!opening_hours],
 relation.pt_route_master["interval:conditional"][!opening_hours]
 {
 	throwError: tr("Missing opening_hours tag");
+}
 
+way[railway=subway_entrance],
+relation[railway=subway_entrance],
+way[railway=train_station_entrance],
+relation[railway=train_station_entrance]
+{
+	throwError: tr("Subway entrances should be mapped as nodes");
+	assertMatch: "way railway=subway_entrance";
+}
+
+relation[public_transport=stop_area] > node[railway=subway_entrance]
+{
+	set subway_entrance_in_stop_area
+}
+relation[public_transport=stop_area] > node[railway=train_station_entrance]
+{
+	set train_station_entrance_in_stop_area
+}
+
+node[railway=subway_entrance]!.subway_entrance_in_stop_area,
+node[railway=train_station_entrance]!.train_station_entrance_in_stop_area
+{
+	throwError: tr("The station entrance should be in a station: add it to a stop_area relation");
+	-osmoseItemClassLevel: none;
+}
+
+way > node[railway=subway_entrance]
+{
+	set subway_entrance_in_way
+}
+way > node[railway=train_station_entrance]
+{
+	set train_station_entrance_in_way
+}
+
+node[railway=subway_entrance]!.subway_entrance_in_way,
+node[railway=train_station_entrance]!.train_station_entrance_in_way
+{
+	throwError: tr("The station entrance should be part of a building or a highway (steps, footway, etc)");
+	-osmoseItemClassLevel: none;
 }
