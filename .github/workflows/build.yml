@@ -1,0 +1,26 @@
+name: Build and deploy JOSM rules
+
+on:
+  push:
+    branches-ignore:
+      - 'gh-pages'
+
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install deps
+      run: sudo apt-get install --yes gettext libterm-readkey-perl 
+    - name: Build translations
+      run: |
+        cd po
+        make *.po
+        make
+    - name: Deploy
+      if: ${{ github.ref == 'refs/heads/master' }}
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: .
