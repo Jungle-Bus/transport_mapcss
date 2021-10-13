@@ -189,12 +189,6 @@ msgstr "Is this a bus or tram stop ? Add a tag to precise the kind of platform"
 msgid "Subway entrances should be mapped as nodes"
 msgstr "Subway entrances should be mapped as nodes"
 
-#: ../transport.validator.mapcss:375
-msgid ""
-"The station entrance should be in a station: add it to a stop_area relation"
-msgstr ""
-"The station entrance should be in a station: add it to a stop_area relation"
-
 #: ../transport.validator.mapcss:391
 msgid ""
 "The station entrance should be part of a building or a highway (steps, "
@@ -202,3 +196,11 @@ msgid ""
 msgstr ""
 "The station entrance should be part of a building or a highway (steps, "
 "footway, etc)"
+
+#: ../transport.validator.mapcss:375
+msgid ""
+"The station entrance should be in part of a station: add it to a stop_area "
+"relation"
+msgstr ""
+"The station entrance should be in part of a station: add it to a stop_area "
+"relation"

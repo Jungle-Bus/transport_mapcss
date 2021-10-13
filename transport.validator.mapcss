@@ -372,7 +372,7 @@ relation[public_transport=stop_area] > node[railway=train_station_entrance]
 node[railway=subway_entrance]!.subway_entrance_in_stop_area,
 node[railway=train_station_entrance]!.train_station_entrance_in_stop_area
 {
-	throwError: tr("The station entrance should be in a station: add it to a stop_area relation");
+	throwError: tr("The station entrance should be in part of a station: add it to a stop_area relation");
 	-osmoseItemClassLevel: none;
 }
 
