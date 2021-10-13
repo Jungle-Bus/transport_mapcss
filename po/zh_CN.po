@@ -184,17 +184,18 @@ msgstr "公交枢纽站通常是包含了很多公交站的大型区域，如果
 msgid "Is this a bus or tram stop ? Add a tag to precise the kind of platform"
 msgstr "这是公交站还是电车站？添加更精确的标记来描述站台的类型"
 
-#: ../transport.validator.mapcss:360
+#: ../transport.validator.mapcss:359
 msgid "Subway entrances should be mapped as nodes"
 msgstr "地铁出入口应绘制为点"
 
-#: ../transport.validator.mapcss:376
-msgid ""
-"The station entrance should be in a station: add it to a stop_area relation"
-msgstr "车站出入口应属于某个车站：将其添加到stop_area关系"
-
-#: ../transport.validator.mapcss:392
+#: ../transport.validator.mapcss:391
 msgid ""
 "The station entrance should be part of a building or a highway (steps, "
 "footway, etc)"
 msgstr "车站出入口应作为建筑或道路（steps, footway等）的一部分"
+
+#: ../transport.validator.mapcss:375
+msgid ""
+"The station entrance should be in part of a station: add it to a stop_area "
+"relation"
+msgstr "车站出入口应属于某个车站：将其添加到stop_area关系"
