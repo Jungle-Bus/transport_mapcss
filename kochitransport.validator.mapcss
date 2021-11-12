@@ -50,6 +50,11 @@ relation.pt_route_master[!opening_hours]
     fixAdd: "opening_hours=Mo-Su,PH 05:00-22:00";
 }
 
+relation.pt_route_master[!interval]
+{
+	throwError: tr("KochiTransport: Missing headway (interval tag) for the line");
+}
+
 relation[type=route_master][interval]![interval:note] > relation[type=route][interval]
 {
     throwError: "KochiTransport: The interval is set on both the line (route_master) and route. If it's the same, only add it on the route";
@@ -66,8 +71,8 @@ way[type=public_transport] {
 	fixRemove: "type";
 }
 
-relation.pt_route[!duration]
+/*relation.pt_route[!duration]
 {
 	throwError: "KochiTransport : Missing travel time (duration tag) for this trip. You can get this value from the GPS track using Voodoo";
 
-}
+}*/
