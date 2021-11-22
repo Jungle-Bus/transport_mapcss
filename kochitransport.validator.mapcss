@@ -2,7 +2,7 @@ meta
 {
 	title: "Jungle Bus – KochiTransport add-ons";
 	version: "0.12";
-	description: "Uncompromising validation of transit data";
+	description: "Uncompromising validation of public transport data";
 	author: "nlehuby";
 	link: "https://junglebus.io/";
 	baselanguage: "fr";
@@ -44,6 +44,7 @@ relation.pt_route!.route_with_platform {
     throwError: "KochiTransport: Add stops (platform) to this route to make it valid";
 }
 
+/*
 relation.pt_route_master[!opening_hours]
 {
 	throwError: tr("KochiTransport: Missing opening hours for the line");
@@ -63,12 +64,26 @@ relation[type=route_master][interval]![interval:note] > relation[type=route][int
  relation[type=route][interval] < relation[type=route_master][interval]![interval:note]
 {
     throwError: "KochiTransport: The interval is set on both the line (route_master) and route. If it's the same, only add it on the route";
-}
+}*/
 
 node[type=public_transport],
 way[type=public_transport] {
     throwError: "KochiTransport: type=public_transport is not a valid tag for this object (it is only to categorize relations)";
 	fixRemove: "type";
+}
+
+node[highway=bus_stop][public_transport=station] {
+    throwError: "KochiTransport: Bus stop should have public_transport=platform (If it is a bus station, add an area with amenity=bus_station + public_transport=bus_station)";
+    fixAdd: "public_transport=platform";
+}
+
+node[highway=bus_stop][name][name=~/(?i)jn/] {
+	throwError: "KochiTransport: Don't use abbreviation (Junction instead of Jn)";
+}
+
+node[highway=bus_stop][name][name=~/(?i)bus stop/],
+node[highway=bus_stop][name][name=~/(?i)bus stand/] {
+	throwError: "KochiTransport: Don't add bus stop or bus stand to the name";
 }
 
 /*relation.pt_route[!duration]
