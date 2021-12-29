@@ -26,14 +26,14 @@ relation.pt_route_master[!charge]
 	throwError: "AbidjanTransport : Il manque le tag charge pour indiquer le prix";
 }
 
-/* The charge tag must end with FCFA */
-relation.pt_route_master[charge$="FCFA"][route_master=~/^(bus|share_taxi|ferry)$/]
+/* The charge tag must end with XOF */
+relation.pt_route_master[charge$="XOF"][route_master=~/^(bus|share_taxi|ferry)$/]
 {
 	set charge_ok
 }
 relation.pt_route_master[charge][route_master=~/^(bus|share_taxi|ferry)$/]!.charge_ok
 {
-	throwError: "AbidjanTransport : le prix doit se terminer par FCFA";
+	throwError: "AbidjanTransport : le prix doit se terminer par XOF";
 }
 
 /* we choose to map highway=bus_stop as platform and not stop_position*/
