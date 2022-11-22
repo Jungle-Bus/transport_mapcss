@@ -59,12 +59,12 @@ meta[lang=zh_TW]
 	description: "未妥協驗證的運輸資料";
 }
 
-relation[type=route][!route]
+relation[type=route][!route][!disused:route]
 {
 	throwError: tr("Missing transportation mode, add a tag route = bus/coach/tram/etc");
 }
 
-relation[type=route_master][!route_master][!route]
+relation[type=route_master][!route_master][!route][!disused:route_master]
 {
 	throwError: tr("Missing transportation mode, add a tag route = bus/coach/tram/etc");
 }
