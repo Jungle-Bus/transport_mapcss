@@ -168,15 +168,23 @@ relation[type=route_master]
 	throwError: tr("The public transport mode should be the same for the route and the route_master : {0} vs {1}", tag(route), parent_tag(route_master));
 }
 
-*.pt_route[colour][colour=~/^#/][colour!~/^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/],
-*.pt_route_master[colour][colour=~/^#/][colour!~/^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/]
+*[colour][colour=~/^#/][colour!~/^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/]
+{
+	set bad_colour
+}
+*.pt_route.bad_colour,
+*.pt_route_master.bad_colour
 {
 	throwError: tr("Check the colour tag");
 	-osmoseItemClassLevel: none;
 }
 
-*.pt_route[colour][colour=~/^([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/],
-*.pt_route_master[colour][colour=~/^([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/]
+*[colour][colour=~/^([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/]
+{
+	set colour_nohash
+}
+*.pt_route.colour_nohash,
+*.pt_route_master.colour_nohash
 {
 	throwError: tr("The colour code should start with '#' followed by 3 or 6 digits");
 	fixAdd: concat("colour=#", tag(colour));
@@ -197,14 +205,22 @@ relation[type=route_master]
 }
 
 /* These values are not valid operator or network */
-*.pt_route["operator"=~/STIF|Kéolis|Véolia/][inside("FR")],
-*.pt_route_master["operator"=~/STIF|Kéolis|Véolia/][inside("FR")]
+*["operator"=~/STIF|Kéolis|Véolia/][inside("FR")]
+{
+	set bad_operator
+}
+*.pt_route.bad_operator,
+*.pt_route_master.bad_operator
 {
 	throwError: tr("Check the operator tag : this operator does not exist, it may be a typo");
 }
 
-*.pt_route["network"=~/STIF|Kéolis|Véolia/][inside("FR")],
-*.pt_route_master["network"=~/STIF|Kéolis|Véolia/][inside("FR")]
+*["network"=~/STIF|Kéolis|Véolia/][inside("FR")]
+{
+	set bad_network
+}
+*.pt_route.bad_network,
+*.pt_route_master.bad_network
 {
 	throwError: tr("Check the network tag : this network does not exist, it may be a typo");
 }
