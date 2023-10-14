@@ -409,8 +409,12 @@ relation[public_transport=stop_area]
 {
 	set stop_area
 }
+node[railway=subway_entrance]
+{
+	set subway_entrance
+}
 
-*.stop_area > node[railway=subway_entrance]
+*.stop_area > *.subway_entrance
 {
 	set subway_entrance_in_stop_area
 }
@@ -419,14 +423,14 @@ relation[public_transport=stop_area]
 	set train_station_entrance_in_stop_area
 }
 
-node[railway=subway_entrance]!.subway_entrance_in_stop_area,
+*.subway_entrance!.subway_entrance_in_stop_area,
 node[railway=train_station_entrance]!.train_station_entrance_in_stop_area
 {
 	throwError: tr("The station entrance should be in part of a station: add it to a stop_area relation");
 	-osmoseItemClassLevel: none;
 }
 
-way > node[railway=subway_entrance]
+way > *.subway_entrance
 {
 	set subway_entrance_in_way
 }
@@ -435,7 +439,7 @@ way > node[railway=train_station_entrance]
 	set train_station_entrance_in_way
 }
 
-node[railway=subway_entrance]!.subway_entrance_in_way,
+*.subway_entrance!.subway_entrance_in_way,
 node[railway=train_station_entrance]!.train_station_entrance_in_way
 {
 	throwWarning: tr("The station entrance should be part of a building or a highway (steps, footway, etc)");
