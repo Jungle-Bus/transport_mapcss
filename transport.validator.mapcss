@@ -97,7 +97,7 @@ relation[type=route_master]
 	set pt_route_master;
 }
 
-relation.pt_route[!public_transport:version]
+*.pt_route[!public_transport:version]
 {
 	throwError: tr("Missing public_transport:version tag on a public_transport route relation");
 	-osmoseItemClassLevel: "2140/21401/3";
@@ -105,7 +105,7 @@ relation.pt_route[!public_transport:version]
 	assertMatch: "relation type=route route=bus";
 }
 
-relation.pt_route[!network],
+*.pt_route[!network],
 relation.pt_route_master[!network]
 {
 	throwError: tr("Missing network tag on a public_transport relation");
@@ -114,7 +114,7 @@ relation.pt_route_master[!network]
 	assertMatch: "relation type=route route=bus";
 }
 
-relation.pt_route[!operator],
+*.pt_route[!operator],
 relation.pt_route_master[!operator]
 {
 	throwError: tr("Missing operator tag on a public_transport relation");
@@ -123,7 +123,7 @@ relation.pt_route_master[!operator]
 	assertMatch: "relation type=route route=bus";
 }
 
-relation.pt_route[!ref],
+*.pt_route[!ref],
 relation.pt_route_master[!ref]
 {
 	throwWarning: tr("Missing ref tag for line number on a public_transport relation");
@@ -132,8 +132,8 @@ relation.pt_route_master[!ref]
 	assertMatch: "relation type=route route=bus";
 }
 
-relation.pt_route[!from],
-relation.pt_route[!to]
+*.pt_route[!from],
+*.pt_route[!to]
 {
 	throwError: tr("Missing from/to tag on a public_transport route relation");
 	-osmoseItemClassLevel: "2140/21405/3";
@@ -143,39 +143,39 @@ relation.pt_route[!to]
 	assertMatch: "relation type=route route=bus";
 }
 
-relation.pt_route[tag(network)!=parent_tag(network)]
+*.pt_route[tag(network)!=parent_tag(network)]
 {
 	throwError: tr("The network tag should be the same for the route and the route_master : {0} vs {1}", tag(network), parent_tag(network));
 }
 
-relation.pt_route[tag(operator)!=parent_tag(operator)]
+*.pt_route[tag(operator)!=parent_tag(operator)]
 {
 	throwError: tr("The operator tag should be the same for the route and the route_master : {0} vs {1}", tag(operator), parent_tag(operator));
 }
 
-relation.pt_route[tag(ref)!=parent_tag(ref)]
+*.pt_route[tag(ref)!=parent_tag(ref)]
 {
 	throwWarning: tr("The ref tag should be the same for the route and the route_master : {0} vs {1}", tag(ref), parent_tag(ref));
 }
 
-relation.pt_route[tag(colour)!=parent_tag(colour)]
+*.pt_route[tag(colour)!=parent_tag(colour)]
 {
 	throwWarning: tr("The colour tag should be the same for the route and the route_master : {0} vs {1}", tag(colour), parent_tag(colour));
 }
 
-relation.pt_route[tag(route)!=parent_tag(route_master)]
+*.pt_route[tag(route)!=parent_tag(route_master)]
 {
 	throwError: tr("The public transport mode should be the same for the route and the route_master : {0} vs {1}", tag(route), parent_tag(route_master));
 }
 
-relation.pt_route[colour][colour=~/^#/][colour!~/^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/],
+*.pt_route[colour][colour=~/^#/][colour!~/^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/],
 relation.pt_route_master[colour][colour=~/^#/][colour!~/^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/]
 {
 	throwError: tr("Check the colour tag");
 	-osmoseItemClassLevel: none;
 }
 
-relation.pt_route[colour][colour=~/^([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/],
+*.pt_route[colour][colour=~/^([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/],
 relation.pt_route_master[colour][colour=~/^([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/]
 {
 	throwError: tr("The colour code should start with '#' followed by 3 or 6 digits");
@@ -183,27 +183,27 @@ relation.pt_route_master[colour][colour=~/^([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/]
 	-osmoseItemClassLevel: none;
 }
 
-relation.pt_route[!colour][color],
+*.pt_route[!colour][color],
 relation.pt_route_master[!colour][color]
 {
 	throwError: tr("The color of the public transport line should be in a colour tag");
 	fixChangeKey: "color=>colour";
 }
 
-relation.pt_route["fixme:relation"="order members"]
+*.pt_route["fixme:relation"="order members"]
 {
 	throwWarning: tr("The stops may not be in the right order");
 	-osmoseItemClassLevel: none;
 }
 
 /* These values are not valid operator or network */
-relation.pt_route["operator"=~/STIF|Kéolis|Véolia/][inside("FR")],
+*.pt_route["operator"=~/STIF|Kéolis|Véolia/][inside("FR")],
 relation.pt_route_master["operator"=~/STIF|Kéolis|Véolia/][inside("FR")]
 {
 	throwError: tr("Check the operator tag : this operator does not exist, it may be a typo");
 }
 
-relation.pt_route["network"=~/STIF|Kéolis|Véolia/][inside("FR")],
+*.pt_route["network"=~/STIF|Kéolis|Véolia/][inside("FR")],
 relation.pt_route_master["network"=~/STIF|Kéolis|Véolia/][inside("FR")]
 {
 	throwError: tr("Check the network tag : this network does not exist, it may be a typo");
@@ -289,7 +289,7 @@ node[highway=bus_stop][operator][inside("FR")]
 	set route_ok
 }
 
-relation.pt_route!.route_ok
+*.pt_route!.route_ok
 {
 	throwError: tr("The line variant does not belong to any line, add it to the route_master relation");
 }
@@ -321,7 +321,7 @@ way.way_platform_in_route[!name]
 	-osmoseItemClassLevel: none;
 }
 
-relation.pt_route[interval][interval !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/],
+*.pt_route[interval][interval !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/],
 relation.pt_route_master[interval][interval !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/]
 {
 	throwError: tr("The interval is invalid (try a number of minutes)");
@@ -337,7 +337,7 @@ relation.pt_route_master[interval][interval !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[
 	assertMatch: "relation type=route route=bus interval=00:70:00";
 }
 
-relation.pt_route[duration][duration !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/],
+*.pt_route[duration][duration !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/],
 relation.pt_route_master[duration][duration !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/]
 {
 	throwError: tr("The duration is invalid (try a number of minutes)");
@@ -350,13 +350,13 @@ relation.pt_route_master[duration][duration !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[
 	assertNoMatch: "relation type=route route=bus duration=25:00";
 }
 
-relation.pt_route["interval:conditional"][!interval],
+*.pt_route["interval:conditional"][!interval],
 relation.pt_route_master["interval:conditional"][!interval]
 {
 	throwError: tr("Missing interval tag to specify the main interval");
 }
 
-relation.pt_route["interval:conditional"][!opening_hours],
+*.pt_route["interval:conditional"][!opening_hours],
 relation.pt_route_master["interval:conditional"][!opening_hours]
 {
 	throwError: tr("Missing opening_hours tag");
