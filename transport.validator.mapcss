@@ -405,11 +405,16 @@ relation[railway=train_station_entrance]
 	assertMatch: "way railway=subway_entrance";
 }
 
-relation[public_transport=stop_area] > node[railway=subway_entrance]
+relation[public_transport=stop_area]
+{
+	set stop_area
+}
+
+*.stop_area > node[railway=subway_entrance]
 {
 	set subway_entrance_in_stop_area
 }
-relation[public_transport=stop_area] > node[railway=train_station_entrance]
+*.stop_area > node[railway=train_station_entrance]
 {
 	set train_station_entrance_in_stop_area
 }
