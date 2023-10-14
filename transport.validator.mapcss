@@ -70,13 +70,18 @@ relation[type=route]
 	throwError: tr("Missing transportation mode, add a tag route = bus/coach/tram/etc");
 }
 
-relation[type=route_master][!route_master][!route][!disused:route_master]
+relation[type=route_master]
+{
+	set route_master
+}
+
+*.route_master[!route_master][!route][!disused:route_master]
 {
 	throwError: tr("Missing transportation mode, add a tag route = bus/coach/tram/etc");
 }
 
 /*the transport mode is specified with the wrong tag */
-relation[type=route_master][!route_master][route]
+*.route_master[!route_master][route]
 {
 	throwError: tr("Missing transportation mode, change tag route to route_master");
 	fixChangeKey: "route=>route_master";
@@ -87,7 +92,7 @@ relation[type=route_master][!route_master][route]
 	set pt_route;
 }
 
-relation[type=route_master][route_master=~/^(bus|coach|train|subway|monorail|trolleybus|aerialway|funicular|ferry|tram|share_taxi|light_rail|school_bus|walking_bus)$/]
+*.route_master[route_master=~/^(bus|coach|train|subway|monorail|trolleybus|aerialway|funicular|ferry|tram|share_taxi|light_rail|school_bus|walking_bus)$/]
 {
 	set pt_route_master;
 }
@@ -279,7 +284,7 @@ node[highway=bus_stop][operator][inside("FR")]
 	fixRemove: "operator";
 }
 
-relation[type=route_master] > *.route
+*.route_master > *.route
 {
 	set route_ok
 }
