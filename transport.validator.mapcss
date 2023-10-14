@@ -60,7 +60,12 @@ meta[lang=zh_TW]
 	description: "未妥協驗證的運輸資料";
 }
 
-relation[type=route][!route][!disused:route]
+relation[type=route]
+{
+	set route
+}
+
+*.route[!route][!disused:route]
 {
 	throwError: tr("Missing transportation mode, add a tag route = bus/coach/tram/etc");
 }
@@ -77,7 +82,7 @@ relation[type=route_master][!route_master][route]
 	fixChangeKey: "route=>route_master";
 }
 
-relation[type=route][route=~/^(bus|coach|train|subway|monorail|trolleybus|aerialway|funicular|ferry|tram|share_taxi|light_rail|school_bus|walking_bus)$/]
+*.route[route=~/^(bus|coach|train|subway|monorail|trolleybus|aerialway|funicular|ferry|tram|share_taxi|light_rail|school_bus|walking_bus)$/]
 {
 	set pt_route;
 }
@@ -274,7 +279,7 @@ node[highway=bus_stop][operator][inside("FR")]
 	fixRemove: "operator";
 }
 
-relation[type=route_master] > relation[type=route]
+relation[type=route_master] > *.route
 {
 	set route_ok
 }
@@ -284,11 +289,11 @@ relation.pt_route!.route_ok
 	throwError: tr("The line variant does not belong to any line, add it to the route_master relation");
 }
 
-relation[type=route] > node[public_transport=platform]
+*.route > node[public_transport=platform]
 {
 	set platform_in_route
 }
-relation[type=route] > way[public_transport=platform]
+*.route > way[public_transport=platform]
 {
 	set way_platform_in_route
 }
