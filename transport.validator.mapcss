@@ -231,7 +231,12 @@ relation[highway=bus_stop]
 	throwError: tr("A bus stop is supposed to be a node");
 }
 
-node[highway=bus_stop][amenity=bus_station]
+node[highway=bus_stop]
+{
+	set ptv1_busstop
+}
+
+*.ptv1_busstop[amenity=bus_station]
 {
 	throwError: tr("Is it a bus stop or a bus station?");
 	fixRemove: "amenity";
@@ -243,7 +248,7 @@ node[amenity=bus_station]
 	-osmoseItemClassLevel: none;
 }
 
-node[highway=bus_stop][!public_transport]
+*.ptv1_busstop[!public_transport]
 {
 	throwError: tr("Specify if it is a stop (platform) or a location on the road (stop_position)");
 	group: tr("Missing public_transport tag on a public transport stop");
@@ -282,19 +287,19 @@ node[public_transport=platform][!highway][!railway][bus=yes]
 }
 
 /* The note tag is often used to specify the bus routes or other useful metadata that should have their own tag */
-node[highway=bus_stop][note],
-node[highway=bus_stop][note:fr][inside("FR")]
+*.ptv1_busstop[note],
+*.ptv1_busstop[note:fr][inside("FR")]
 {
 	throwWarning: tr("Check if the note can be deleted");
 }
 
-node[highway=bus_stop][network][inside("FR")]
+*.ptv1_busstop[network][inside("FR")]
 {
 	throwWarning: tr("The network should be on the transport lines and not on the stops");
 	fixRemove: "network";
 }
 
-node[highway=bus_stop][operator][inside("FR")]
+*.ptv1_busstop[operator][inside("FR")]
 {
 	throwWarning: tr("The operator should be on the transport lines and not on the stops");
 	fixRemove: "operator";
