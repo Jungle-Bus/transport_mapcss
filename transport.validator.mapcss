@@ -1,10 +1,11 @@
 meta
 {
 	title: "Jungle Bus - validation ruleset";
-	version: "0.12";
+	version: "0.12.1";
 	description: "Uncompromising validation of transit data";
 	author: "nlehuby";
 	link: "https://junglebus.io/";
+	license: "AGPL-3.0-or-later";
 	baselanguage: "en";
 	watch-modified: true;
 	min-josm-version: 14481;
