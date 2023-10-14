@@ -1,6 +1,6 @@
 meta
 {
-	title: "Jungle Bus – validation ruleset";
+	title: "Jungle Bus - validation ruleset";
 	version: "0.12";
 	description: "Uncompromising validation of transit data";
 	author: "nlehuby";
