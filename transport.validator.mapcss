@@ -339,8 +339,12 @@ way.platform_in_route[!name]
 	-osmoseItemClassLevel: none;
 }
 
-*.pt_route[interval][interval !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/],
-*.pt_route_master[interval][interval !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/]
+*[interval][interval !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/]
+{
+	set bad_interval
+}
+*.pt_route.bad_interval,
+*.pt_route_master.bad_interval
 {
 	throwError: tr("The interval is invalid (try a number of minutes)");
 	assertMatch: "relation type=route route=bus interval=irregular";
@@ -355,8 +359,12 @@ way.platform_in_route[!name]
 	assertMatch: "relation type=route route=bus interval=00:70:00";
 }
 
-*.pt_route[duration][duration !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/],
-*.pt_route_master[duration][duration !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/]
+*[duration][duration !~ /^([0-9][0-9]?[0-9]?|[0-2][0-9]:[0-5][0-9](:[0-5][0-9])?)$/]
+{
+	set bad_duration
+}
+*.pt_route.bad_duration,
+*.pt_route_master.bad_duration
 {
 	throwError: tr("The duration is invalid (try a number of minutes)");
 	assertMatch: "relation type=route route=bus duration=20minutes";
@@ -368,14 +376,22 @@ way.platform_in_route[!name]
 	assertNoMatch: "relation type=route route=bus duration=25:00";
 }
 
-*.pt_route["interval:conditional"][!interval],
-*.pt_route_master["interval:conditional"][!interval]
+*["interval:conditional"][!interval]
+{
+	set conditional_no_interval
+}
+*.pt_route.conditional_no_interval,
+*.pt_route_master.conditional_no_interval
 {
 	throwError: tr("Missing interval tag to specify the main interval");
 }
 
-*.pt_route["interval:conditional"][!opening_hours],
-*.pt_route_master["interval:conditional"][!opening_hours]
+*["interval:conditional"][!opening_hours]
+{
+	set conditional_no_hours
+}
+*.pt_route.conditional_no_hours,
+*.pt_route_master.conditional_no_hours
 {
 	throwError: tr("Missing opening_hours tag");
 }
