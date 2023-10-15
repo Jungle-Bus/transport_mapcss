@@ -132,31 +132,25 @@ relation.pt_route_probably_v2[!public_transport:version]!.pt_route_probably_v1
 	fixAdd: "public_transport:version=2";
 }
 
-relation.pt_route[!network],
+relation.pt_route[!network][!parent_tag(network)],
 relation.pt_route_master[!network]
 {
 	throwError: tr("Missing network tag on a public_transport relation");
 	-osmoseItemClassLevel: "2140/21402/3";
-	assertNoMatch: "relation type=route route=bus network=BiBiBus";
-	assertMatch: "relation type=route route=bus";
 }
 
-relation.pt_route[!operator],
+relation.pt_route[!operator][!parent_tag(operator)],
 relation.pt_route_master[!operator]
 {
 	throwError: tr("Missing operator tag on a public_transport relation");
 	-osmoseItemClassLevel: "2140/21403/3";
-	assertNoMatch: "relation type=route route=bus operator=BiBiBus";
-	assertMatch: "relation type=route route=bus";
 }
 
-relation.pt_route[!ref],
+relation.pt_route[!ref][!parent_tag(ref)],
 relation.pt_route_master[!ref]
 {
 	throwWarning: tr("Missing ref tag for line number on a public_transport relation");
     -osmoseItemClassLevel: none;
-	assertNoMatch: "relation type=route route=bus ref=3";
-	assertMatch: "relation type=route route=bus";
 }
 
 relation.pt_route[!from],
