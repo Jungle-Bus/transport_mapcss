@@ -109,12 +109,33 @@ node[public_transport=stop_position] < relation.pt_route,
 	set pt_route_probably_v2
 }
 
-relation.pt_route[!public_transport:version]
+relation.pt_route[!public_transport:version]!.pt_route_probably_v1!.pt_route_probably_v2
 {
 	throwError: tr("Missing public_transport:version tag on a public_transport route relation");
-	-osmoseItemClassLevel: "2140/21401/3";
+	-osmoseItemClassLevel: "2140/21401:0/3";
 	assertNoMatch: "relation type=route route=bus public_transport:version=1";
+	assertNoMatch: "relation type=route route=bus public_transport:version=2";
 	assertMatch: "relation type=route route=bus";
+}
+
+relation.pt_route_probably_v1[!public_transport:version]!.pt_route_probably_v2
+{
+	throwError: tr("Missing public_transport:version tag on a Public Transport Version 1 schema relation.");
+	-osmoseItemClassLevel: "2140/21401:1/3";
+	assertNoMatch: "relation type=route route=bus public_transport:version=1";
+	assertNoMatch: "relation type=route route=bus public_transport:version=2";
+	assertMatch: "relation type=route route=bus";
+	fixAdd: "public_transport:version=1";
+}
+
+relation.pt_route_probably_v2[!public_transport:version]!.pt_route_probably_v1
+{
+	throwError: tr("Missing public_transport:version tag on a Public Transport Version 2 schema relation.");
+	-osmoseItemClassLevel: "2140/21401:2/2";
+	assertNoMatch: "relation type=route route=bus public_transport:version=1";
+	assertNoMatch: "relation type=route route=bus public_transport:version=2";
+	assertMatch: "relation type=route route=bus";
+	fixAdd: "public_transport:version=2";
 }
 
 relation.pt_route[!network],
