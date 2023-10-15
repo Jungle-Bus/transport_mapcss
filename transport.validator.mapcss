@@ -5,6 +5,7 @@ meta
 	description: "Uncompromising validation of transit data";
 	author: "nlehuby";
 	link: "https://junglebus.io/";
+	license: "AGPL-3.0-or-later";
 	baselanguage: "en";
 	watch-modified: true;
 	min-josm-version: 14481;
