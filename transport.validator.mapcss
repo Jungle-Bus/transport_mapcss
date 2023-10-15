@@ -86,6 +86,42 @@ relation[type=route_master][route_master=~/^(bus|coach|train|subway|monorail|tro
 	set pt_route_master;
 }
 
+way <[role="route"] relation.pt_route,
+way <[role="forward"] relation.pt_route,
+way <[role="backward"] relation.pt_route,
+way <[role="reverse"] relation.pt_route,
+way <[role="forward:stop"] relation.pt_route,
+way <[role="backward:stop"] relation.pt_route
+{
+	set pt_route_probably_v1;
+}
+
+relation[type=route_master] > relation[type=route]
+{
+	set route_in_master;
+}
+
+relation.route_in_master.pt_route,
+node[public_transport=stop_position] < relation.pt_route,
+*[public_transport=platform] < relation.pt_route
+{
+	set pt_route_probably_v2;
+}
+
+relation.pt_route_probably_v1[!public_transport:version]!.pt_route_probably_v2
+{
+	throwError: tr("Missing public_transport:version tag on a Public Transport Version 1 route relation.");
+	-osmoseItemClassLevel: none;
+	fixAdd: "public_transport:version=1";
+}
+
+relation.pt_route_probably_v2[!public_transport:version]!.pt_route_probably_v1
+{
+	throwError: tr("Missing public_transport:version tag on a Public Transport Version 2 route relation.");
+	-osmoseItemClassLevel: none;
+	fixAdd: "public_transport:version=2";
+}
+
 relation.pt_route[!public_transport:version]
 {
 	throwError: tr("Missing public_transport:version tag on a public_transport route relation");
