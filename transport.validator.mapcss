@@ -122,12 +122,23 @@ relation.pt_route_probably_v2[!public_transport:version]!.pt_route_probably_v1
 	fixAdd: "public_transport:version=2";
 }
 
-relation.pt_route[!public_transport:version]
-{
-	throwError: tr("Missing public_transport:version tag on a public_transport route relation");
-	-osmoseItemClassLevel: "2140/21401/3";
-	assertNoMatch: "relation type=route route=bus public_transport:version=1";
-	assertMatch: "relation type=route route=bus";
+@supports (user-agent: josm) {
+	relation.pt_route[!public_transport:version]!.pt_route_probably_v1!.pt_route_probably_v2
+	{
+		throwError: tr("Missing public_transport:version tag on a public_transport route relation");
+		-osmoseItemClassLevel: "2140/21401/3";
+		assertNoMatch: "relation type=route route=bus public_transport:version=1";
+		assertMatch: "relation type=route route=bus";
+	}
+}
+
+@supports not (user-agent: josm) {
+	relation.pt_route[!public_transport:version]
+	{
+		throwError: tr("Missing public_transport:version tag on a public_transport route relation");
+		assertNoMatch: "relation type=route route=bus public_transport:version=1";
+		assertMatch: "relation type=route route=bus";
+	}
 }
 
 relation.pt_route[!network],
