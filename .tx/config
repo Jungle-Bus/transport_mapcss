@@ -1,9 +1,11 @@
 [main]
 host = https://www.transifex.com
 
-[osmose.transport_mapcss]
-file_filter = po/<lang>.po
-source_file = po/transport_mapcss.pot
-source_lang = en
-type = PO
+[o:openstreetmap-france:p:osmose:r:transport_mapcss]
+file_filter            = po/<lang>.po
+source_file            = po/transport_mapcss.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
 
