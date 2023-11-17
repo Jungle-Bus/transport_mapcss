@@ -5,13 +5,14 @@ all: ../transport.validator.zip
 
 transport_mapcss.pot: ../transport.validator.mapcss
 	sed -i "s/^#: .*//" $@
-	LANG=C xgettext --join-existing -cTRANSLATORS \
+	xgettext --join-existing -cTRANSLATORS \
 	  --keyword=tr \
+	  --language=C \
 	  --force-po --omit-header \
 	  --output=$@ $<
 
 %.po: transport_mapcss.pot
-	msgmerge --no-fuzzy-matching --no-location --update $@ $<
+	msgmerge --no-fuzzy-matching --update $@ $<
 
 i18n.pl:
 	wget https://raw.githubusercontent.com/openstreetmap/svn-archive/main/applications/editors/josm/i18n/i18n.pl
