@@ -6,7 +6,7 @@ To test your changes in JOSM, from `po` directory, run `make`. This will create 
 
 ## advanced debugging
 
-You can set the parameter `validator.check_assert_local_rules` to true in JOSM Preferences page and launch josm with the command line.
+You can set the parameter `validator.check_assert_local_rules` to true in JOSM Preferences page and launch josm from the command line.
 
 You will then get errors in the console if JOSM fails to parse some rules or if the tests (`assertMatch` and `assertNoMatch`) do not pass.
 
