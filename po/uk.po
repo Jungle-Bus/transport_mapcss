@@ -2,11 +2,11 @@
 # Translators:
 # frodrigo <fred.rodrigo@gmail.com>, 2018
 # Green Aloe, 2022
-# VARVAR <182050@i.ua>, 2023
+# VARVAR <182050@i.ua>, 2024
 # 
 msgid ""
 msgstr ""
-"Last-Translator: VARVAR <182050@i.ua>, 2023\n"
+"Last-Translator: VARVAR <182050@i.ua>, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/openstreetmap-france/teams/17462/uk/)\n"
 "Language: uk\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,7 @@ msgstr "Безкомпромісна перевірка транзитних д�
 #: ../transport.validator.mapcss:64 ../transport.validator.mapcss:69
 msgid "Missing transportation mode, add a tag route = bus/coach/tram/etc"
 msgstr ""
-"Відсутній режим транспортування, додайте теґ route=bus/coach/tram/тощо"
+"Відсутній режим транспортування, додайте теґ route = bus/coach/tram/тощо"
 
 #: ../transport.validator.mapcss:75
 msgid "Missing transportation mode, change tag route to route_master"
@@ -51,7 +51,7 @@ msgstr "Відсутній теґ from/to у звʼязку маршруту г�
 
 #: ../transport.validator.mapcss:232
 msgid "The stops may not be in the right order"
-msgstr "The stops may not be in the right order"
+msgstr "Зупинки можуть бути в неправильному порядку"
 
 #: ../transport.validator.mapcss:257
 msgid "Is it a bus stop or a bus station?"
@@ -222,8 +222,8 @@ msgstr ""
 
 #: ../transport.validator.mapcss:114
 msgid "Missing public_transport:version=1 on a public_transport relation"
-msgstr ""
+msgstr "Відсутній public_transport:version=1 на звʼязку public_transport"
 
 #: ../transport.validator.mapcss:121
 msgid "Missing public_transport:version=2 on a public_transport relation"
-msgstr ""
+msgstr "Відсутній public_transport:version=2 на звʼязку public_transport"
