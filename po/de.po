@@ -5,10 +5,11 @@
 # ToniE <osm-ToniE@web.de>, 2020
 # Manfred Brandl <manfred@brandl.net>, 2021
 # kjon kjon <kjon@gmx.de>, 2023
+# mcliquid <info@mcliquid.de>, 2024
 # 
 msgid ""
 msgstr ""
-"Last-Translator: kjon kjon <kjon@gmx.de>, 2023\n"
+"Last-Translator: mcliquid <info@mcliquid.de>, 2024\n"
 "Language-Team: German (https://app.transifex.com/openstreetmap-france/teams/17462/de/)\n"
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -238,8 +239,8 @@ msgstr ""
 
 #: ../transport.validator.mapcss:114
 msgid "Missing public_transport:version=1 on a public_transport relation"
-msgstr ""
+msgstr "Fehlende public_transport:version=1 an einer ÖPNV-Relation"
 
 #: ../transport.validator.mapcss:121
 msgid "Missing public_transport:version=2 on a public_transport relation"
-msgstr ""
+msgstr "Fehlende public_transport:version=2 an einer ÖPNV-Relation"
