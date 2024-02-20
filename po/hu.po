@@ -1,11 +1,11 @@
 # 
 # Translators:
 # frodrigo <fred.rodrigo@gmail.com>, 2018
-# Gábor Babos <gabor.babos@gmail.com>, 2023
+# Gábor Babos <gabor.babos@gmail.com>, 2024
 # 
 msgid ""
 msgstr ""
-"Last-Translator: Gábor Babos <gabor.babos@gmail.com>, 2023\n"
+"Last-Translator: Gábor Babos <gabor.babos@gmail.com>, 2024\n"
 "Language-Team: Hungarian (https://app.transifex.com/openstreetmap-france/teams/17462/hu/)\n"
 "Language: hu\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -248,7 +248,9 @@ msgstr ""
 #: ../transport.validator.mapcss:114
 msgid "Missing public_transport:version=1 on a public_transport relation"
 msgstr ""
+"Hiányzik a `public_transport:version=1` a `public_transport` kapcsolatról"
 
 #: ../transport.validator.mapcss:121
 msgid "Missing public_transport:version=2 on a public_transport relation"
 msgstr ""
+"Hiányzik a `public_transport:version=2` a `public_transport` kapcsolatról"
