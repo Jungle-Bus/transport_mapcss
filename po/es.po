@@ -4,10 +4,11 @@
 # Franco, 2018
 # Jorge Sanz <sanchi2@gmail.com>, 2020
 # Hugoren Martinako <aumpfbahn@gmail.com>, 2021
+# Tim D., 2024
 # 
 msgid ""
 msgstr ""
-"Last-Translator: Hugoren Martinako <aumpfbahn@gmail.com>, 2021\n"
+"Last-Translator: Tim D., 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/openstreetmap-france/teams/17462/es/)\n"
 "Language: es\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -240,8 +241,8 @@ msgstr ""
 
 #: ../transport.validator.mapcss:114
 msgid "Missing public_transport:version=1 on a public_transport relation"
-msgstr ""
+msgstr "Falta public_transport:version=1 en una relación public_transport"
 
 #: ../transport.validator.mapcss:121
 msgid "Missing public_transport:version=2 on a public_transport relation"
-msgstr ""
+msgstr "Falta public_transport:version=2 en una relación public_transport"
