@@ -2,11 +2,11 @@
 # Translators:
 # maro21 OSM, 2021
 # polish96, 2022
-# Piotr Strębski <strebski@gmail.com>, 2023
+# Piotr Strebski <strebski@gmail.com>, 2023
 # 
 msgid ""
 msgstr ""
-"Last-Translator: Piotr Strębski <strebski@gmail.com>, 2023\n"
+"Last-Translator: Piotr Strebski <strebski@gmail.com>, 2023\n"
 "Language-Team: Polish (https://app.transifex.com/openstreetmap-france/teams/17462/pl/)\n"
 "Language: pl\n"
 "Content-Type: text/plain; charset=UTF-8\n"
