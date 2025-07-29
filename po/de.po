@@ -1,4 +1,4 @@
-# 
+#
 # Translators:
 # frodrigo <fred.rodrigo@gmail.com>, 2018
 # Christian Ostermann, 2019
@@ -6,11 +6,12 @@
 # Manfred Brandl <manfred@brandl.net>, 2021
 # kjon kjon <kjon@gmx.de>, 2023
 # mcliquid <info@mcliquid.de>, 2024
-# 
+#
 msgid ""
 msgstr ""
 "Last-Translator: mcliquid <info@mcliquid.de>, 2024\n"
-"Language-Team: German (https://app.transifex.com/openstreetmap-france/teams/17462/de/)\n"
+"Language-Team: German (https://app.transifex.com/openstreetmap-france/"
+"teams/17462/de/)\n"
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -45,8 +46,7 @@ msgstr "Fehlender operator Tag bei einer public_transport Relation"
 
 #: ../transport.validator.mapcss:166
 msgid "Missing ref tag for line number on a public_transport relation"
-msgstr ""
-"Fehlender ref Tag für Liniennummer bei einer public_transport Relation"
+msgstr "Fehlender ref Tag für Liniennummer bei einer public_transport Relation"
 
 #: ../transport.validator.mapcss:175
 msgid "Missing from/to tag on a public_transport route relation"
@@ -65,8 +65,8 @@ msgstr "Ist das eine Bushaltestelle oder ein Busbahnhof?"
 msgid ""
 "Specify if it is a stop (platform) or a location on the road (stop_position)"
 msgstr ""
-"Gebe bitte an, ob das eine Haltestelle (platform) oder eine Position auf der"
-" Fahrbahn ist (stop_position)"
+"Gebe bitte an, ob das eine Haltestelle (platform) oder eine Position auf der "
+"Fahrbahn ist (stop_position)"
 
 #: ../transport.validator.mapcss:298
 msgid "Is this a bus stop? add the tag highway=bus_stop"
@@ -108,11 +108,10 @@ msgstr "Fehlender public_transport Tag an einer Haltestelle"
 
 #: ../transport.validator.mapcss:280
 msgid ""
-"Specify if it is a stop (platform) or a location on the rails "
-"(stop_position)"
+"Specify if it is a stop (platform) or a location on the rails (stop_position)"
 msgstr ""
-"Gebe bitte an, ob das eine Haltestelle (platform) oder eine Position auf den"
-" Schienen ist (stop_position)"
+"Gebe bitte an, ob das eine Haltestelle (platform) oder eine Position auf den "
+"Schienen ist (stop_position)"
 
 #: ../transport.validator.mapcss:292 ../transport.validator.mapcss:299
 msgid "Missing legacy tag on a public transport stop"
@@ -127,8 +126,8 @@ msgstr ""
 
 #: ../transport.validator.mapcss:190
 msgid ""
-"The operator tag should be the same for the route and the route_master : {0}"
-" vs {1}"
+"The operator tag should be the same for the route and the route_master : {0} "
+"vs {1}"
 msgstr ""
 "Der operator-Tag sollte bei route und route_master gleich sein: {0} vs. {1}"
 
@@ -136,8 +135,7 @@ msgstr ""
 msgid ""
 "The ref tag should be the same for the route and the route_master : {0} vs "
 "{1}"
-msgstr ""
-"Der ref-Tag sollte bei route und route_master gleich sein: {0} vs. {1}"
+msgstr "Der ref-Tag sollte bei route und route_master gleich sein: {0} vs. {1}"
 
 #: ../transport.validator.mapcss:200
 msgid ""
@@ -193,8 +191,7 @@ msgid "Missing name on a public transport stop"
 msgstr "Haltestelle ohne Namen"
 
 #: ../transport.validator.mapcss:240
-msgid ""
-"Check the operator tag : this operator does not exist, it may be a typo"
+msgid "Check the operator tag : this operator does not exist, it may be a typo"
 msgstr ""
 "Prüfe das operator Tag: Dieses existiert nicht, vielleicht ein Tippfehler"
 

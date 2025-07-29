@@ -1,12 +1,13 @@
-# 
+#
 # Translators:
 # frodrigo <fred.rodrigo@gmail.com>, 2018
 # Gábor Babos <gabor.babos@gmail.com>, 2024
-# 
+#
 msgid ""
 msgstr ""
 "Last-Translator: Gábor Babos <gabor.babos@gmail.com>, 2024\n"
-"Language-Team: Hungarian (https://app.transifex.com/openstreetmap-france/teams/17462/hu/)\n"
+"Language-Team: Hungarian (https://app.transifex.com/openstreetmap-france/"
+"teams/17462/hu/)\n"
 "Language: hu\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -107,8 +108,7 @@ msgstr "Hiányzik a `public_transport` címke a tömegközlekedési megállóró
 
 #: ../transport.validator.mapcss:280
 msgid ""
-"Specify if it is a stop (platform) or a location on the rails "
-"(stop_position)"
+"Specify if it is a stop (platform) or a location on the rails (stop_position)"
 msgstr ""
 "Határozza meg, hogy ez egy megálló/peron `platform` vagy a jármű "
 "megállásának helye a sínen `stop_position`"
@@ -122,13 +122,13 @@ msgid ""
 "The network tag should be the same for the route and the route_master : {0} "
 "vs {1}"
 msgstr ""
-"A `network` hálózat címkének meg kell egyeznie a `route` és a `route_master`"
-" esetében: {0} vs {1}"
+"A `network` hálózat címkének meg kell egyeznie a `route` és a `route_master` "
+"esetében: {0} vs {1}"
 
 #: ../transport.validator.mapcss:190
 msgid ""
-"The operator tag should be the same for the route and the route_master : {0}"
-" vs {1}"
+"The operator tag should be the same for the route and the route_master : {0} "
+"vs {1}"
 msgstr ""
 "Az `operator` üzemeltető címkének meg kell egyeznie a `route` és a "
 "`route_master` esetében: {0} vs {1}"
@@ -179,8 +179,7 @@ msgstr "A buszmegálló feltételezhetően egy pont"
 #: ../transport.validator.mapcss:364
 msgid "The interval is invalid (try a number of minutes)"
 msgstr ""
-"Érvénytelen `interval` követési időköz (próbálja meg a percek számát "
-"megadni)"
+"Érvénytelen `interval` követési időköz (próbálja meg a percek számát megadni)"
 
 #: ../transport.validator.mapcss:380
 msgid "The duration is invalid (try a number of minutes)"
@@ -199,11 +198,10 @@ msgid "Missing name on a public transport stop"
 msgstr "Hiányzik a `name` név a tömegközlekedési megállóról"
 
 #: ../transport.validator.mapcss:240
-msgid ""
-"Check the operator tag : this operator does not exist, it may be a typo"
+msgid "Check the operator tag : this operator does not exist, it may be a typo"
 msgstr ""
-"Ellenőrizze az `operator` címkét: ilyen üzemeltető nem létezik, talán elírás"
-" történt"
+"Ellenőrizze az `operator` címkét: ilyen üzemeltető nem létezik, talán elírás "
+"történt"
 
 #: ../transport.validator.mapcss:246
 msgid "Check the network tag : this network does not exist, it may be a typo"

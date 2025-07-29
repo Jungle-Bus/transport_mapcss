@@ -1,13 +1,14 @@
-# 
+#
 # Translators:
 # Navhy, 2019
 # Iváns, 2019
 # ccpr1l <csdpe0810-tf@yahoo.es>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Last-Translator: ccpr1l <csdpe0810-tf@yahoo.es>, 2020\n"
-"Language-Team: Galician (https://app.transifex.com/openstreetmap-france/teams/17462/gl/)\n"
+"Language-Team: Galician (https://app.transifex.com/openstreetmap-france/"
+"teams/17462/gl/)\n"
 "Language: gl\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -97,13 +98,11 @@ msgstr ""
 
 #: ../transport.validator.mapcss:270 ../transport.validator.mapcss:281
 msgid "Missing public_transport tag on a public transport stop"
-msgstr ""
-"Falla a etiqueta 'public_transport' nunha paraxe de transporte público"
+msgstr "Falla a etiqueta 'public_transport' nunha paraxe de transporte público"
 
 #: ../transport.validator.mapcss:280
 msgid ""
-"Specify if it is a stop (platform) or a location on the rails "
-"(stop_position)"
+"Specify if it is a stop (platform) or a location on the rails (stop_position)"
 msgstr ""
 "Especificar se é unha paraxe nunha plataforma ('platform') ou nunha "
 "localización sobre os raís ('stop_position')"
@@ -122,8 +121,8 @@ msgstr ""
 
 #: ../transport.validator.mapcss:190
 msgid ""
-"The operator tag should be the same for the route and the route_master : {0}"
-" vs {1}"
+"The operator tag should be the same for the route and the route_master : {0} "
+"vs {1}"
 msgstr ""
 "A etiqueta de 'operator' ten que ser a mesma para a 'route' e a "
 "'route_master': {0} vs {1}"
@@ -191,11 +190,10 @@ msgid "Missing name on a public transport stop"
 msgstr "Falla o nome nunha paraxe de transporte público"
 
 #: ../transport.validator.mapcss:240
-msgid ""
-"Check the operator tag : this operator does not exist, it may be a typo"
+msgid "Check the operator tag : this operator does not exist, it may be a typo"
 msgstr ""
-"Verificar a etiqueta do operador: este operador non existe, pode ser un erro"
-" tipográfico (gralla)"
+"Verificar a etiqueta do operador: este operador non existe, pode ser un erro "
+"tipográfico (gralla)"
 
 #: ../transport.validator.mapcss:246
 msgid "Check the network tag : this network does not exist, it may be a typo"

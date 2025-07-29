@@ -1,16 +1,18 @@
-# 
+#
 # Translators:
 # Lorenzo Beltrami <lorenzo.beba@gmail.com>, 2020
 # Marco <marcxosm@gmail.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Last-Translator: Marco <marcxosm@gmail.com>, 2020\n"
-"Language-Team: Italian (https://app.transifex.com/openstreetmap-france/teams/17462/it/)\n"
+"Language-Team: Italian (https://app.transifex.com/openstreetmap-france/"
+"teams/17462/it/)\n"
 "Language: it\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
 
 #: ../transport.validator.mapcss:15
 msgid "Uncompromising validation of transit data"
@@ -19,8 +21,8 @@ msgstr "Validazione senza compromessi sui dati di transito"
 #: ../transport.validator.mapcss:64 ../transport.validator.mapcss:69
 msgid "Missing transportation mode, add a tag route = bus/coach/tram/etc"
 msgstr ""
-"Manca la modalità di trasporto, aggiungere l’etichetta route = "
-"bus/coach/tram/ecc."
+"Manca la modalità di trasporto, aggiungere l’etichetta route = bus/coach/"
+"tram/ecc."
 
 #: ../transport.validator.mapcss:75
 msgid "Missing transportation mode, change tag route to route_master"
@@ -31,8 +33,8 @@ msgstr ""
 msgid ""
 "Missing public_transport:version tag on a public_transport route relation"
 msgstr ""
-"Manca l’etichetta public_transport:version su una relazione di linea di tipo"
-" public_transport"
+"Manca l’etichetta public_transport:version su una relazione di linea di tipo "
+"public_transport"
 
 #: ../transport.validator.mapcss:148
 msgid "Missing network tag on a public_transport relation"
@@ -64,8 +66,8 @@ msgstr "Si tratta di una stazione o di una fermata dei bus?"
 msgid ""
 "Specify if it is a stop (platform) or a location on the road (stop_position)"
 msgstr ""
-"Specificare se si tratta di una  fermata (platform) o di un punto di arresto"
-" sulla strada (stop_position)"
+"Specificare se si tratta di una  fermata (platform) o di un punto di arresto "
+"sulla strada (stop_position)"
 
 #: ../transport.validator.mapcss:298
 msgid "Is this a bus stop? add the tag highway=bus_stop"
@@ -103,13 +105,11 @@ msgstr ""
 
 #: ../transport.validator.mapcss:270 ../transport.validator.mapcss:281
 msgid "Missing public_transport tag on a public transport stop"
-msgstr ""
-"Manca l’etichetta public_transport sulla fermata di trasporto pubblico"
+msgstr "Manca l’etichetta public_transport sulla fermata di trasporto pubblico"
 
 #: ../transport.validator.mapcss:280
 msgid ""
-"Specify if it is a stop (platform) or a location on the rails "
-"(stop_position)"
+"Specify if it is a stop (platform) or a location on the rails (stop_position)"
 msgstr ""
 "Specificare se si tratta di una fermata (platform) oppure di un punto di "
 "arresto sui binari (stop_position)"
@@ -128,8 +128,8 @@ msgstr ""
 
 #: ../transport.validator.mapcss:190
 msgid ""
-"The operator tag should be the same for the route and the route_master : {0}"
-" vs {1}"
+"The operator tag should be the same for the route and the route_master : {0} "
+"vs {1}"
 msgstr ""
 "L’etichetta operator dovrebbe avere lo stesso valore per route e "
 "route_master: {0} vs {1}"
@@ -147,8 +147,8 @@ msgid ""
 "The colour tag should be the same for the route and the route_master : {0} "
 "vs {1}"
 msgstr ""
-"L’etichetta colour dovrebbe avere lo stesso valore per route e route_master:"
-" {0} vs {1}"
+"L’etichetta colour dovrebbe avere lo stesso valore per route e route_master: "
+"{0} vs {1}"
 
 #: ../transport.validator.mapcss:205
 msgid ""
@@ -197,8 +197,7 @@ msgid "Missing name on a public transport stop"
 msgstr "Manca il nome su una fermata del trasporto pubblico"
 
 #: ../transport.validator.mapcss:240
-msgid ""
-"Check the operator tag : this operator does not exist, it may be a typo"
+msgid "Check the operator tag : this operator does not exist, it may be a typo"
 msgstr ""
 "Verifica l’etichetta operator: questo operatore non esiste, potrebbe "
 "trattarsi di un refuso"
@@ -220,8 +219,8 @@ msgstr ""
 #: ../transport.validator.mapcss:291
 msgid "Is this a bus or tram stop ? Add a tag to precise the kind of platform"
 msgstr ""
-"È una fermata dell’autobus o del tram? Aggiungi un’etichetta per specificare"
-" il tipo di piattaforma"
+"È una fermata dell’autobus o del tram? Aggiungi un’etichetta per specificare "
+"il tipo di piattaforma"
 
 #: ../transport.validator.mapcss:407
 msgid "Subway entrances should be mapped as nodes"
