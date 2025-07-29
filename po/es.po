@@ -1,19 +1,21 @@
-# 
+#
 # Translators:
 # frodrigo <fred.rodrigo@gmail.com>, 2018
 # Franco, 2018
 # Jorge Sanz <sanchi2@gmail.com>, 2020
 # Hugoren Martinako <aumpfbahn@gmail.com>, 2021
 # Tim D., 2024
-# 
+#
 msgid ""
 msgstr ""
 "Last-Translator: Tim D., 2024\n"
-"Language-Team: Spanish (https://app.transifex.com/openstreetmap-france/teams/17462/es/)\n"
+"Language-Team: Spanish (https://app.transifex.com/openstreetmap-france/"
+"teams/17462/es/)\n"
 "Language: es\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
 
 #: ../transport.validator.mapcss:15
 msgid "Uncompromising validation of transit data"
@@ -82,8 +84,7 @@ msgstr "La red debe estar en las líneas de transporte y no en las paradas"
 
 #: ../transport.validator.mapcss:320
 msgid "The operator should be on the transport lines and not on the stops"
-msgstr ""
-"El operador debe estar en las líneas de transporte y no en las paradas"
+msgstr "El operador debe estar en las líneas de transporte y no en las paradas"
 
 #: ../transport.validator.mapcss:331
 msgid ""
@@ -105,8 +106,7 @@ msgstr "Falta etiqueta public_transport en una parada de transporte público"
 
 #: ../transport.validator.mapcss:280
 msgid ""
-"Specify if it is a stop (platform) or a location on the rails "
-"(stop_position)"
+"Specify if it is a stop (platform) or a location on the rails (stop_position)"
 msgstr ""
 "Especificar si es una parada (platform) o una ubicación sobre los rieles "
 "(stop_position)"
@@ -125,8 +125,8 @@ msgstr ""
 
 #: ../transport.validator.mapcss:190
 msgid ""
-"The operator tag should be the same for the route and the route_master : {0}"
-" vs {1}"
+"The operator tag should be the same for the route and the route_master : {0} "
+"vs {1}"
 msgstr ""
 "La etiqueta de operator debe ser la misma para la route y la route_master: "
 "{0} vs {1}"
@@ -136,24 +136,24 @@ msgid ""
 "The ref tag should be the same for the route and the route_master : {0} vs "
 "{1}"
 msgstr ""
-"La etiqueta de ref debe ser la misma para la route y la route_master: {0} vs"
-" {1}"
+"La etiqueta de ref debe ser la misma para la route y la route_master: {0} vs "
+"{1}"
 
 #: ../transport.validator.mapcss:200
 msgid ""
 "The colour tag should be the same for the route and the route_master : {0} "
 "vs {1}"
 msgstr ""
-"La etiqueta colour debe ser la misma para la route y la route_master: {0} vs"
-" {1}"
+"La etiqueta colour debe ser la misma para la route y la route_master: {0} vs "
+"{1}"
 
 #: ../transport.validator.mapcss:205
 msgid ""
 "The public transport mode should be the same for the route and the "
 "route_master : {0} vs {1}"
 msgstr ""
-"El modo de transporte debe ser el mismo para la route y la route_master: {0}"
-" vs {1}"
+"El modo de transporte debe ser el mismo para la route y la route_master: {0} "
+"vs {1}"
 
 #: ../transport.validator.mapcss:211
 msgid "Check the colour tag"
@@ -193,8 +193,7 @@ msgid "Missing name on a public transport stop"
 msgstr "Nombre perdido en una parada de transporte público"
 
 #: ../transport.validator.mapcss:240
-msgid ""
-"Check the operator tag : this operator does not exist, it may be a typo"
+msgid "Check the operator tag : this operator does not exist, it may be a typo"
 msgstr ""
 "Verifique la etiqueta del operador: este operador no existe, puede ser un "
 "error tipográfico"

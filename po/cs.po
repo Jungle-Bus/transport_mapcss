@@ -1,19 +1,21 @@
-# 
+#
 # Translators:
 # frodrigo <fred.rodrigo@gmail.com>, 2018
 # Petr Schönmann <pschonmann@gmail.com>, 2018
 # majkaz, 2019
 # Jiří Podhorecký <jirka.p@volny.cz>, 2019
 # TK, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Last-Translator: TK, 2020\n"
-"Language-Team: Czech (https://app.transifex.com/openstreetmap-france/teams/17462/cs/)\n"
+"Language-Team: Czech (https://app.transifex.com/openstreetmap-france/"
+"teams/17462/cs/)\n"
 "Language: cs\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n "
+"<= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 #: ../transport.validator.mapcss:15
 msgid "Uncompromising validation of transit data"
@@ -100,8 +102,7 @@ msgstr "Chybějící tag public_transport na zastávce hromadné dopravy"
 
 #: ../transport.validator.mapcss:280
 msgid ""
-"Specify if it is a stop (platform) or a location on the rails "
-"(stop_position)"
+"Specify if it is a stop (platform) or a location on the rails (stop_position)"
 msgstr ""
 "Specifikuj, zda se jedná o zastávku (platform) nebo místo zastavení "
 "(stop_position)"
@@ -118,8 +119,8 @@ msgstr "Tag network by měl být stejný pro route i route_master :  {0} vs {1}"
 
 #: ../transport.validator.mapcss:190
 msgid ""
-"The operator tag should be the same for the route and the route_master : {0}"
-" vs {1}"
+"The operator tag should be the same for the route and the route_master : {0} "
+"vs {1}"
 msgstr "Tag operator by měl být stejný pro route i route_master : {0} vs {1}"
 
 #: ../transport.validator.mapcss:195
@@ -139,8 +140,7 @@ msgid ""
 "The public transport mode should be the same for the route and the "
 "route_master : {0} vs {1}"
 msgstr ""
-"Režim veřejné dopravy by měl být stejný pro route i route_master : {0} vs "
-"{1}"
+"Režim veřejné dopravy by měl být stejný pro route i route_master : {0} vs {1}"
 
 #: ../transport.validator.mapcss:211
 msgid "Check the colour tag"
@@ -179,8 +179,7 @@ msgid "Missing name on a public transport stop"
 msgstr "Chybějící jméno na zastávce veřejné dopravy"
 
 #: ../transport.validator.mapcss:240
-msgid ""
-"Check the operator tag : this operator does not exist, it may be a typo"
+msgid "Check the operator tag : this operator does not exist, it may be a typo"
 msgstr ""
 "Zkontrolujte tag operator: tento provozovatel neexistuje, možná se jedná o "
 "překlep."

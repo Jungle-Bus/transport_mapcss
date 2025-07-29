@@ -1,11 +1,12 @@
-# 
+#
 # Translators:
 # imni <iriman@chmail.ir>, 2018
-# 
+#
 msgid ""
 msgstr ""
 "Last-Translator: imni <iriman@chmail.ir>, 2018\n"
-"Language-Team: Persian (https://app.transifex.com/openstreetmap-france/teams/17462/fa/)\n"
+"Language-Team: Persian (https://app.transifex.com/openstreetmap-france/"
+"teams/17462/fa/)\n"
 "Language: fa\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,13 +19,12 @@ msgstr ""
 #: ../transport.validator.mapcss:64 ../transport.validator.mapcss:69
 msgid "Missing transportation mode, add a tag route = bus/coach/tram/etc"
 msgstr ""
-"شیوهٔ حمل‌ونقل عمومی مشخص نشده. یکی از تگ‌های route = bus/coach/tram/...‎ را"
-" وارد کنید."
+"شیوهٔ حمل‌ونقل عمومی مشخص نشده. یکی از تگ‌های route = bus/coach/tram/...‎ را "
+"وارد کنید."
 
 #: ../transport.validator.mapcss:75
 msgid "Missing transportation mode, change tag route to route_master"
-msgstr ""
-"شیوهٔ حمل‌ونقل عمومی مشخص نشده. تگ route را به route_master تغییر دهید"
+msgstr "شیوهٔ حمل‌ونقل عمومی مشخص نشده. تگ route را به route_master تغییر دهید"
 
 #: ../transport.validator.mapcss:129 ../transport.validator.mapcss:138
 msgid ""
@@ -60,8 +60,8 @@ msgstr "ایستگاه اتوبوس است (stop) یا پایانهٔ اتوبو
 msgid ""
 "Specify if it is a stop (platform) or a location on the road (stop_position)"
 msgstr ""
-"مشخص کنید آیا ایستگاه است (سکو، platform) یا نقطه‌ای در جاده (stop_position،"
-" محل توقف وسیله)"
+"مشخص کنید آیا ایستگاه است (سکو، platform) یا نقطه‌ای در جاده (stop_position، "
+"محل توقف وسیله)"
 
 #: ../transport.validator.mapcss:298
 msgid "Is this a bus stop? add the tag highway=bus_stop"
@@ -88,8 +88,7 @@ msgstr ""
 
 #: ../transport.validator.mapcss:345
 msgid "The stop is not served by any line, add it to a route relation"
-msgstr ""
-"هیچ خطی از ایستگاه نمی‌گذرد. ایستگاه را به یک رابطهٔ route اضافه کنید."
+msgstr "هیچ خطی از ایستگاه نمی‌گذرد. ایستگاه را به یک رابطهٔ route اضافه کنید."
 
 #: ../transport.validator.mapcss:270 ../transport.validator.mapcss:281
 msgid "Missing public_transport tag on a public transport stop"
@@ -97,8 +96,7 @@ msgstr "کمبود تگ public_transport روی ایستگاه حمل‌ونقل
 
 #: ../transport.validator.mapcss:280
 msgid ""
-"Specify if it is a stop (platform) or a location on the rails "
-"(stop_position)"
+"Specify if it is a stop (platform) or a location on the rails (stop_position)"
 msgstr ""
 "مشخص کنید آیا ایستگاه (platform، سکو) است یا مکانی در کنار ریل "
 "(stop_position، محل توقف وسیله)"
@@ -115,8 +113,8 @@ msgstr ""
 
 #: ../transport.validator.mapcss:190
 msgid ""
-"The operator tag should be the same for the route and the route_master : {0}"
-" vs {1}"
+"The operator tag should be the same for the route and the route_master : {0} "
+"vs {1}"
 msgstr ""
 
 #: ../transport.validator.mapcss:195
@@ -174,8 +172,7 @@ msgid "Missing name on a public transport stop"
 msgstr ""
 
 #: ../transport.validator.mapcss:240
-msgid ""
-"Check the operator tag : this operator does not exist, it may be a typo"
+msgid "Check the operator tag : this operator does not exist, it may be a typo"
 msgstr ""
 
 #: ../transport.validator.mapcss:246

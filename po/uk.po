@@ -1,17 +1,21 @@
-# 
+#
 # Translators:
 # frodrigo <fred.rodrigo@gmail.com>, 2018
 # Green Aloe, 2022
 # VARVAR <182050@i.ua>, 2024
-# 
+#
 msgid ""
 msgstr ""
 "Last-Translator: VARVAR <182050@i.ua>, 2024\n"
-"Language-Team: Ukrainian (https://app.transifex.com/openstreetmap-france/teams/17462/uk/)\n"
+"Language-Team: Ukrainian (https://app.transifex.com/openstreetmap-france/"
+"teams/17462/uk/)\n"
 "Language: uk\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: ../transport.validator.mapcss:15
 msgid "Uncompromising validation of transit data"
@@ -96,10 +100,8 @@ msgstr "Відсутній теґ public_transport на public_transport_stop"
 
 #: ../transport.validator.mapcss:280
 msgid ""
-"Specify if it is a stop (platform) or a location on the rails "
-"(stop_position)"
-msgstr ""
-"Вкажіть, чи це зупинка (платформа), чи місце на рейках (stop_position)"
+"Specify if it is a stop (platform) or a location on the rails (stop_position)"
+msgstr "Вкажіть, чи це зупинка (платформа), чи місце на рейках (stop_position)"
 
 #: ../transport.validator.mapcss:292 ../transport.validator.mapcss:299
 msgid "Missing legacy tag on a public transport stop"
@@ -114,8 +116,8 @@ msgstr ""
 
 #: ../transport.validator.mapcss:190
 msgid ""
-"The operator tag should be the same for the route and the route_master : {0}"
-" vs {1}"
+"The operator tag should be the same for the route and the route_master : {0} "
+"vs {1}"
 msgstr ""
 "Теґ operator має бути однаковим для route та route_master : {0} проти {1}"
 
@@ -177,8 +179,7 @@ msgid "Missing name on a public transport stop"
 msgstr "Відсутня назва зупинки громадського транспорту"
 
 #: ../transport.validator.mapcss:240
-msgid ""
-"Check the operator tag : this operator does not exist, it may be a typo"
+msgid "Check the operator tag : this operator does not exist, it may be a typo"
 msgstr ""
 "Перевірте теґ operator: такого оператора не існує, або може бути "
 "орфоргафічною помилкою"
@@ -194,8 +195,8 @@ msgid ""
 "A bus station is usually a large area where many buses stop, check if you "
 "can draw this area"
 msgstr ""
-"Автобусна станція -  це, як правило, велика територія, де зупиняється багато"
-" автобусів, перевірте, чи можна накреслити цю зону"
+"Автобусна станція -  це, як правило, велика територія, де зупиняється багато "
+"автобусів, перевірте, чи можна накреслити цю зону"
 
 #: ../transport.validator.mapcss:291
 msgid "Is this a bus or tram stop ? Add a tag to precise the kind of platform"
@@ -210,8 +211,7 @@ msgid ""
 "The station entrance should be part of a building or a highway (steps, "
 "footway, etc)"
 msgstr ""
-"Вхід до станції повинен бути частиною будівлі або шляху (сходи, хідник, "
-"тощо)"
+"Вхід до станції повинен бути частиною будівлі або шляху (сходи, хідник, тощо)"
 
 #: ../transport.validator.mapcss:423
 msgid ""

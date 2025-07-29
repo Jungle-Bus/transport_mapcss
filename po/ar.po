@@ -1,15 +1,17 @@
-# 
+#
 # Translators:
 # Abdullah, 2025
-# 
+#
 msgid ""
 msgstr ""
 "Last-Translator: Abdullah, 2025\n"
-"Language-Team: Arabic (https://app.transifex.com/openstreetmap-france/teams/17462/ar/)\n"
+"Language-Team: Arabic (https://app.transifex.com/openstreetmap-france/"
+"teams/17462/ar/)\n"
 "Language: ar\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #: ../transport.validator.mapcss:15
 msgid "Uncompromising validation of transit data"
@@ -18,8 +20,8 @@ msgstr "تحقق صارم من صحة بيانات النقل العام"
 #: ../transport.validator.mapcss:64 ../transport.validator.mapcss:69
 msgid "Missing transportation mode, add a tag route = bus/coach/tram/etc"
 msgstr ""
-"نمط النقل غير موجود، أضف وسم طريق=حافلة/مدرب/ترام/إلخ route = "
-"bus/coach/tram/etc"
+"نمط النقل غير موجود، أضف وسم طريق=حافلة/مدرب/ترام/إلخ route = bus/coach/tram/"
+"etc"
 
 #: ../transport.validator.mapcss:75
 msgid "Missing transportation mode, change tag route to route_master"
@@ -92,8 +94,7 @@ msgstr "وسم public_transport غير موجود في محطة نقل عام"
 
 #: ../transport.validator.mapcss:280
 msgid ""
-"Specify if it is a stop (platform) or a location on the rails "
-"(stop_position)"
+"Specify if it is a stop (platform) or a location on the rails (stop_position)"
 msgstr ""
 "حدد ما إذا كانت محطة (رصيف platform) أو موقعًا على القضبان (stop_position)"
 
@@ -109,8 +110,8 @@ msgstr "يجب أن يكون وسم الشبكة هو نفسه للمسار و r
 
 #: ../transport.validator.mapcss:190
 msgid ""
-"The operator tag should be the same for the route and the route_master : {0}"
-" vs {1}"
+"The operator tag should be the same for the route and the route_master : {0} "
+"vs {1}"
 msgstr "يجب أن يكون وسم المشغل هو نفسه للمسار و route_master: {0} مقابل {1}"
 
 #: ../transport.validator.mapcss:195
@@ -168,8 +169,7 @@ msgid "Missing name on a public transport stop"
 msgstr "الاسم غير موجود في محطة نقل عام"
 
 #: ../transport.validator.mapcss:240
-msgid ""
-"Check the operator tag : this operator does not exist, it may be a typo"
+msgid "Check the operator tag : this operator does not exist, it may be a typo"
 msgstr "تحقق من وسم المشغل: هذا المشغل غير موجود، قد يكون خطأ إملائي"
 
 #: ../transport.validator.mapcss:246
