@@ -1,17 +1,20 @@
-# 
+#
 # Translators:
 # maro21 OSM, 2021
 # polish96, 2022
 # Piotr Strebski <strebski@gmail.com>, 2023
-# 
+#
 msgid ""
 msgstr ""
 "Last-Translator: Piotr Strebski <strebski@gmail.com>, 2023\n"
-"Language-Team: Polish (https://app.transifex.com/openstreetmap-france/teams/17462/pl/)\n"
+"Language-Team: Polish (https://app.transifex.com/openstreetmap-france/"
+"teams/17462/pl/)\n"
 "Language: pl\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && "
+"(n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && "
+"n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 #: ../transport.validator.mapcss:15
 msgid "Uncompromising validation of transit data"
@@ -28,8 +31,7 @@ msgstr "Zmień tag route na route_master"
 #: ../transport.validator.mapcss:129 ../transport.validator.mapcss:138
 msgid ""
 "Missing public_transport:version tag on a public_transport route relation"
-msgstr ""
-"Relacji transportu publicznego brakuje tagu „public_transport:version”"
+msgstr "Relacji transportu publicznego brakuje tagu „public_transport:version”"
 
 #: ../transport.validator.mapcss:148
 msgid "Missing network tag on a public_transport relation"
@@ -59,8 +61,8 @@ msgstr "To przystanek czy dworzec autobusowy?"
 msgid ""
 "Specify if it is a stop (platform) or a location on the road (stop_position)"
 msgstr ""
-"Określ, czy jest to przystanek (platform), czy miejsce zatrzymania na drodze"
-" (stop_position)"
+"Określ, czy jest to przystanek (platform), czy miejsce zatrzymania na drodze "
+"(stop_position)"
 
 #: ../transport.validator.mapcss:298
 msgid "Is this a bus stop? add the tag highway=bus_stop"
@@ -87,8 +89,8 @@ msgid ""
 "The line variant does not belong to any line, add it to the route_master "
 "relation"
 msgstr ""
-"Ten wariant linii transportu publicznego nie jest przyporządkowany do żadnej"
-" linii, dodaj go do relacji route_master"
+"Ten wariant linii transportu publicznego nie jest przyporządkowany do żadnej "
+"linii, dodaj go do relacji route_master"
 
 #: ../transport.validator.mapcss:345
 msgid "The stop is not served by any line, add it to a route relation"
@@ -102,8 +104,7 @@ msgstr "Przystankowi brakuje tagu „public_transport”"
 
 #: ../transport.validator.mapcss:280
 msgid ""
-"Specify if it is a stop (platform) or a location on the rails "
-"(stop_position)"
+"Specify if it is a stop (platform) or a location on the rails (stop_position)"
 msgstr ""
 "Określ, czy jest to peron (platform), czy miejsce zatrzymania na torach "
 "(stop_position)"
@@ -117,13 +118,13 @@ msgid ""
 "The network tag should be the same for the route and the route_master : {0} "
 "vs {1}"
 msgstr ""
-"Tag network powinien być taki sam w relacji route jak i route_master: {0} vs"
-" {1}"
+"Tag network powinien być taki sam w relacji route jak i route_master: {0} vs "
+"{1}"
 
 #: ../transport.validator.mapcss:190
 msgid ""
-"The operator tag should be the same for the route and the route_master : {0}"
-" vs {1}"
+"The operator tag should be the same for the route and the route_master : {0} "
+"vs {1}"
 msgstr ""
 "Tag operator powinien być taki sam w relacji route jak i route_master: {0} "
 "vs {1}"
@@ -190,8 +191,7 @@ msgid "Missing name on a public transport stop"
 msgstr "Brak nazwy przystanku"
 
 #: ../transport.validator.mapcss:240
-msgid ""
-"Check the operator tag : this operator does not exist, it may be a typo"
+msgid "Check the operator tag : this operator does not exist, it may be a typo"
 msgstr ""
 "Sprawdź znacznik \"operator\": ten zarządca nie istnieje, może to literówka"
 

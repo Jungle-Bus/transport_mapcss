@@ -1,11 +1,12 @@
-# 
+#
 # Translators:
 # Supaplex <bejokeup@gmail.com>, 2024
-# 
+#
 msgid ""
 msgstr ""
 "Last-Translator: Supaplex <bejokeup@gmail.com>, 2024\n"
-"Language-Team: Chinese (Taiwan) (https://app.transifex.com/openstreetmap-france/teams/17462/zh_TW/)\n"
+"Language-Team: Chinese (Taiwan) (https://app.transifex.com/openstreetmap-"
+"france/teams/17462/zh_TW/)\n"
 "Language: zh_TW\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -89,8 +90,7 @@ msgstr "大眾運輸站點遺失 public_transport 標籤"
 
 #: ../transport.validator.mapcss:280
 msgid ""
-"Specify if it is a stop (platform) or a location on the rails "
-"(stop_position)"
+"Specify if it is a stop (platform) or a location on the rails (stop_position)"
 msgstr "請指明是車站 (月台) 或是鐵軌上的位置 (停車位置)"
 
 #: ../transport.validator.mapcss:292 ../transport.validator.mapcss:299
@@ -105,8 +105,8 @@ msgstr "路線和路線總纜的網路標籤應該是相同的：{0} vs {1}"
 
 #: ../transport.validator.mapcss:190
 msgid ""
-"The operator tag should be the same for the route and the route_master : {0}"
-" vs {1}"
+"The operator tag should be the same for the route and the route_master : {0} "
+"vs {1}"
 msgstr "路線和路線總纜的營運者標籤應該是相同的：{0} vs {1}"
 
 #: ../transport.validator.mapcss:195
@@ -164,8 +164,7 @@ msgid "Missing name on a public transport stop"
 msgstr "大眾運輸站點遺失名稱"
 
 #: ../transport.validator.mapcss:240
-msgid ""
-"Check the operator tag : this operator does not exist, it may be a typo"
+msgid "Check the operator tag : this operator does not exist, it may be a typo"
 msgstr "檢查營運者標籤：營運者並不存在，也許打錯了"
 
 #: ../transport.validator.mapcss:246

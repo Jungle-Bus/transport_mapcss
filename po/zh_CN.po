@@ -1,14 +1,15 @@
-# 
+#
 # Translators:
 # frodrigo <fred.rodrigo@gmail.com>, 2018
 # 78ac78a3ce7afd360e50fb1afbd224a9_4676cf1, 2018
 # anodern, 2021
 # Noémie <nlehuby@zaclys.net>, 2021
-# 
+#
 msgid ""
 msgstr ""
 "Last-Translator: Noémie <nlehuby@zaclys.net>, 2021\n"
-"Language-Team: Chinese (China) (https://app.transifex.com/openstreetmap-france/teams/17462/zh_CN/)\n"
+"Language-Team: Chinese (China) (https://app.transifex.com/openstreetmap-"
+"france/teams/17462/zh_CN/)\n"
 "Language: zh_CN\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -92,8 +93,7 @@ msgstr "公共交通站点缺少public_transport标记"
 
 #: ../transport.validator.mapcss:280
 msgid ""
-"Specify if it is a stop (platform) or a location on the rails "
-"(stop_position)"
+"Specify if it is a stop (platform) or a location on the rails (stop_position)"
 msgstr "指定它是停靠点（站台）还是位于铁轨上的位置（stop_position）"
 
 #: ../transport.validator.mapcss:292 ../transport.validator.mapcss:299
@@ -108,8 +108,8 @@ msgstr "路线和主路线的网络标签应一致：{0} vs {1}"
 
 #: ../transport.validator.mapcss:190
 msgid ""
-"The operator tag should be the same for the route and the route_master : {0}"
-" vs {1}"
+"The operator tag should be the same for the route and the route_master : {0} "
+"vs {1}"
 msgstr "路线和主路线的运营者标签应一致：{0} vs {1}"
 
 #: ../transport.validator.mapcss:195
@@ -167,8 +167,7 @@ msgid "Missing name on a public transport stop"
 msgstr "公共交通站点缺少名称标签"
 
 #: ../transport.validator.mapcss:240
-msgid ""
-"Check the operator tag : this operator does not exist, it may be a typo"
+msgid "Check the operator tag : this operator does not exist, it may be a typo"
 msgstr "检查运营者标签：这个运营者不存在，可能是输入错误"
 
 #: ../transport.validator.mapcss:246

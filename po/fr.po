@@ -1,19 +1,21 @@
-# 
+#
 # Translators:
 # frodrigo <fred.rodrigo@gmail.com>, 2018
 # Philippe Verdy, 2019
 # deuzeffe, 2019
 # Noémie <nlehuby@zaclys.net>, 2021
 # Gaëtan GOSSET, 2024
-# 
+#
 msgid ""
 msgstr ""
 "Last-Translator: Gaëtan GOSSET, 2024\n"
-"Language-Team: French (https://app.transifex.com/openstreetmap-france/teams/17462/fr/)\n"
+"Language-Team: French (https://app.transifex.com/openstreetmap-france/"
+"teams/17462/fr/)\n"
 "Language: fr\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % "
+"1000000 == 0 ? 1 : 2;\n"
 
 #: ../transport.validator.mapcss:15
 msgid "Uncompromising validation of transit data"
@@ -22,8 +24,8 @@ msgstr "Une validation rigoureuse des données de transport en commun"
 #: ../transport.validator.mapcss:64 ../transport.validator.mapcss:69
 msgid "Missing transportation mode, add a tag route = bus/coach/tram/etc"
 msgstr ""
-"Le mode de transport est manquant, ajouter un attribut "
-"'route=bus/coach/tram/etc.'"
+"Le mode de transport est manquant, ajouter un attribut 'route=bus/coach/tram/"
+"etc.'"
 
 #: ../transport.validator.mapcss:75
 msgid "Missing transportation mode, change tag route to route_master"
@@ -98,8 +100,7 @@ msgid ""
 "The line variant does not belong to any line, add it to the route_master "
 "relation"
 msgstr ""
-"Le trajet n’appartient à aucune ligne, l’ajouter à la relation "
-"“route_master”"
+"Le trajet n’appartient à aucune ligne, l’ajouter à la relation “route_master”"
 
 #: ../transport.validator.mapcss:345
 msgid "The stop is not served by any line, add it to a route relation"
@@ -112,11 +113,10 @@ msgstr "Il manque l’attribut 'public_transport' sur un arrêt"
 
 #: ../transport.validator.mapcss:280
 msgid ""
-"Specify if it is a stop (platform) or a location on the rails "
-"(stop_position)"
+"Specify if it is a stop (platform) or a location on the rails (stop_position)"
 msgstr ""
-"Préciser s’il s’agit d’un quai (“platform”) ou d’une position d’arrêt sur la"
-" voie (“stop_position”)"
+"Préciser s’il s’agit d’un quai (“platform”) ou d’une position d’arrêt sur la "
+"voie (“stop_position”)"
 
 #: ../transport.validator.mapcss:292 ../transport.validator.mapcss:299
 msgid "Missing legacy tag on a public transport stop"
@@ -132,8 +132,8 @@ msgstr ""
 
 #: ../transport.validator.mapcss:190
 msgid ""
-"The operator tag should be the same for the route and the route_master : {0}"
-" vs {1}"
+"The operator tag should be the same for the route and the route_master : {0} "
+"vs {1}"
 msgstr ""
 "Le nom de l'opérateur doit être le même pour le trajet et pour la ligne : "
 "{0} vs {1}"
@@ -202,8 +202,7 @@ msgid "Missing name on a public transport stop"
 msgstr "Nom manquant sur un arrêt de transport"
 
 #: ../transport.validator.mapcss:240
-msgid ""
-"Check the operator tag : this operator does not exist, it may be a typo"
+msgid "Check the operator tag : this operator does not exist, it may be a typo"
 msgstr ""
 "Vérifier l'opérateur renseigné dans l'attribut \"operator\" : ce "
 "transporteur n'existe pas, c'est peut-être une faute d'orthographe"
@@ -237,8 +236,8 @@ msgid ""
 "The station entrance should be part of a building or a highway (steps, "
 "footway, etc)"
 msgstr ""
-"La bouche de métro doit faire partie d'un bâtiment ou d'un élément de voirie"
-" (escalier, chemin piéton, etc)"
+"La bouche de métro doit faire partie d'un bâtiment ou d'un élément de voirie "
+"(escalier, chemin piéton, etc)"
 
 #: ../transport.validator.mapcss:423
 msgid ""
@@ -251,11 +250,11 @@ msgstr ""
 #: ../transport.validator.mapcss:114
 msgid "Missing public_transport:version=1 on a public_transport relation"
 msgstr ""
-"Il manque l'attribut et sa clé 'public_transport:version=1' sur une relation"
-" 'public_transport'"
+"Il manque l'attribut et sa clé 'public_transport:version=1' sur une relation "
+"'public_transport'"
 
 #: ../transport.validator.mapcss:121
 msgid "Missing public_transport:version=2 on a public_transport relation"
 msgstr ""
-"Il manque l'attribut et sa clé 'public_transport:version=2' sur une relation"
-" 'public_transport'"
+"Il manque l'attribut et sa clé 'public_transport:version=2' sur une relation "
+"'public_transport'"

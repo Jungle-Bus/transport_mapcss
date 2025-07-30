@@ -1,4 +1,4 @@
-# 
+#
 # Translators:
 # frodrigo <fred.rodrigo@gmail.com>, 2018
 # Jo <winfixit@gmail.com>, 2018
@@ -7,11 +7,12 @@
 # Ali z <ali.zaroili@outlook.be>, 2021
 # danieldegroot2 <danieldegroot18@gmail.com>, 2022
 # Famlam, 2022
-# 
+#
 msgid ""
 msgstr ""
 "Last-Translator: Famlam, 2022\n"
-"Language-Team: Dutch (https://app.transifex.com/openstreetmap-france/teams/17462/nl/)\n"
+"Language-Team: Dutch (https://app.transifex.com/openstreetmap-france/"
+"teams/17462/nl/)\n"
 "Language: nl\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -101,8 +102,7 @@ msgstr "public_transport tag ontbreekt op een openbaar vervoer halte"
 
 #: ../transport.validator.mapcss:280
 msgid ""
-"Specify if it is a stop (platform) or a location on the rails "
-"(stop_position)"
+"Specify if it is a stop (platform) or a location on the rails (stop_position)"
 msgstr ""
 "Specifieer of het om een halte (platform) of om een stoppositie op de rails "
 "gaat (stop_position)"
@@ -116,13 +116,13 @@ msgid ""
 "The network tag should be the same for the route and the route_master : {0} "
 "vs {1}"
 msgstr ""
-"Het netwerk tag moet dezelfde zijn voor de route en de route_master : {0} vs"
-" {1}"
+"Het netwerk tag moet dezelfde zijn voor de route en de route_master : {0} vs "
+"{1}"
 
 #: ../transport.validator.mapcss:190
 msgid ""
-"The operator tag should be the same for the route and the route_master : {0}"
-" vs {1}"
+"The operator tag should be the same for the route and the route_master : {0} "
+"vs {1}"
 msgstr ""
 "De beheerder tag moet dezelfde zijn voor de route en de route_master : {0} "
 "vs {1}"
@@ -139,8 +139,7 @@ msgid ""
 "The colour tag should be the same for the route and the route_master : {0} "
 "vs {1}"
 msgstr ""
-"De kleur tag moet dezelfde zijn voor de route en de route_master : {0} vs "
-"{1}"
+"De kleur tag moet dezelfde zijn voor de route en de route_master : {0} vs {1}"
 
 #: ../transport.validator.mapcss:205
 msgid ""
@@ -187,8 +186,7 @@ msgid "Missing name on a public transport stop"
 msgstr "Naam op een  public transport halte ontbreekt"
 
 #: ../transport.validator.mapcss:240
-msgid ""
-"Check the operator tag : this operator does not exist, it may be a typo"
+msgid "Check the operator tag : this operator does not exist, it may be a typo"
 msgstr ""
 "Check dee operator tag : deze beheerder bestaaat niet, het is wellicht een "
 "typefout"
@@ -209,8 +207,7 @@ msgstr ""
 
 #: ../transport.validator.mapcss:291
 msgid "Is this a bus or tram stop ? Add a tag to precise the kind of platform"
-msgstr ""
-"Is dit een bus- of tramhalte? Voeg een tag toe met het juiste platform"
+msgstr "Is dit een bus- of tramhalte? Voeg een tag toe met het juiste platform"
 
 #: ../transport.validator.mapcss:407
 msgid "Subway entrances should be mapped as nodes"
@@ -229,8 +226,8 @@ msgid ""
 "The station entrance should be in part of a station: add it to a stop_area "
 "relation"
 msgstr ""
-"De stationsingang zou deel moeten uitmaken van een station: voeg het toe aan"
-" een stop_area relatie"
+"De stationsingang zou deel moeten uitmaken van een station: voeg het toe aan "
+"een stop_area relatie"
 
 #: ../transport.validator.mapcss:114
 msgid "Missing public_transport:version=1 on a public_transport relation"
