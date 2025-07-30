@@ -5,6 +5,10 @@ The `errors` are meant to be easy to fix, whereas the `warnings` may need some l
 
 Some of these validation rules are also available in [Osmose](http://osmose.openstreetmap.fr/fr/errors/?item=9014)
 
+![screenshot](screenshot.png)
+
+## Add to JOSM 
+
 To add the ruleset to JOSM:
 
 * Edit -> Preferences
@@ -18,15 +22,14 @@ You may also want to add the pt_assistant plugin, for even more validation rules
 
 ## Translate
 
-[Help us translate the validation rules in your language !](https://www.transifex.com/openstreetmap-france/osmose/)
-
-![screenshot](screenshot.png)
+[Help us translate the validation rules in your language !](https://hosted.weblate.org/projects/jungle-bus/transport_mapcss-validation-ruleset/)
 
 ## Contribute
 
 Please share your ideas in the issues, and feel free to send a pull request if you know how to implement it in MapCSS.
 
 ## About
+
 This validation ruleset has been developed by the [Jungle Bus](http://junglebus.io/) team, as part as the **Bifidus, improve your transit!** project.
 
 If you value this work, show your support by donating to the [OSM French local chapter](http://openstreetmap.fr).

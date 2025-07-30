@@ -12,8 +12,7 @@ You will then get errors in the console if JOSM fails to parse some rules or if 
 
 # about translations
 
-If you have updated the labels inside the MapCSS file you need to update the translation strings : from `po` directory, run `make *.po` and fix or add new translations.
+If you have updated the labels inside the MapCSS file you need to update the translation template : from `po` directory, run `make *.po`. You will need to commit the .pot file.
 
-You don't have to provide all languages, the project is on transifex so translators can give us some help on that :+1:
+The translations then happen in [Weblate](https://hosted.weblate.org/projects/jungle-bus/transport_mapcss-validation-ruleset/).
 
-Don't forget to commit the .pot and .po files ;)
