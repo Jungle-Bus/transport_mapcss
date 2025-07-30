@@ -6,15 +6,17 @@
 #
 msgid ""
 msgstr ""
-"Last-Translator: Piotr Strebski <strebski@gmail.com>, 2023\n"
-"Language-Team: Polish (https://app.transifex.com/openstreetmap-france/"
-"teams/17462/pl/)\n"
+"PO-Revision-Date: 2025-07-30 13:02+0000\n"
+"Last-Translator: Eryk Michalak <gnu.ewm@protonmail.com>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/jungle-bus/"
+"transport_mapcss-validation-ruleset/pl/>\n"
 "Language: pl\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && "
-"(n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && "
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && ("
+"n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && "
 "n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: ../transport.validator.mapcss:15
 msgid "Uncompromising validation of transit data"
@@ -22,7 +24,7 @@ msgstr "Bezkompromisowa walidacja danych przewozowych"
 
 #: ../transport.validator.mapcss:64 ../transport.validator.mapcss:69
 msgid "Missing transportation mode, add a tag route = bus/coach/tram/etc"
-msgstr "Brak środka transportu, dodaj tag route=bus/tram/coach itp."
+msgstr "Brak środka transportu, dodaj tag route = bus/coach/tram/etc"
 
 #: ../transport.validator.mapcss:75
 msgid "Missing transportation mode, change tag route to route_master"
@@ -232,8 +234,8 @@ msgstr ""
 
 #: ../transport.validator.mapcss:114
 msgid "Missing public_transport:version=1 on a public_transport relation"
-msgstr ""
+msgstr "Brak public_transport:version=1 w relacji public_transport"
 
 #: ../transport.validator.mapcss:121
 msgid "Missing public_transport:version=2 on a public_transport relation"
-msgstr ""
+msgstr "Brak public_transport:version=2 w relacji public_transport"
