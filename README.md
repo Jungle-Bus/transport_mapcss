@@ -22,7 +22,9 @@ You may also want to add the pt_assistant plugin, for even more validation rules
 
 ## Translate
 
-[Help us translate the validation rules in your language !](https://hosted.weblate.org/projects/jungle-bus/transport_mapcss-validation-ruleset/)
+[Help us translate the validation rules in your language:](https://hosted.weblate.org/projects/jungle-bus/transport_mapcss-validation-ruleset/)
+
+[![translation status](https://hosted.weblate.org/widget/jungle-bus/transport_mapcss-validation-ruleset/multi-auto.svg)](https://hosted.weblate.org/projects/jungle-bus/transport_mapcss-validation-ruleset/)
 
 ## Contribute
 
