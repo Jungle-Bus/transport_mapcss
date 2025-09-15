@@ -7,13 +7,15 @@
 #
 msgid ""
 msgstr ""
-"Last-Translator: Noémie <nlehuby@zaclys.net>, 2021\n"
-"Language-Team: Chinese (China) (https://app.transifex.com/openstreetmap-"
-"france/teams/17462/zh_CN/)\n"
+"PO-Revision-Date: 2025-09-14 01:01+0000\n"
+"Last-Translator: marvel at flowers <qiuhangli_2024@qq.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/jungle-bus/transport_mapcss-validation-ruleset/zh_Hans/>\n"
 "Language: zh_CN\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 #: ../transport.validator.mapcss:15
 msgid "Uncompromising validation of transit data"
@@ -144,7 +146,7 @@ msgstr "表示公共交通路线的颜色应使用colour标签"
 
 #: ../transport.validator.mapcss:252
 msgid "A bus stop is supposed to be a node"
-msgstr "公交停车点应绘制为点"
+msgstr "公交站应作为交通节点"
 
 #: ../transport.validator.mapcss:364
 msgid "The interval is invalid (try a number of minutes)"
@@ -178,11 +180,11 @@ msgstr "检查网络标签：这个网络不存在，可能是输入错误"
 msgid ""
 "A bus station is usually a large area where many buses stop, check if you "
 "can draw this area"
-msgstr "公交枢纽站通常是包含了很多公交站的大型区域，如果可以的话请绘制为区域"
+msgstr "公交总站通常是多线路公交停靠的场站区域，请核查是否可对该区域进行规划绘制"
 
 #: ../transport.validator.mapcss:291
 msgid "Is this a bus or tram stop ? Add a tag to precise the kind of platform"
-msgstr "这是公交站还是电车站？添加更精确的标记来描述站台的类型"
+msgstr "该站点属于公交站还是电车站？添加更精确的标记来描述站台的类型"
 
 #: ../transport.validator.mapcss:407
 msgid "Subway entrances should be mapped as nodes"
