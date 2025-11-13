@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-31 19:23+0200\n"
-"PO-Revision-Date: 2025-08-01 18:01+0000\n"
+"PO-Revision-Date: 2025-11-11 08:51+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/jungle-bus/"
 "transport_mapcss-validation-ruleset/et/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 #: ../transport.validator.mapcss:15
 msgid "Uncompromising validation of transit data"
@@ -20,189 +20,212 @@ msgstr "Ühistranspordi andmete range ja kompromissitu valideerimine"
 
 #: ../transport.validator.mapcss:64 ../transport.validator.mapcss:69
 msgid "Missing transportation mode, add a tag route = bus/coach/tram/etc"
-msgstr ""
+msgstr "Transpordiviis on puudu, lisa silt: route = bus/coach/tram/etc"
 
 #: ../transport.validator.mapcss:75
 msgid "Missing transportation mode, change tag route to route_master"
-msgstr ""
+msgstr "Transpordiviis on puudu, muuda silti: route = route_master"
 
 #: ../transport.validator.mapcss:129 ../transport.validator.mapcss:138
 msgid ""
 "Missing public_transport:version tag on a public_transport route relation"
-msgstr ""
+msgstr "Ühistranspordi marsruudil puudub public_transport:version silt"
 
 #: ../transport.validator.mapcss:148
 msgid "Missing network tag on a public_transport relation"
-msgstr ""
+msgstr "Ühistranspordi marsruudil puudub võrgustiku silt"
 
 #: ../transport.validator.mapcss:157
 msgid "Missing operator tag on a public_transport relation"
-msgstr ""
+msgstr "Ühistranspordi marsruudil puudub käitaja silt"
 
 #: ../transport.validator.mapcss:166
 msgid "Missing ref tag for line number on a public_transport relation"
-msgstr ""
+msgstr "Ühistranspordi marsruudil puudub ref silt, mis sisaldaks liininumbrit"
 
 #: ../transport.validator.mapcss:175
 msgid "Missing from/to tag on a public_transport route relation"
-msgstr ""
+msgstr "Ühistranspordi marsruudil puudub to või from silt"
 
 #: ../transport.validator.mapcss:232
 msgid "The stops may not be in the right order"
-msgstr ""
+msgstr "Peatused ei pruugi olla õiges järjekorras"
 
 #: ../transport.validator.mapcss:257
 msgid "Is it a bus stop or a bus station?"
-msgstr ""
+msgstr "Kas tegemist on bussipeatuse või bussijaamaga?"
 
 #: ../transport.validator.mapcss:269
 msgid ""
 "Specify if it is a stop (platform) or a location on the road (stop_position)"
 msgstr ""
+"Määratle, kas tegemist on bussipeatusega (platform) tee ääres või "
+"peatuspunktiga (stop_position) tee peal"
 
 #: ../transport.validator.mapcss:298
 msgid "Is this a bus stop? add the tag highway=bus_stop"
-msgstr ""
+msgstr "Kas see on bussipeatus? Kui jah, siis lisa silt highway=bus_stop"
 
 #: ../transport.validator.mapcss:309
 msgid "Check if the note can be deleted"
-msgstr ""
+msgstr "Kontrolli, kas seda märget on võimalik kustutatada"
 
 #: ../transport.validator.mapcss:314
 msgid "The network should be on the transport lines and not on the stops"
-msgstr ""
+msgstr "Võrgustik peaks eelkõige moodustuma joontest, mitte peatustest"
 
 #: ../transport.validator.mapcss:320
 msgid "The operator should be on the transport lines and not on the stops"
-msgstr ""
+msgstr "Käitaja silt peaks olema eelkõige joontel, mitte peatustel"
 
 #: ../transport.validator.mapcss:331
 msgid ""
 "The line variant does not belong to any line, add it to the route_master "
 "relation"
 msgstr ""
+"See liini variant ei kuulu ühegi liini alla, lisa ta route_master "
+"relatsiooni osaks"
 
 #: ../transport.validator.mapcss:345
 msgid "The stop is not served by any line, add it to a route relation"
-msgstr ""
+msgstr "Siin peatuses ei peatu ükski liin, lisa ta mõne transpordiliini osaks"
 
 #: ../transport.validator.mapcss:270 ../transport.validator.mapcss:281
 msgid "Missing public_transport tag on a public transport stop"
-msgstr ""
+msgstr "Ühistranspordipeatusest on puudu public_transport silt"
 
 #: ../transport.validator.mapcss:280
 msgid ""
 "Specify if it is a stop (platform) or a location on the rails (stop_position)"
 msgstr ""
+"Määratle, kas tegemist on peatusega (platform) rööbastee ääres või "
+"peatuspunktiga (stop_position) rööbastee peal"
 
 #: ../transport.validator.mapcss:292 ../transport.validator.mapcss:299
 msgid "Missing legacy tag on a public transport stop"
-msgstr ""
+msgstr "Ühistranspordipeatusel on pärandsilt ehk vanas stiilis puudu"
 
 #: ../transport.validator.mapcss:185
 msgid ""
 "The network tag should be the same for the route and the route_master : {0} "
 "vs {1}"
 msgstr ""
+"Võrgustiku silt peaks marsruudi ja ülemmarsruudi puhul olema sama: {0} vs {1}"
 
 #: ../transport.validator.mapcss:190
 msgid ""
 "The operator tag should be the same for the route and the route_master : {0} "
 "vs {1}"
 msgstr ""
+"Käitaja silt peaks marsruudi ja ülemmarsruudi puhul olema sama: {0} vs {1}"
 
 #: ../transport.validator.mapcss:195
 msgid ""
 "The ref tag should be the same for the route and the route_master : {0} vs "
 "{1}"
 msgstr ""
+"Ref ehk liininumbri silt peaks marsruudi ja ülemmarsruudi puhul olema sama: "
+"{0} vs {1}"
 
 #: ../transport.validator.mapcss:200
 msgid ""
 "The colour tag should be the same for the route and the route_master : {0} "
 "vs {1}"
 msgstr ""
+"Värvi silt peaks marsruudi ja ülemmarsruudi puhul olema sama: {0} vs {1}"
 
 #: ../transport.validator.mapcss:205
 msgid ""
 "The public transport mode should be the same for the route and the "
 "route_master : {0} vs {1}"
 msgstr ""
+"Ühistranspordiliigi silt peaks marsruudi ja ülemmarsruudi puhul olema sama: "
+"{0} vs {1}"
 
 #: ../transport.validator.mapcss:211
 msgid "Check the colour tag"
-msgstr ""
+msgstr "Kontrolli värvisilti"
 
 #: ../transport.validator.mapcss:218
 msgid "The colour code should start with '#' followed by 3 or 6 digits"
 msgstr ""
+"Värvikoodi alguses peaks olema #, millele järgneb 3- või 6-märgine "
+"kuueteistkümnendsüsteemis number (numbrid 0-9 ja tähed A-F)"
 
 #: ../transport.validator.mapcss:226
 msgid "The color of the public transport line should be in a colour tag"
-msgstr ""
+msgstr "Ühistranspordiliini värv peaks olema kirjas värvisildis (colour)"
 
 #: ../transport.validator.mapcss:252
 msgid "A bus stop is supposed to be a node"
-msgstr ""
+msgstr "Bussipeatused peaksid olema kaardistatud punktidena/sõlmedena"
 
 #: ../transport.validator.mapcss:364
 msgid "The interval is invalid (try a number of minutes)"
-msgstr ""
+msgstr "Liinivälp (interval) pole korrektne (sisesta minuteid märkiv number)"
 
 #: ../transport.validator.mapcss:380
 msgid "The duration is invalid (try a number of minutes)"
-msgstr ""
+msgstr "Kestus pole korrektne (sisesta minuteid märkiv number)"
 
 #: ../transport.validator.mapcss:393
 msgid "Missing interval tag to specify the main interval"
-msgstr ""
+msgstr "Puudu on liinivälba (interval) silt, mis määratleks põhilise liinivälba"
 
 #: ../transport.validator.mapcss:399
 msgid "Missing opening_hours tag"
-msgstr ""
+msgstr "Puudu on tööaja silt (opening_hours)"
 
 #: ../transport.validator.mapcss:351 ../transport.validator.mapcss:357
 msgid "Missing name on a public transport stop"
-msgstr ""
+msgstr "Ühistranspordipeatusel puudub nimi"
 
 #: ../transport.validator.mapcss:240
 msgid "Check the operator tag : this operator does not exist, it may be a typo"
 msgstr ""
+"Kontrolli käitaja silti - sellist käitajat ei tundu olema olemas ja tegemist "
+"võib olla trükiveaga"
 
 #: ../transport.validator.mapcss:246
 msgid "Check the network tag : this network does not exist, it may be a typo"
 msgstr ""
+"Kontrolli võrgustiku silti - sellist võrgustikku ei tundu olema olemas ja "
+"tegemist võib olla trükiveaga"
 
 #: ../transport.validator.mapcss:263
 msgid ""
 "A bus station is usually a large area where many buses stop, check if you "
 "can draw this area"
 msgstr ""
+"Bussijaam on tavaliselt suurem ala, kus leiduvad paljude bussiliinide "
+"peatused, vaata kas sul õnnestub see joonistada"
 
 #: ../transport.validator.mapcss:291
 msgid "Is this a bus or tram stop ? Add a tag to precise the kind of platform"
 msgstr ""
+"Kas see on bussi- või trammipeatus? Lisa silt, mis täpsustab platvormi tüüpi"
 
 #: ../transport.validator.mapcss:407
 msgid "Subway entrances should be mapped as nodes"
-msgstr ""
+msgstr "Metroo sissepääsud peaksid olema kaardistatud punktidena/sõlmedena"
 
 #: ../transport.validator.mapcss:439
 msgid ""
 "The station entrance should be part of a building or a highway (steps, "
 "footway, etc)"
-msgstr ""
+msgstr "Jaama sissepääs peaks olema hoone või tee osa (trepp, jalgtee, jne)"
 
 #: ../transport.validator.mapcss:423
 msgid ""
 "The station entrance should be in part of a station: add it to a stop_area "
 "relation"
 msgstr ""
+"Jaama sissepääs peaks olema peatuse ala osa: lisa ta stop_area realatsiooni"
 
 #: ../transport.validator.mapcss:114
 msgid "Missing public_transport:version=1 on a public_transport relation"
-msgstr ""
+msgstr "Ühistranspordi marsruudil puudub public_transport:version=1 silt"
 
 #: ../transport.validator.mapcss:121
 msgid "Missing public_transport:version=2 on a public_transport relation"
-msgstr ""
+msgstr "Ühistranspordi marsruudil puudub public_transport:version=2 silt"
