@@ -6,13 +6,15 @@
 #
 msgid ""
 msgstr ""
-"Last-Translator: ccpr1l <csdpe0810-tf@yahoo.es>, 2020\n"
-"Language-Team: Galician (https://app.transifex.com/openstreetmap-france/"
-"teams/17462/gl/)\n"
+"PO-Revision-Date: 2025-12-11 12:00+0000\n"
+"Last-Translator: Hugoren Martinako <aumpfbahn@gmail.com>\n"
+"Language-Team: Galician <https://hosted.weblate.org/projects/jungle-bus/"
+"transport_mapcss-validation-ruleset/gl/>\n"
 "Language: gl\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 #: ../transport.validator.mapcss:15
 msgid "Uncompromising validation of transit data"
@@ -162,8 +164,7 @@ msgstr ""
 
 #: ../transport.validator.mapcss:226
 msgid "The color of the public transport line should be in a colour tag"
-msgstr ""
-"A cor da liña de transporte público ten que estar na etiqueta 'colour'."
+msgstr "A cor da liña de transporte público ten que estar na etiqueta 'colour'"
 
 #: ../transport.validator.mapcss:252
 msgid "A bus stop is supposed to be a node"
