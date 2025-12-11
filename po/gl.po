@@ -6,7 +6,7 @@
 #
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-12-11 12:00+0000\n"
+"PO-Revision-Date: 2025-12-12 20:00+0000\n"
 "Last-Translator: Hugoren Martinako <aumpfbahn@gmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/jungle-bus/"
 "transport_mapcss-validation-ruleset/gl/>\n"
@@ -218,24 +218,28 @@ msgstr ""
 
 #: ../transport.validator.mapcss:407
 msgid "Subway entrances should be mapped as nodes"
-msgstr ""
+msgstr "As entradas ao metro deberían ser mapeadas como nodos"
 
 #: ../transport.validator.mapcss:439
 msgid ""
 "The station entrance should be part of a building or a highway (steps, "
 "footway, etc)"
 msgstr ""
+"A entrada da estación debería ser parte dun edificio ou dun vial "
+"(escaleiras, beirarrúas etc...)"
 
 #: ../transport.validator.mapcss:423
 msgid ""
 "The station entrance should be in part of a station: add it to a stop_area "
 "relation"
 msgstr ""
+"A entrada da estación debería ser parte da estación: engádea a unha relación "
+"stop_area"
 
 #: ../transport.validator.mapcss:114
 msgid "Missing public_transport:version=1 on a public_transport relation"
-msgstr ""
+msgstr "Falta public_transport:version=1 nunha relación public_transport"
 
 #: ../transport.validator.mapcss:121
 msgid "Missing public_transport:version=2 on a public_transport relation"
-msgstr ""
+msgstr "Falta public_transport:version=2 nunha relación public_transport"
