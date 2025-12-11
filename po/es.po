@@ -8,14 +8,16 @@
 #
 msgid ""
 msgstr ""
-"Last-Translator: Tim D., 2024\n"
-"Language-Team: Spanish (https://app.transifex.com/openstreetmap-france/"
-"teams/17462/es/)\n"
+"PO-Revision-Date: 2025-12-11 12:00+0000\n"
+"Last-Translator: Hugoren Martinako <aumpfbahn@gmail.com>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/jungle-bus/"
+"transport_mapcss-validation-ruleset/es/>\n"
 "Language: es\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
-"1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == "
+"0) ? 1 : 2);\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 #: ../transport.validator.mapcss:15
 msgid "Uncompromising validation of transit data"
@@ -166,7 +168,7 @@ msgstr "El código de color debe comenzar con '#' seguido de 3 o 6 dígitos"
 #: ../transport.validator.mapcss:226
 msgid "The color of the public transport line should be in a colour tag"
 msgstr ""
-"El color de la línea de transporte público debe estar en la etiqueta colour."
+"El color de la línea de transporte público debe estar en la etiqueta colour"
 
 #: ../transport.validator.mapcss:252
 msgid "A bus stop is supposed to be a node"
@@ -236,7 +238,7 @@ msgid ""
 "relation"
 msgstr ""
 "La entrada de la estación debería ser parte de la estación: añádela a una "
-"relación stop_area "
+"relación stop_area"
 
 #: ../transport.validator.mapcss:114
 msgid "Missing public_transport:version=1 on a public_transport relation"
