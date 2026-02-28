@@ -3,15 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-28 05:05+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-03-01 04:09+0000\n"
+"Last-Translator: quaalun lawlu <quaalun@gmail.com>\n"
+"Language-Team: Korean <https://hosted.weblate.org/projects/jungle-bus/"
+"transport_mapcss-validation-ruleset/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Translate Toolkit 3.19.2\n"
+"X-Generator: Weblate 5.16.1-dev\n"
 
 #: ../transport.validator.mapcss:15
 msgid "Uncompromising validation of transit data"
@@ -28,27 +29,27 @@ msgstr ""
 #: ../transport.validator.mapcss:129 ../transport.validator.mapcss:138
 msgid ""
 "Missing public_transport:version tag on a public_transport route relation"
-msgstr ""
+msgstr "public_transport 경로 관계에 public_transport:version 태그가 없음"
 
 #: ../transport.validator.mapcss:148
 msgid "Missing network tag on a public_transport relation"
-msgstr ""
+msgstr "public_transport 관계에 network 태그가 없음"
 
 #: ../transport.validator.mapcss:157
 msgid "Missing operator tag on a public_transport relation"
-msgstr ""
+msgstr "public_transport 관계에 operator 태그가 없음"
 
 #: ../transport.validator.mapcss:166
 msgid "Missing ref tag for line number on a public_transport relation"
-msgstr ""
+msgstr "public_transport 관계에 ref 태그가 없음"
 
 #: ../transport.validator.mapcss:175
 msgid "Missing from/to tag on a public_transport route relation"
-msgstr ""
+msgstr "public_transport 경로 관계에 from/to 태그가 없음"
 
 #: ../transport.validator.mapcss:232
 msgid "The stops may not be in the right order"
-msgstr ""
+msgstr "정거장이 올바른 순서로 배치되어있지 않음"
 
 #: ../transport.validator.mapcss:257
 msgid "Is it a bus stop or a bus station?"
@@ -61,11 +62,11 @@ msgstr ""
 
 #: ../transport.validator.mapcss:298
 msgid "Is this a bus stop? add the tag highway=bus_stop"
-msgstr ""
+msgstr "버스 정류장인가요? highway=bus_stop 태그를 추가하세요"
 
 #: ../transport.validator.mapcss:309
 msgid "Check if the note can be deleted"
-msgstr ""
+msgstr "노트가 삭제될 수 있는지 확인"
 
 #: ../transport.validator.mapcss:314
 msgid "The network should be on the transport lines and not on the stops"
@@ -102,25 +103,25 @@ msgstr ""
 msgid ""
 "The network tag should be the same for the route and the route_master : {0} "
 "vs {1}"
-msgstr ""
+msgstr "network 태그는 route의 값과 route_master의 값이 같아야 함: {0} vs {1}"
 
 #: ../transport.validator.mapcss:190
 msgid ""
 "The operator tag should be the same for the route and the route_master : {0} "
 "vs {1}"
-msgstr ""
+msgstr "operator 태그는 route의 값과 route_master의 값이 같아야 함: {0} vs {1}"
 
 #: ../transport.validator.mapcss:195
 msgid ""
 "The ref tag should be the same for the route and the route_master : {0} vs "
 "{1}"
-msgstr ""
+msgstr "ref 태그는 route의 값과 route_master의 값이 같아야 함: {0} vs {1}"
 
 #: ../transport.validator.mapcss:200
 msgid ""
 "The colour tag should be the same for the route and the route_master : {0} "
 "vs {1}"
-msgstr ""
+msgstr "colour 태그는 route의 값과 route_master의 값이 같아야 함: {0} vs {1}"
 
 #: ../transport.validator.mapcss:205
 msgid ""
@@ -130,78 +131,86 @@ msgstr ""
 
 #: ../transport.validator.mapcss:211
 msgid "Check the colour tag"
-msgstr ""
+msgstr "colour 태그 확인 필요"
 
 #: ../transport.validator.mapcss:218
 msgid "The colour code should start with '#' followed by 3 or 6 digits"
-msgstr ""
+msgstr "색상 코드는 #으로 시작해서 3자리나 6자리 숫자로 되어있어야 합니다"
 
 #: ../transport.validator.mapcss:226
 msgid "The color of the public transport line should be in a colour tag"
-msgstr ""
+msgstr "대중교통 노선의 색은 색 태그에 있어야 합니다"
 
 #: ../transport.validator.mapcss:252
 msgid "A bus stop is supposed to be a node"
-msgstr ""
+msgstr "버스 정류장은 점의 형태가 추천됩니다"
 
 #: ../transport.validator.mapcss:364
 msgid "The interval is invalid (try a number of minutes)"
-msgstr ""
+msgstr "배차 간격이 잘못됨 (분 단위의 숫자 입력 필요)"
 
 #: ../transport.validator.mapcss:380
 msgid "The duration is invalid (try a number of minutes)"
-msgstr ""
+msgstr "소요 시간이 잘못됨 (분 단위의 숫자 입력 필요)"
 
 #: ../transport.validator.mapcss:393
 msgid "Missing interval tag to specify the main interval"
-msgstr ""
+msgstr "주 배차간격을 설정하는 interval 태그가 누락됨"
 
 #: ../transport.validator.mapcss:399
 msgid "Missing opening_hours tag"
-msgstr ""
+msgstr "opening_hours 태그가 누락됨"
 
 #: ../transport.validator.mapcss:351 ../transport.validator.mapcss:357
 msgid "Missing name on a public transport stop"
-msgstr ""
+msgstr "대중교통 정거장의 이름이 누락됨"
 
 #: ../transport.validator.mapcss:240
 msgid "Check the operator tag : this operator does not exist, it may be a typo"
 msgstr ""
+"operator 태그를 확인하세요: 이 운영자는 존재하지 않습니다. 오타일 수도 "
+"있습니다"
 
 #: ../transport.validator.mapcss:246
 msgid "Check the network tag : this network does not exist, it may be a typo"
 msgstr ""
+"network 태그를 확인하세요: 이 교통망은 존재하지 않습니다. 오타일 수도 "
+"있습니다"
 
 #: ../transport.validator.mapcss:263
 msgid ""
 "A bus station is usually a large area where many buses stop, check if you "
 "can draw this area"
 msgstr ""
+"버스 정류장은 보통 많은 버스들이 정차하는 넓은 지역입니다, 이 지역을 수정할 "
+"수 있다면 확인하세요"
 
 #: ../transport.validator.mapcss:291
 msgid "Is this a bus or tram stop ? Add a tag to precise the kind of platform"
 msgstr ""
+"버스 또는 트램 정류장인가요? 플랫폼의 종류를 정확히 알 수 있게 태그를 "
+"추가하세요"
 
 #: ../transport.validator.mapcss:407
 msgid "Subway entrances should be mapped as nodes"
-msgstr ""
+msgstr "지하철 입구들은 점으로 맵핑되어야 합니다"
 
 #: ../transport.validator.mapcss:439
 msgid ""
 "The station entrance should be part of a building or a highway (steps, "
 "footway, etc)"
-msgstr ""
+msgstr "역 입구는 건물 또는 길(계단, 보도 등)의 일부이어야합니다"
 
 #: ../transport.validator.mapcss:423
 msgid ""
 "The station entrance should be in part of a station: add it to a stop_area "
 "relation"
-msgstr ""
+msgstr "역 입구는 역의 일부에 있어야합니다: stop_area 관계에 추가하세요"
 
 #: ../transport.validator.mapcss:114
 msgid "Missing public_transport:version=1 on a public_transport relation"
-msgstr ""
+msgstr "public_transport 관계에서 public_transport:version=1가 누락됨"
 
 #: ../transport.validator.mapcss:121
 msgid "Missing public_transport:version=2 on a public_transport relation"
-msgstr ""
+msgstr "public_transport 관계에서 public_transport:version=2가 누락됨"
