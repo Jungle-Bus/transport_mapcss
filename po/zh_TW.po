@@ -4,13 +4,15 @@
 #
 msgid ""
 msgstr ""
-"Last-Translator: Supaplex <bejokeup@gmail.com>, 2024\n"
-"Language-Team: Chinese (Taiwan) (https://app.transifex.com/openstreetmap-"
-"france/teams/17462/zh_TW/)\n"
+"PO-Revision-Date: 2025-12-30 06:00+0000\n"
+"Last-Translator: Supaplex <bejokeup@gmail.com>\n"
+"Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
+"projects/jungle-bus/transport_mapcss-validation-ruleset/zh_Hant/>\n"
 "Language: zh_TW\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #: ../transport.validator.mapcss:15
 msgid "Uncompromising validation of transit data"
@@ -51,7 +53,7 @@ msgstr "站牌並不是對的順序"
 
 #: ../transport.validator.mapcss:257
 msgid "Is it a bus stop or a bus station?"
-msgstr "這是公車站牌還是公車轉運站"
+msgstr "這是公車站牌還是公車轉運站？"
 
 #: ../transport.validator.mapcss:269
 msgid ""
@@ -133,7 +135,7 @@ msgstr "檢查顏色標籤"
 
 #: ../transport.validator.mapcss:218
 msgid "The colour code should start with '#' followed by 3 or 6 digits"
-msgstr "顏色代碼應該以  '#' 開頭後面接 3 或 6 個數字"
+msgstr "顏色代碼應該以 '#' 開頭後面接 3 或 6 個數字"
 
 #: ../transport.validator.mapcss:226
 msgid "The color of the public transport line should be in a colour tag"
@@ -189,7 +191,7 @@ msgstr "捷運出口應該標為節點"
 msgid ""
 "The station entrance should be part of a building or a highway (steps, "
 "footway, etc)"
-msgstr "車站出入口應當是建築或是路徑 (樓梯、步道等) 的一部分。"
+msgstr "車站出入口應當是建築或是路徑 (樓梯、步道等) 的一部分"
 
 #: ../transport.validator.mapcss:423
 msgid ""
